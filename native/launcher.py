@@ -29,10 +29,13 @@ import sys
 import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-GAME_DIR = os.path.dirname(HERE)
+DEFAULT_HOME = os.path.expanduser("~/Library/Application Support/Ultima Ratio Regum")
+# Official game files as installed by the launcher (or urrctl import).
+GAME_DIR = os.environ.get("URR_GAME_DIR", os.path.join(DEFAULT_HOME, "Game"))
 PYC = os.path.join(HERE, "build", "URR.pyc")
 FONTS = ("8x8.png", "10x10.png", "12x12.png")
-DEFAULT_DATA_DIR = os.path.expanduser("~/Library/Application Support/Ultima Ratio Regum")
+# Shared with the container backend, so saves work in either.
+DEFAULT_DATA_DIR = os.path.join(DEFAULT_HOME, "Saves")
 
 
 def force_dumb_dbm():
@@ -176,14 +179,27 @@ def patch_display(libtcodpy, tcod):
             print("Could not adjust the game window:", e, file=sys.stderr)
         return root
 
+    def whole_multiple_fills_screen():
+        """True if scaling by a whole multiple would still fill (nearly) the
+        screen. On a 1698-pixel-high screen 12x12 and 8x8 tiles scale 2.02x
+        and 3.03x, but 10x10 tiles scale 2.43x: rounding down to 2x would
+        leave a wide border on every side."""
+        size = tcod.ffi.new("int[2]")
+        if tcod.lib.SDL_GetRendererOutputSize(tcod.lib.TCOD_sys_get_sdl_renderer(), size, size + 1):
+            return False
+        fit = min(size[0] / state["shape"][0], size[1] / state["shape"][1])
+        return fit >= 1 and int(fit) / fit >= 0.9
+
     def console_flush(*args, **kwargs):
         tick()
         # Letterbox instead of stretching (matters in fullscreen, where the
         # screen's shape differs from the game's); in fullscreen also scale by
-        # whole multiples so every game pixel is the same size.
+        # whole multiples, so every game pixel is the same size, when that
+        # doesn't shrink the game much.
         kwargs.setdefault("keep_aspect", True)
         if "integer_scaling" not in kwargs:
-            kwargs["integer_scaling"] = is_fullscreen()
+            kwargs["integer_scaling"] = (state["shape"] is not None and is_fullscreen()
+                                         and whole_multiple_fills_screen())
         return original_flush(*args, **kwargs)
 
     def console_wait_for_keypress(flush):

@@ -1,0 +1,3937 @@
+{
+ "posts": [
+  {
+   "url": "https://www.markrjohnsongames.com/2026/10/27/ultima-ratio-regum-0-11-update-69-quest-generation-architecture/",
+   "slug": "ultima-ratio-regum-0-11-update-69-quest-generation-architecture",
+   "title": "Ultima Ratio Regum 0.11 Update #69: Quest Generation Architecture",
+   "published": "2026-10-27T11:49:28+00:00",
+   "modified": "2026-10-27T11:49:31+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Quest Generation Architecture",
+    "What next?"
+   ],
+   "opening": "Friends! Hello. Welcome back. You may recall from last fortnight’s entry that I was unfortunately Not Having A Good Time, and I’m pleased to say that things have improved overall on that front. The injury’s pain level and the degree to which the injury was stopping me doing stuff (both physically, and mentally in the sense of distracting me and massively lowering my spirits) have both declined. They have not…",
+   "lede": "At the start of this fortnight’s progress, I sat down and defined make_a_quest. This was itself something of an exciting milestone, and once I’d done so I actually found myself sitting back, trying to gather all my brainpower and everything I’ve learned in 15 years of programming (and 15 before that of very active modding) to make this function as clean, crisp, and efficient as I possibly could. Indeed, quite…",
+   "words": 2946,
+   "images": 2,
+   "comments": 8,
+   "series": "update",
+   "version": "0.11",
+   "number": 69
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/10/11/nothing-much-this-time/",
+   "slug": "nothing-much-this-time",
+   "title": "Nothing Much This Time",
+   "published": "2026-10-10T22:35:28+00:00",
+   "modified": "2026-10-11T11:16:23+00:00",
+   "categories": [
+    "Uncategorized"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Hello friends! I’m sorry to say I don’t really have a full entry to post this fortnight, so I’m going to skip this one. It has been a pretty tough fortnight – I’ve sustained a potentially serious injury (unclear right now), my mental chill and calm haven’t been ideal (this was the case before the injury, but being a survivor of an all-but-fatal injury / illness already in my life,…",
+   "lede": "",
+   "words": 307,
+   "images": 1,
+   "comments": 13,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/09/27/ultima-ratio-regum-0-11-update-68-exactly-one-hundred-and-fifty-bugs-fixed/",
+   "slug": "ultima-ratio-regum-0-11-update-68-exactly-one-hundred-and-fifty-bugs-fixed",
+   "title": "Ultima Ratio Regum 0.11 Update #68: Exactly One Hundred and Fifty Bugs Fixed",
+   "published": "2026-09-27T08:07:16+00:00",
+   "modified": "2026-09-27T08:12:37+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "What next?"
+   ],
+   "opening": "Hello everyone! This fortnight we have precisely 150 bugs fixed (or minor adjustments made) for the 0.11 release, following on again from the already tremendous count of my last bug-fixing release which came in at 100. By my count I’ve now resolved around 450 bugs on my list for the 0.11 release, which is absolutely bananas – such a number seems ridiculously intimidating, but it is striking how simply by…",
+   "lede": "",
+   "words": 5752,
+   "images": 11,
+   "comments": 4,
+   "series": "update",
+   "version": "0.11",
+   "number": 68
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/09/13/ultima-ratio-regum-0-11-update-67-taverns-mansions-halls-crypts-religious-buildings-journal-world-maps-local-maps-soundtrack/",
+   "slug": "ultima-ratio-regum-0-11-update-67-taverns-mansions-halls-crypts-religious-buildings-journal-world-maps-local-maps-soundtrack",
+   "title": "Ultima Ratio Regum 0.11 Update #67: Taverns, Mansions, Halls, Crypts, Religious Buildings, Journal, World Maps, Local Maps, Soundtrack",
+   "published": "2026-09-12T17:44:00+00:00",
+   "modified": "2026-09-07T05:44:56+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Taverns",
+    "Town Mansions and Town Halls",
+    "Crypts",
+    "Religious Buildings",
+    "Sphinx-Houses",
+    "Final Journal Bits",
+    "World Map Clue Polishing",
+    "Local Map Damage",
+    "Soundtrack Update",
+    "What’s nex t?"
+   ],
+   "opening": "Friends, welcome back! Whereas in the past two updates I got most of the tutorial quest done and then finished it off and polished it – so these were both about sustained focus on one single item – this fortnight we have a whole load of small adjustments and improvements and polishes as I try to get everything “lined up” for quest generation and the final push towards release, i.e.…",
+   "lede": "The first place to start this fortnight was in clearing up the final remaining elements of generators which haven’t been totally moved over to the new method, i.e. having all generative elements within a larger dictionary (of over 2000 layouts) so that local map clues can draw on those elements when they need to be created, and these elements will appear correctly as part of pre-emptively setting how some of…",
+   "words": 5931,
+   "images": 23,
+   "comments": 6,
+   "series": "update",
+   "version": "0.11",
+   "number": 67
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/08/30/ultima-ratio-regum-0-11-update-66-tutorial-quest-refinement/",
+   "slug": "ultima-ratio-regum-0-11-update-66-tutorial-quest-refinement",
+   "title": "Ultima Ratio Regum 0.11 Update #66: Tutorial Quest Refinement",
+   "published": "2026-08-30T00:23:35+00:00",
+   "modified": "2026-08-30T11:26:25+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Tutorial quest and tutorial prompts",
+    "Rhyme refinement",
+    "Incorrect chests",
+    "NPCs can talk to you",
+    "Signs outside buildings",
+    "Marking out tutorial notes",
+    "Beginning quest generator",
+    "What next?"
+   ],
+   "opening": "Hello everyone, welcome back! More huge progress this fortnight – really working at a cracking pace at the moment. I’ve been doing so much refining and polishing the tutorial quest and integrating the tutorial quest within the game’s formal tutorial prompts, and with all of this done, I genuinely think this introductory section is as complete as I can possibly get it now for 0.11, and as good as I…",
+   "lede": "One really important thing I set about doing this week is making sure all the tutorial prompts – i.e. the gold pop-ups that give you non-diegetic information about the game – match and sychronise really well with the tutorial quest, but also of course give you plenty of “outs” if you want to skip the tutorial quest as an experienced player, or just want to skip the tutorial quest per…",
+   "words": 5228,
+   "images": 15,
+   "comments": 4,
+   "series": "update",
+   "version": "0.11",
+   "number": 66
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/08/18/ultima-ratio-regum-0-11-update-65-playable-tutorial-quest/",
+   "slug": "ultima-ratio-regum-0-11-update-65-playable-tutorial-quest",
+   "title": "Ultima Ratio Regum 0.11 Update #65: Playable Tutorial Quest!!",
+   "published": "2026-08-18T10:23:58+00:00",
+   "modified": "2026-08-18T10:50:53+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "The Curator",
+    "The First Half",
+    "Chest Spawning",
+    "A big milestone",
+    "IT ACTUALLY WORKS."
+   ],
+   "opening": "Housekeeping Notice: I’ve just finally found a way to stop WordPress resizing my images! But, this might break something without me anticipating it, so please let me know if anything looks odd on this entry.",
+   "lede": "First task was to add the curator, who is the curator of the museum you start in, and the person who sets you off on your quest. In the current version you spawn in a room near the main museum in the university of the nation you randomly start the game in, and so I just needed to add the curator. There is an unused character (in the sense of…",
+   "words": 4823,
+   "images": 16,
+   "comments": 11,
+   "series": "update",
+   "version": "0.11",
+   "number": 65
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/08/04/ultima-ratio-regum-0-11-update-64-total-speech-and-conversation-rework-1-2/",
+   "slug": "ultima-ratio-regum-0-11-update-64-total-speech-and-conversation-rework-1-2",
+   "title": "Ultima Ratio Regum 0.11 Update #64: Total Speech and Conversation Rework 1/2",
+   "published": "2026-08-04T12:31:19+00:00",
+   "modified": "2026-08-04T12:35:37+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "What next?"
+   ],
+   "opening": "Friends, welcome back! Today I begin something very exciting. Only a very small portion of this is going to appear in the 0.11 release, but as we find ourselves only weeks away from playtesting and I need to actually design the beginning of the game, i.e. where the curator of the museum you begin the game in lets you know that the world is full of riddles and mysteries that…",
+   "lede": "",
+   "words": 4191,
+   "images": 2,
+   "comments": 12,
+   "series": "update",
+   "version": "0.11",
+   "number": 64
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/07/19/interlude-thoughts-on-some-cryptic-riddle-quests/",
+   "slug": "interlude-thoughts-on-some-cryptic-riddle-quests",
+   "title": "Interlude: Thoughts On Some Cryptic Riddle Quests",
+   "published": "2026-07-18T21:40:58+00:00",
+   "modified": "2026-07-18T21:41:01+00:00",
+   "categories": [
+    "Commentary",
+    "Game Design"
+   ],
+   "tags": [],
+   "sections": [
+    "Symbols Quest",
+    "Cursed Letters Quest",
+    "Four Envoys Quest",
+    "Final Thoughts"
+   ],
+   "opening": "Hello everyone! I’m taking a short mid-year break right now to recharge, not do much work / game dev, and focus on leisure and relaxation for a little while, as well as catching up some larger but less “urgent” life admin / life jobs that need doing but can be hard to find the time and attention for when working on everyday stuff with a lot of focus. As such,…",
+   "lede": "The first quest is found in a mysterious room that one can access from pretty early in the game. When you first get in there, none of the symbols shown in the screenshot above are lit up. Instead they are simply etched into the background wall of this chamber – and this is the symbol that Blasphemous uses in its branding and on plenty of in-game stuff as well. The…",
+   "words": 6829,
+   "images": 19,
+   "comments": 4,
+   "series": "interlude",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/07/05/ultima-ratio-regum-0-11-update-63-picture-clues-generation-1-and-soundtrack-news/",
+   "slug": "ultima-ratio-regum-0-11-update-63-picture-clues-generation-1-and-soundtrack-news",
+   "title": "Ultima Ratio Regum 0.11 Update #63: Picture Clues Generation 1 and Soundtrack News",
+   "published": "2026-07-05T09:12:30+00:00",
+   "modified": "2026-06-15T09:14:45+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "New graphics",
+    "Abstract Clue Elements",
+    "Soundtrack News",
+    "What next?"
+   ],
+   "opening": "Hello friends, welcome back! Over the past couple of months we’ve been looking at the creation and implementation of the local map clue types, i.e. clues that show you something on the human scale (doors, furniture, trees, etc) – rather than the world scale (towns, cities, mountains, etc) – which the player might want to investigate. I’m incredibly happy with how these are coming together, including some of the quite…",
+   "lede": "In the process of all this I also added quite a few new graphics to what is now the huge list of these which can appear in these sorts of clues (and also in other clues, in books, on statues, in all kinds of places – always good to find as many ways to reuse this kind of work as possible). Specifically, there are already graphics in the normal 7×7…",
+   "words": 4537,
+   "images": 9,
+   "comments": 4,
+   "series": "update",
+   "version": "0.11",
+   "number": 63
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/06/21/ultima-ratio-regum-0-11-update-62-university-tutorial-riddles/",
+   "slug": "ultima-ratio-regum-0-11-update-62-university-tutorial-riddles",
+   "title": "Ultima Ratio Regum 0.11 Update #62: University Tutorial Riddles",
+   "published": "2026-06-21T02:53:21+00:00",
+   "modified": "2026-06-08T02:57:47+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Starting off the game",
+    "Finishing in the museum",
+    "Curator’s trinket",
+    "What next?"
+   ],
+   "opening": "Hello everyone! Welcome back. After a month or two of incredibly rapid progress on the 0.11 release in a range of rather exciting ways, I’m pleased to announce that we have… another fortnight of huge progress. I realised a while ago that I wanted to add in a riddle generator specifically for the university you start in. Before the player even gets onto the world map and starts thinking about…",
+   "lede": "So, for starters – my basic plan for the game’s start is that you get given a bunch of materials (right now some clue notes, in the future maybe some clue notes, plus a previous explorer’s journal, plus maybe one or two other resources?) with which to get started. Before that, however, you’ll have the option to also get the tutorial set of information first, which is a bunch of…",
+   "words": 4040,
+   "images": 8,
+   "comments": 8,
+   "series": "update",
+   "version": "0.11",
+   "number": 62
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/06/08/ultima-ratio-regum-0-11-update-61-local-map-clues-implementation-part-3/",
+   "slug": "ultima-ratio-regum-0-11-update-61-local-map-clues-implementation-part-3",
+   "title": "Ultima Ratio Regum 0.11 Update #61: Local Map Clues Implementation Part 3",
+   "published": "2026-06-08T00:34:41+00:00",
+   "modified": "2026-06-08T00:39:02+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Building out the dictionary",
+    "Losing the bad walls",
+    "The Experiment(s)",
+    "What next?",
+    "(Late edit: fixed the town things! Towns now generate in all their beauty once again.)"
+   ],
+   "opening": "Friends, hello! More huge progress this fortnight. This is already a gigantic energy, so rather than spend time on the intro, let’s get into it:",
+   "lede": "To begin with, in this fortnight I decided I had the objective of – by the end of the fortnight – being “done” for 0.11 with shifting as many generators as possible into the massive generator-information dictionary I’ve been slowly constructing across the past month (along with the also vast dictionary of dictionaries for everything within that dictionary, allowing the information from dozens of generators to be “standardized” when used…",
+   "words": 4952,
+   "images": 15,
+   "comments": 6,
+   "series": "update",
+   "version": "0.11",
+   "number": 61
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/05/25/ultima-ratio-regum-0-11-update-60-local-map-clues-implementation-part-2/",
+   "slug": "ultima-ratio-regum-0-11-update-60-local-map-clues-implementation-part-2",
+   "title": "Ultima Ratio Regum 0.11 Update #60: Local Map Clues Implementation Part 2",
+   "published": "2026-05-25T12:18:20+00:00",
+   "modified": "2026-05-25T12:38:37+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "All possible local map tiles",
+    "More examples for testing",
+    "More abyss",
+    "Adding more generators to the generator dictionary",
+    "Testing the first one!",
+    "What next?"
+   ],
+   "opening": "Hello everyone, welcome back! Loads more excellent progress to report on this week about the local map clue generation, I’m pleased to say. I’ve incorporated a ton more generators into the overall dictionary which now houses all the generative materials – now into the many hundreds, actually – and continued to refine the system by which all possibilities, when being pre-generated, are funneled into a single translation function that then…",
+   "lede": "Firstly though, I want to cover something I actually should have covered in the previous update, but I forgot to in all the excitement to describe and cover the output of the local map generator (and also perhaps because that entry had already become more than long enough by the time I’d finished typing all of that out). In the earlier proof-of-concept variations of the local map clues I showed…",
+   "words": 6583,
+   "images": 9,
+   "comments": 7,
+   "series": "update",
+   "version": "0.11",
+   "number": 60
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/05/11/ultima-ratio-regum-0-11-update-59-local-map-clues-implementation-part-1/",
+   "slug": "ultima-ratio-regum-0-11-update-59-local-map-clues-implementation-part-1",
+   "title": "Ultima Ratio Regum 0.11 Update #59: Local Map Clues Implementation Part 1",
+   "published": "2026-05-11T09:53:30+00:00",
+   "modified": "2026-05-11T09:56:49+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "The Double Generator",
+    "What next?"
+   ],
+   "opening": "To begin with: you know how just a few entries ago I said that the 0.11 release was going to have just one clue type, i.e. the rhyming riddle clues? And I’d done about 95% of the required work on these, and they were looking really cool and novel…",
+   "lede": "To begin with, I realised that this generator had to be able to take in two different kinds of input, and produce the same kind of output from them. This is different from all the other generators so far – though it will be duplicated with some others later, so I suppose this was good practice – and posed an interesting design and coding challenge that I hadn’t really encountered…",
+   "words": 4654,
+   "images": 12,
+   "comments": 7,
+   "series": "update",
+   "version": "0.11",
+   "number": 59
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/04/27/ultima-ratio-regum-0-11-update-58-riddle-rhyme-integration-finished/",
+   "slug": "ultima-ratio-regum-0-11-update-58-riddle-rhyme-integration-finished",
+   "title": "Ultima Ratio Regum 0.11 Update #58: Riddle Rhyme Integration Finished!",
+   "published": "2026-04-27T04:57:04+00:00",
+   "modified": "2026-04-27T04:57:06+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Sorting Edge Cases in Location Stanzas",
+    "Implementing Local Map Stanzas",
+    "Implementing Action and Reward Stanzas",
+    "What next?"
+   ],
+   "opening": "Housekeeping Notice: I’ve just upgraded my spam filter. Until now actual comments normally went straight through, but sometimes would be caught until I “okay” them, though I’m not sure how this new one will work (it should be much better). If anything is different or doesn’t work, please email me / DM me on Twitter and tell me!",
+   "lede": "Firstly, we had some edges in location stanzas to deal with. Specifically these involved some complex scenarios in which some of the locations or information being drawn upon were multi-tile things, such as mountains or chasms, and so the specific area you are in can’t actually be used since that could be referring to many tiles. Extra complexity, however, arose in using those as reference points elsewhere, since that would…",
+   "words": 4506,
+   "images": 6,
+   "comments": 8,
+   "series": "update",
+   "version": "0.11",
+   "number": 58
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/04/11/ultima-ratio-regum-0-11-update-57-interesting-map-geometry-and-mathematics/",
+   "slug": "ultima-ratio-regum-0-11-update-57-interesting-map-geometry-and-mathematics",
+   "title": "Ultima Ratio Regum 0.11 Update #57: Interesting Map Geometry and Mathematics",
+   "published": "2026-04-10T22:20:24+00:00",
+   "modified": "2026-04-10T22:20:27+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Hello everyone! We have a bit of a different entry this fortnight. I don’t normally talk too extensively about how things are coded in detail since I prefer to focus on design questions, but I decided to do so this week. While working on a few edge cases and bugs and the like for the world map clues since last fortnight’s entry I ran into a somewhat interesting challenge involving…",
+   "lede": "",
+   "words": 3617,
+   "images": 9,
+   "comments": 14,
+   "series": "update",
+   "version": "0.11",
+   "number": 57
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/03/30/ultima-ratio-regum-0-11-update-56-huge-map-clue-advancement-and-integration-complete/",
+   "slug": "ultima-ratio-regum-0-11-update-56-huge-map-clue-advancement-and-integration-complete",
+   "title": "Ultima Ratio Regum 0.11 Update #56: Huge Map Clue Advancement, and Integration Complete",
+   "published": "2026-03-29T13:01:15+00:00",
+   "modified": "2026-03-29T13:01:17+00:00",
+   "categories": [
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "World map clues",
+    "What next?"
+   ],
+   "opening": "Friends, welcome back! Exciting news this week – an entire other clue type has been completely implemented in the space of the last two weeks. By “implemented” what I mean is that it has been massively expanded and enhanced in detail and variation and gameplay interest, then taken out of the testing file, put in the game, synchronized with the game’s actual generators and data architecture rather than testing or…",
+   "lede": "So, to begin with, at the strategic level, I realise now it’s going to be most interesting if not all clue types appear in all worlds. So if we end up with, say, six easy, six middling, and six hard clue types, then perhaps three of them will be randomly selected at world generation to populate that world with, while the others will be nowhere to be seen. This kind…",
+   "words": 4090,
+   "images": 9,
+   "comments": 8,
+   "series": "update",
+   "version": "0.11",
+   "number": 56
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/03/15/ultima-ratio-regum-0-11-update-55-riddle-rhyme-integration-continues/",
+   "slug": "ultima-ratio-regum-0-11-update-55-riddle-rhyme-integration-continues",
+   "title": "Ultima Ratio Regum 0.11 Update #55: Riddle Rhyme Integration Continues",
+   "published": "2026-03-15T11:20:39+00:00",
+   "modified": "2026-03-15T11:20:42+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "What’s next?"
+   ],
+   "opening": "Hello everyone – welcome back! I’m pleased to say these past fourteen days have been closer to the usual level of productivity for a fortnight, although still a little bit disrupted by work stuff (though the life stuff seems to have improved a lot!). Last fortnight was 20% coding capacity, this fortnight has been something like 60%, and next time I hope to get back to 80% or more. I’m…",
+   "lede": "Well, that’s everything for this fortnight. I’m sorry we haven’t had much – er, anything – in the way of screenshots this update and last, but I know they’ve been lighter updates because I’ve been overwhelmed a bit by other things, and because I’m really deep in the code here – but proper progress is being made, even if it’s not quite as speedy right now as I would like.…",
+   "words": 2660,
+   "images": 1,
+   "comments": 16,
+   "series": "update",
+   "version": "0.11",
+   "number": 55
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/03/02/ultima-ratio-regum-0-11-update-54-riddle-integration-begins/",
+   "slug": "ultima-ratio-regum-0-11-update-54-riddle-integration-begins",
+   "title": "Ultima Ratio Regum 0.11 Update #54: Riddle Integration Begins",
+   "published": "2026-03-02T00:55:58+00:00",
+   "modified": "2026-03-02T00:56:01+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Hello friends! Just a very short update this fortnight – it’s the start of semester and that’s always absolute chaos, and I’ve had a lot of crappy life stuff to deal with at the same time, so I haven’t got a great deal done this fortnight, unfortunately. As such, I’m just going to write up a quick summary of what has been done, and then we’ll come back next fortnight…",
+   "lede": "",
+   "words": 1359,
+   "images": 1,
+   "comments": 5,
+   "series": "update",
+   "version": "0.11",
+   "number": 54
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/02/17/ultima-ratio-regum-0-11-update-52-finishing-keys-and-padlocks/",
+   "slug": "ultima-ratio-regum-0-11-update-52-finishing-keys-and-padlocks",
+   "title": "Ultima Ratio Regum 0.11 Update #53: Finishing Keys and Padlocks",
+   "published": "2026-02-16T13:10:20+00:00",
+   "modified": "2026-02-16T13:20:50+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Key and Padlock Communication",
+    "Finishing Key Visual Upgrade",
+    "Unlocking Animation via Keys",
+    "Remembering Used Keys and Combinations",
+    "New Key Shapes",
+    "Key Descriptions",
+    "Showing Padlock Risk",
+    "What next?"
+   ],
+   "opening": "Friends, welcome back! Following on from the huge progress in last fortnight’s entry, this time I’ve continued down that path and essentially finished off everything that needs doing on keys and padlocks, their interactions, gameplay, visuals, complexities, and also adding significant extra details into key descriptions, and implementing appropriate mechanics for the game – i.e. the player – remembering correct usage of keys or combinations before, and then pointing that…",
+   "lede": "The first thing was to finish off the ability for keys and padlocks to intelligently “talk to each other” – i.e. the game needs to be able to take a key, take a padlock, and even if they weren’t generated together and regardless of what order they were actually generated in, be able to say whether or not that key should work in that padlock. Doing this last time was…",
+   "words": 3610,
+   "images": 14,
+   "comments": 4,
+   "series": "update",
+   "version": "0.11",
+   "number": 53
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/02/02/ultima-ratio-regum-0-11-update-52-leaps-and-bounds/",
+   "slug": "ultima-ratio-regum-0-11-update-52-leaps-and-bounds",
+   "title": "Ultima Ratio Regum 0.11 Update #52: Leaps and Bounds",
+   "published": "2026-02-02T10:42:15+00:00",
+   "modified": "2026-02-02T10:42:17+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Doors, Chests, and Locks",
+    "Chests",
+    "Keys",
+    "Padlock Unlocking",
+    "Chest Opening and Looting",
+    "What next?"
+   ],
+   "opening": "Hello everyone! It is with great pleasure that I can say the last fortnight has been one of my most coding-productive in years. A number of major tasks that I thought would take many days of work in fact took me only one day (or even just hours) of focused work, and as a result the current version of URR on my machine has absolutely leapt forward in ways that…",
+   "lede": "The first thing was to get padlocks spawning, and interacting correctly with doors and chests. Readers might remember from a recent entry that I noted we now had rthe game using the two door characters correctly, i.e. the sort of “open” door symbol for an unlocked door and a “closed” door (i.e. filled with colour) symbol for a closed door. This made it apparent that I immediately needed to create…",
+   "words": 4210,
+   "images": 17,
+   "comments": 2,
+   "series": "update",
+   "version": "0.11",
+   "number": 52
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/01/19/ultima-ratio-regum-0-11-update-51-major-progress-on-the-players-journal/",
+   "slug": "ultima-ratio-regum-0-11-update-51-major-progress-on-the-players-journal",
+   "title": "Ultima Ratio Regum 0.11 Update #51: Major Progress on the Player’s Journal",
+   "published": "2026-01-18T22:59:33+00:00",
+   "modified": "2026-01-18T22:59:36+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Finishing Narrative Pages",
+    "Finishing Connection Pages",
+    "Finishing Faction Pages",
+    "Finishing Padlock Pages",
+    "What next?"
+   ],
+   "opening": "Hello everyone, welcome back! This fortnight I’ve been made more major pushes forward on the player’s journal for 0.11, including finishing absolutely everything except one aspect of the factions pages which I’ll be able to integrate some point in the next few months. I’m super pleased with this and in particular how the padlock pages now work (which I honestly think is incredibly cool), and so here I’ll outline some…",
+   "lede": "First, and although in many ways these were mostly finished beforehand, I have done some more work to get these absolutely done, and at this point I can say there’s nothing more needed on the narrative pages for the forthcoming 0.11 release. One step was to slightly simplify some of the programming-like logic that tracks previously statements in the narrative pages and integrates future statements alongside them – for instance,…",
+   "words": 3601,
+   "images": 12,
+   "comments": 2,
+   "series": "update",
+   "version": "0.11",
+   "number": 51
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2026/01/04/ultima-ratio-regum-0-11-update-48-key-integration-padlock-integration-0-10-4d-release/",
+   "slug": "ultima-ratio-regum-0-11-update-48-key-integration-padlock-integration-0-10-4d-release",
+   "title": "Ultima Ratio Regum 0.11 Update #50: Key Integration, Padlock Integration, 0.10.4d Release",
+   "published": "2026-01-04T00:34:34+00:00",
+   "modified": "2026-01-04T00:35:20+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Key Spawning",
+    "0.10.4d Released!",
+    "What next?"
+   ],
+   "opening": "Hello everyone, welcome back! To begin with, I’m pleased to announce that things have so far been looking up in the past month. I mentioned last time that I’d been dealing with some health issues again (which long-term readers will know is / has been an on-and-off thing) but these last couple of weeks have been far more stable, and far closer to normality. Although I’m really pleased with all…",
+   "lede": "This then brought us onto keys. Unsurprisingly the first stage was the same – to get key items spawning into my inventory as a test, and then to ensure that the generator is working totally correctly in displaying them. This didn’t take very long again, and I soon had key items which were endlessly regenerating valid keys each time I looked at the key in my inventory. With that done…",
+   "words": 3013,
+   "images": 7,
+   "comments": 6,
+   "series": "update",
+   "version": "0.11",
+   "number": 50
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/12/21/some-games-i-played-in-2025-and-what-i-thought-of-them/",
+   "slug": "some-games-i-played-in-2025-and-what-i-thought-of-them",
+   "title": "Some Games I Played in 2025 and What I Thought Of Them",
+   "published": "2025-12-20T22:01:47+00:00",
+   "modified": "2026-01-24T04:42:31+00:00",
+   "categories": [
+    "Commentary",
+    "Game Design"
+   ],
+   "tags": [],
+   "sections": [
+    "Return of the Obra Dinn",
+    "Balatro",
+    "Cube Escape",
+    "Infra Arcana",
+    "Halo 3",
+    "The Murder of Sonic the Hedgehog",
+    "Alchemia",
+    "Snakebird",
+    "Cryptic Crosswords",
+    "MoonQuest",
+    "Paquerette Down the Bunburrows",
+    "Rift Wizard",
+    "The Double Award Winners of 2025",
+    "Lorelei and the Laser Eyes",
+    "Cobalt Core",
+    "So there we have it!"
+   ],
+   "opening": "Friends – welcome back. I was planning on doing a main devlog this fortnight, but the stuff I’m working on for that update is getting bigger and more comprehensive and exhaustive as I work on it, so I’ve decided to save it up for a big start-of-year devlog post instead (look for that one, and hence also the 0.10.4d release, on Jan 3 / Jan 4).",
+   "lede": "The first game I completed in 2025 was Return of the Obra Dinn. This had long been on my list for obvious reasons – it’s a deduction-focused cryptic-y riddle-y sort of game – but I’d actually held off from it for a while because I was worried the art style would mess with my eyes. Happy it didn’t (the game is honestly pretty visually stunning), and although my time on…",
+   "words": 14958,
+   "images": 26,
+   "comments": 10,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/12/07/ultima-ratio-regum-0-11-update-49-exactly-one-hundred-bugs-fixed/",
+   "slug": "ultima-ratio-regum-0-11-update-49-exactly-one-hundred-bugs-fixed",
+   "title": "Ultima Ratio Regum 0.11 Update #49: Exactly One Hundred Bugs Fixed",
+   "published": "2025-12-07T10:27:39+00:00",
+   "modified": "2025-12-07T20:37:26+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "0.10.4d Bug-Fixes:",
+    "What Next?"
+   ],
+   "opening": "Welcome back everyone! This fortnight we have another massive set of bugs whose fixing I would like to report (and another new release!), and this is indeed one of the largest bug-fix entries I’ve posted in quite a long time. One of the reasons for that will be clear when you read the end of the post, but for now the important thing is that I can – personally, at…",
+   "lede": "And with all that done I will – of course – release a new version! 0.10.4d will soon be live on the downloads page, probably when I upload next fortnight’s post. I really wanted to get it there this week, but it has been such a flat-out sprint to reach a full one hundred bugs fixed, and it’s last thing at night now and I don’t want to delay posting…",
+   "words": 4282,
+   "images": 10,
+   "comments": 7,
+   "series": "update",
+   "version": "0.11",
+   "number": 49
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/11/23/ultima-ratio-regum-0-11-update-48-sound-design-1/",
+   "slug": "ultima-ratio-regum-0-11-update-48-sound-design-1",
+   "title": "Ultima Ratio Regum 0.11 Update #48: Sound Design 1",
+   "published": "2025-11-22T21:36:06+00:00",
+   "modified": "2025-11-23T21:05:59+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "playsound3",
+    "pygame",
+    "Adding sounds",
+    "What next?"
+   ],
+   "opening": "Hello everyone, and welcome back to the new and improved fortnightly Ultima Ratio Regum development blog. The title of this week’s post is, I suspect, one that nobody on the planet saw coming – although after last fortnight’s shock announcement, perhaps some did? – but it’s one that I’m very excited to to talk about. For the last few months I’ve been slowly but surely integrating sound effects into the…",
+   "lede": "As noted last time, the decision to start integrating sound and music and background audio into the game came to me quite suddenly. As well as the desire to ensure that 0.11 really stood out from everything that had come before, it was also definitely spurred on by some recent things I’ve been thinking about – which I’ll talk more about in the in a big summation post for 0.11…",
+   "words": 3449,
+   "images": 5,
+   "comments": 4,
+   "series": "update",
+   "version": "0.11",
+   "number": 48
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/11/08/ultima-ratio-regum-0-11-update-47-official-soundtrack/",
+   "slug": "ultima-ratio-regum-0-11-update-47-official-soundtrack",
+   "title": "Ultima Ratio Regum 0.11 Update #47: Official Soundtrack",
+   "published": "2025-11-07T22:10:43+00:00",
+   "modified": "2025-11-07T22:10:46+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Choosing a Musician",
+    "The Soundtrack",
+    "What next?"
+   ],
+   "opening": "I’ve been pondering much on an important question in the last few months. 0.11 is going to be the first URR release with a clear central quest, and a clear endpoint. This is a “proof of concept” central quest, sure – i.e. making sure the game can indeed create one fully completable riddle thread, which the player can make sense of and play through – but it’s still a huge…",
+   "lede": "The first step was to reach out to a lot of game musicians whose work, I felt, hit some of the notes or at least one of the notes that was going to show up in URR. Interestingly, as I write this blog entry, I realise I’m not sure that I should give too much detail here about responses and discussions, because inevitably some of those who reached out to…",
+   "words": 3050,
+   "images": 1,
+   "comments": 11,
+   "series": "update",
+   "version": "0.11",
+   "number": 47
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/10/26/ultima-ratio-regum-0-11-update-46-bugs-not-in-this-roguelike/",
+   "slug": "ultima-ratio-regum-0-11-update-46-bugs-not-in-this-roguelike",
+   "title": "Ultima Ratio Regum 0.11 Update #46: Bugs? Not In This Roguelike!",
+   "published": "2025-10-26T10:20:18+00:00",
+   "modified": "2025-10-26T10:20:20+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "0.10.4b / 0.10.4c Bug-Fixes:",
+    "What next?"
+   ],
+   "opening": "Hello everyone, welcome back! This week we have another major bug purge, getting the bug list down to something actually surprisingly small now. Thank you, again, to all those posting here with bugs, sending me DMs on Twitter, and emails with bug reports – given how long-running a project this is and how long it has taken to build the foundations for what I’m hopefully going to be releasing fairly…",
+   "lede": "So there we are! A massive bug-fixing effort has been undertaken, and all these changes are in 0.10.4c which is now available on the downloads page. If you have a moment, please do think about giving it a spin!",
+   "words": 3069,
+   "images": 7,
+   "comments": 8,
+   "series": "update",
+   "version": "0.11",
+   "number": 46
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/10/12/ultima-ratio-regum-0-11-update-45-massive-leaps-forward/",
+   "slug": "ultima-ratio-regum-0-11-update-45-massive-leaps-forward",
+   "title": "Ultima Ratio Regum 0.11 Update #45: Massive Leaps Forward",
+   "published": "2025-10-12T06:40:06+00:00",
+   "modified": "2025-10-15T22:11:20+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Finishing Narrative Pages",
+    "Finishing Language Pages",
+    "Finishing(ish) Category Pages",
+    "0.10.4b Release",
+    "What next?"
+   ],
+   "opening": "Hello everyone and welcome back – to one of the largest updates in recent memory. An absolute ton of stuff has been programmed in the last fortnight and it’s really exciting, comprehensive, and in large part, very very novel. Suddenly another huge element of the 0.11 release is just… well, just done, and now I just need to work on implementing and integrating a few other pieces to get the…",
+   "lede": "Firstly, I’m pleased to say that I’ve got all the code for adding the player’s narrative of what they actually do in a playthrough successfully implemented into the journal function. There are some functions for things which literally don’t exist in the game yet – like combat – which I will come to later (and cannot accurately predict now and hence code in advance), but everything relevant in 0.11 to…",
+   "words": 4066,
+   "images": 16,
+   "comments": 10,
+   "series": "update",
+   "version": "0.11",
+   "number": 45
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/09/28/ultima-ratio-regum-0-11-update-44-bug-fixing-and-0-10-4-release/",
+   "slug": "ultima-ratio-regum-0-11-update-44-bug-fixing-and-0-10-4-release",
+   "title": "Ultima Ratio Regum 0.11 Update #44: Bug Fixing and 0.10.4 Release",
+   "published": "2025-09-27T23:56:08+00:00",
+   "modified": "2025-09-28T00:30:38+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "0.10.4 Release",
+    "What next?"
+   ],
+   "opening": "Hello everyone! This week I am proud to report a major bug-purge, and the list of URR bugs continuing to dwindle to a very small number now (from having been many many hundreds before). In this first block, though, I must give my appreciation to the various bug reporters who discovered these and sent them along – thank you so much! These had all been fixed as of 0.10.3b, which…",
+   "lede": "As part of all this, 0.10.4 is now out! This version contains all these bug fixes, but also contains the working journal (more on this in the next blog entry, but you can time travel and experience some of that new blog update right now by downloading 0.10.4!) and various other new features, as I continue to work on the really big ones – keys, padlocks, riddles – for the…",
+   "words": 2515,
+   "images": 6,
+   "comments": 9,
+   "series": "update",
+   "version": "0.11",
+   "number": 44
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/09/14/ultima-ratio-regum-0-11-update-43-the-players-journal-3/",
+   "slug": "ultima-ratio-regum-0-11-update-43-the-players-journal-3",
+   "title": "Ultima Ratio Regum 0.11 Update #43: The Player’s Journal #3",
+   "published": "2025-09-14T11:58:54+00:00",
+   "modified": "2025-09-14T11:59:07+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Continuing Narrative Pages",
+    "Language Pages",
+    "Faction Pages",
+    "What next?"
+   ],
+   "opening": "Hello friends! Welcome back. This week we continue directly on from last week with more progress on developing the player’s journal, and integrating various new pages, mechanics, and other things which will partly find their way fully into the game for 0.11, and partly most likely for 0.12. I’m feeling really happy with how the player’s journal is looking, how I think it’ll focus players on what they want to…",
+   "lede": "The first thing this fortnight has been finishing off the narrative page generation for the player’s journal. Now, some of the potential entries here I actually cannot fully code yet – the one for “I saw [animal species name] for the first time” naturally cannot appear until we have wildlife (though wildlife will be on their way at some point), and there are quite a few other examples in this…",
+   "words": 2982,
+   "images": 9,
+   "comments": 13,
+   "series": "update",
+   "version": "0.11",
+   "number": 43
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/08/30/ultima-ratio-regum-0-11-update-42-the-players-journal-2/",
+   "slug": "ultima-ratio-regum-0-11-update-42-the-players-journal-2",
+   "title": "Ultima Ratio Regum 0.11 Update #42: The Player’s Journal #2",
+   "published": "2025-08-30T13:14:48+00:00",
+   "modified": "2025-08-30T14:04:34+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Book Code",
+    "Narrative Pages",
+    "Lock Pages",
+    "Clue Categories",
+    "Other Changes",
+    "What’s next?"
+   ],
+   "opening": "Friends, we are back! And back with, if I dare say so, a bang. Rather than more work on the abstracts of riddles pre-implementation, I’ve been feeling (as mentioned before) that I just really, really need to start seeing some changes in the main game file. I’ve been doing so much work these last six months that’s going to deliver genuinely unique gameplay, but it has all been so abstract,…",
+   "lede": "The first thing was to move the code for showing book pages – meticulously developed in my testing file – into the game properly. Let’s not talk too much about the fact the entire game is still in a single 1.1m line file, but the important thing here is that having the testing file is a massive help for me in making sure things are working as I want them…",
+   "words": 2724,
+   "images": 12,
+   "comments": 5,
+   "series": "update",
+   "version": "0.11",
+   "number": 42
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/08/16/ultima-ratio-regum-0-11-update-41-padlocks-riddles-keys-hidden-messages-and-maps-and-symbols/",
+   "slug": "ultima-ratio-regum-0-11-update-41-padlocks-riddles-keys-hidden-messages-and-maps-and-symbols",
+   "title": "Ultima Ratio Regum 0.11 Update #41: Padlocks, Riddles, Keys, Hidden Messages and Maps and Symbols",
+   "published": "2025-08-16T13:14:56+00:00",
+   "modified": "2025-08-16T13:16:54+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Padlock Penalties",
+    "Skeleton Keys",
+    "Book Damage",
+    "Hidden Maps in Books",
+    "Hidden Text in Books",
+    "More Hidden Symbols",
+    "Grants?! Other Contributors?!",
+    "What next?"
+   ],
+   "opening": "Hello everyone, welcome back! This fortnight I’ve really been back at it with finishing off a whole bunch of things, adding a bunch of new features into several areas, and beginning the process of transitioning all the new content from the testing files into the game itself. This is super exciting, of course, because it actually won’t be too long from now that I’ll be able to follow and complete…",
+   "lede": "Firstly, I’ve added a system for showing the player what potential penalties exist for incorrectly trying a lock. The method I went with was knots / bands around the lock part of the padlock (?) where colours denote the intensity of negative outcome for a mistake, and the number of knots denotes the likelihood of that outcome. So, for instance, (a) yellow knot(s) might indicate that a failed opening attempt…",
+   "words": 3164,
+   "images": 7,
+   "comments": 10,
+   "series": "update",
+   "version": "0.11",
+   "number": 41
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/08/03/interlude-pcg-in-freelancer-one-must-fall-2097-and-neopets/",
+   "slug": "interlude-pcg-in-freelancer-one-must-fall-2097-and-neopets",
+   "title": "Interlude: PCG in Freelancer, One Must Fall 2097, and Neopets",
+   "published": "2025-08-03T01:27:00+00:00",
+   "modified": "2025-08-08T12:39:54+00:00",
+   "categories": [
+    "Commentary",
+    "Game Design"
+   ],
+   "tags": [],
+   "sections": [
+    "One Must Fall 2097",
+    "Freelancer",
+    "Neopets",
+    "What next?"
+   ],
+   "opening": "Hello everyone, welcome back! I’m taking a short mid-year break at the moment so no devlog update this week, but I want to instead share some thoughts and reflections I’ve been having on some of the earliest experiences I had with procedural content generation techniques, even if at the time of course I had no idea what to call these. This is something I’ve been thinking about for quite a…",
+   "lede": "This probably remains, to this day, my favourite fighting game. Set, if memory serves, a couple hundred years in the future, the game sees you controlling hundred-foot high robots in gladiatorial arenas, as part of the sport that has become the world’s favourite pastime (this was of course released long before the 2011 Hugh Jackman film “Real Steel” came out, and had basically the same idea – though I do…",
+   "words": 4927,
+   "images": 9,
+   "comments": 9,
+   "series": "interlude",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/07/20/ultima-ratio-regum-0-11-update-40-riddle-generation-7-instructions/",
+   "slug": "ultima-ratio-regum-0-11-update-40-riddle-generation-7-instructions",
+   "title": "Ultima Ratio Regum 0.11 Update #40: Riddle Generation 7: Instructions",
+   "published": "2025-07-20T13:11:55+00:00",
+   "modified": "2025-07-03T13:16:31+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Prompt Sentences",
+    "Reward Sentences",
+    "Riddle Generation for 0.11",
+    "What next?"
+   ],
+   "opening": "Hello everyone, and welcome back. This week we’re going to be talking about generating the poetry riddles for instructions in terms of what the player should do when they get to the right map tile where a secret can be found. The headline – I’m very pleased to say, after the challenges and frankly the semi-drudgery of working on the single-map-tile riddle clue generator – is that this generator has…",
+   "lede": "So, the first thing to do was to identify what sorts of actions the player can take, having arrived at the exactly correct location on the local map grid and on the world map grid, in order to activate or switch on secret. After a little bit of thought, I reasoned that there are basically eight options. They can use a shovel to dig into the ground; they can drop…",
+   "words": 3424,
+   "images": 8,
+   "comments": 2,
+   "series": "update",
+   "version": "0.11",
+   "number": 40
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/07/06/ultima-ratio-regum-0-11-update-39-riddle-generation-6-breakthrough/",
+   "slug": "ultima-ratio-regum-0-11-update-39-riddle-generation-6-breakthrough",
+   "title": "Ultima Ratio Regum 0.11 Update #39: Riddle Generation 6: Breakthrough!",
+   "published": "2025-07-06T01:07:00+00:00",
+   "modified": "2025-06-30T11:03:26+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "What next?"
+   ],
+   "opening": "Hello everyone, welcome back! Readers might recall that two entries ago I had made significant progress on the rhyming riddles for pointing the player towards a specific location on the world map – either by describing that location, or describing a location which is directly to the north, south, east, or west of that location, and then noting what direction it’s in and how far away it is. This is…",
+   "lede": "",
+   "words": 3060,
+   "images": 16,
+   "comments": 6,
+   "series": "update",
+   "version": "0.11",
+   "number": 39
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/06/21/ultima-ratio-regum-0-11-update-38-religious-books-maps-in-books-book-secrets/",
+   "slug": "ultima-ratio-regum-0-11-update-38-religious-books-maps-in-books-book-secrets",
+   "title": "Ultima Ratio Regum 0.11 Update #38: Religious Books, Maps in Books, Book Secrets",
+   "published": "2025-06-21T02:25:10+00:00",
+   "modified": "2025-06-21T02:25:13+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Religious and Cult Books",
+    "Maps in Books",
+    "Secrets in Books",
+    "What next?"
+   ],
+   "opening": "Hello everyone, and welcome to this fortnight’s entry. Here we consider several things. Firstly, we’ll take another look at the frontispieces of books. By this, I don’t mean the covers of books, but the first page you see when you open the book. As with the covers themselves, I really want these to be very varied, very distinctive, and stand out, to give the player the sense that each book…",
+   "lede": "First, let’s talk about the title pages in books. Readers will remember that a few entries ago I focused on the cover pages for most genres of books, whether they be biographies, histories, novels, research books, or anything else, really. I’m really happy with how those are looking, but there were two categories that I hadn’t yet got to – one being combat books, since I need a better sense…",
+   "words": 3512,
+   "images": 14,
+   "comments": 8,
+   "series": "update",
+   "version": "0.11",
+   "number": 38
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/06/09/ultima-ratio-regum-0-11-update-37-riddle-generation-5-specific-locations/",
+   "slug": "ultima-ratio-regum-0-11-update-37-riddle-generation-5-specific-locations",
+   "title": "Ultima Ratio Regum 0.11 Update #37: Riddle Generation 5: Specific Locations",
+   "published": "2025-06-09T11:21:49+00:00",
+   "modified": "2025-06-09T11:24:49+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Names to Ciphers",
+    "Other Things",
+    "What next?"
+   ],
+   "opening": "Hello everyone, and welcome back to the new fortnightly blog (sorry this one’s just a day late – had a health scare over the weekend, the first / worst I’ve had in a long time. I think things are going to be okay, but it really shook me up mentally / emotionally). This week is another update on the generation of the poetry riddles which are going to be the…",
+   "lede": "The main achievement here is that I now have a system which can take any name of anything on the world map, and convert it into a short version that hints at the name without explicitly giving get away. This was months of work, although I was of course working on other stuff at the same time as well. This took so long for several reasons. First and foremost, there…",
+   "words": 3745,
+   "images": 7,
+   "comments": 5,
+   "series": "update",
+   "version": "0.11",
+   "number": 37
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/05/24/ultima-ratio-regum-0-11-update-36-padlocks/",
+   "slug": "ultima-ratio-regum-0-11-update-36-padlocks",
+   "title": "Ultima Ratio Regum 0.11 Update #36: Padlocks",
+   "published": "2025-05-24T12:11:02+00:00",
+   "modified": "2025-05-24T14:08:23+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "One-Key Padlocks …",
+    "Multiple Keys …",
+    "Keys and Clues …",
+    "…and Combination Locks!",
+    "What next?"
+   ],
+   "opening": "Welcome, friends, to this week’s development blog for Padlock Simulator 2025 Ultima Ratio Regum. For the past little while now I’ve been working on generating padlocks as a way to draw attention to objectives for the player (especially a new player), to add even more visual flair, and also to give the player clues to the solutions of riddles and quests as well. These have been a lot of work…",
+   "lede": "The most basic sort of padlock is of course the one key padlock – which is to say a lock that has little special about it, and just requires a single key (which the player needs to find somewhere) to open. I’d anticipate the player encountering a lot of these in the early game, and obviously once the player has the required key they’ll be able to open it and…",
+   "words": 3358,
+   "images": 8,
+   "comments": 13,
+   "series": "update",
+   "version": "0.11",
+   "number": 36
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/05/10/ultima-ratio-regum-0-11-update-35-lots-of-book-progress/",
+   "slug": "ultima-ratio-regum-0-11-update-35-lots-of-book-progress",
+   "title": "Ultima Ratio Regum 0.11 Update #35: Lots of Book Progress",
+   "published": "2025-05-09T23:59:10+00:00",
+   "modified": "2025-05-09T23:59:13+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Book Generation",
+    "What next?",
+    "A final thing"
+   ],
+   "opening": "Hello everyone! Welcome back to the continuing, and new-and-improved, fortnightly Ultima Ratio Regum development blog update. As regular readers will know, we’ve really been cracking along in the last few months, with the development of an in-game tutorial, the development of a tutorial system, the removal of the in-game guidebook since was no longer required, major progress on generating books – useful for the journal in 0.11, and more broadly…",
+   "lede": "As I mentioned previously, it makes sense to do all of the generic book code in my testing file before then moving it fully over and integrating it into the game’s main file. What this means is that I’ve spent a few days in the last few weeks – while mostly working on riddle generation, of course – developing generators for the inside front pages of books. All books of…",
+   "words": 3287,
+   "images": 10,
+   "comments": 12,
+   "series": "update",
+   "version": "0.11",
+   "number": 35
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/04/26/ultima-ratio-regum-0-11-update-34-significant-mechanical-changes/",
+   "slug": "ultima-ratio-regum-0-11-update-34-significant-mechanical-changes",
+   "title": "Ultima Ratio Regum 0.11 Update #34: Significant Mechanical Changes",
+   "published": "2025-04-25T22:43:09+00:00",
+   "modified": "2025-04-25T22:43:13+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Mechanical Complexity",
+    "Desert, Polar Regions, Supplies",
+    "Money, Buying, Selling, Coinage",
+    "I’ve just acquired some money for a distant nation. Shall I go there now?",
+    "Progress",
+    "What next?"
+   ],
+   "opening": "Hello everyone, welcome back! This week we’re talking about some key gameplay mechanics, so let’s get into it:",
+   "lede": "So, firstly, I’ve had something of a revelation recently vis-à-vis the complexity of mechanics in games in general, and the required complexity of mechanics in URR. This revelation would go something like this – it’s fine to have a wildly complex central mechanic, or wildly demanding central mechanic if this is a real time game… but you really don’t want side mechanics to be wildly complex. This is one of…",
+   "words": 3051,
+   "images": 7,
+   "comments": 20,
+   "series": "update",
+   "version": "0.11",
+   "number": 34
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/04/12/ultima-ratio-regum-0-11-update-33-riddle-generation-4-poems/",
+   "slug": "ultima-ratio-regum-0-11-update-33-riddle-generation-4-poems",
+   "title": "Ultima Ratio Regum 0.11 Update #33: Riddle Generation 4: Poems",
+   "published": "2025-04-12T13:36:08+00:00",
+   "modified": "2025-04-12T13:36:33+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Civilization Riddles",
+    "Specific Location Riddles",
+    "Location-location",
+    "Orientation- location",
+    "Location -orientation",
+    "Orientation-orientation",
+    "What next?"
+   ],
+   "opening": "Hello everyone, welcome back! I do hope you all continue to enjoy the new fortnightly update schedule. After a few blog entries away from discussing the poetry riddle generation – this being the only type of riddle I’m promising to have released in 0.11, with the possibility of more if time allows – it’s time to get back to them. They remain a huge task with so many different layers…",
+   "lede": "Firstly, I’ve been doing a lot more work on the civilization aspect of the “location” category of riddles – as in, for 0.11, the first stanza or two that one would expect to find in a clue, letting you know which of the game’s civilizations you should be looking towards in order to solve the riddle. As noted in a recent blog post, these riddles can already draw on many…",
+   "words": 3214,
+   "images": 8,
+   "comments": 5,
+   "series": "update",
+   "version": "0.11",
+   "number": 33
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/03/30/ultima-ratio-regum-0-11-update-32-the-players-journal-1/",
+   "slug": "ultima-ratio-regum-0-11-update-32-the-players-journal-1",
+   "title": "Ultima Ratio Regum 0.11 Update #32: The Player’s Journal #1",
+   "published": "2025-03-29T13:32:16+00:00",
+   "modified": "2025-03-29T13:32:20+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Journal Generation",
+    "Player’s Activity Log",
+    "What next?"
+   ],
+   "opening": "Hello friends! Welcome back. I really do hope you have all been enjoying the more regular fortnightly updates recently. I’m pleased to say that – as of yet(!) – they are not stressing me out in the least, and are only helping to focus and drive 0.11 development. It’s good to have this fortnightly check in where something concrete and material has to actually have been achieved, while a full…",
+   "lede": "As mentioned in the last entry, I’ve been doing a lot of work on books. One really important aspect of this, as I said last time, is that the books will all be completely generated at world generation rather than created on-the-fly as the player plays the game. What this means is that we’ll be able to know exactly what page of a book anything appears on, and then integrate…",
+   "words": 4060,
+   "images": 7,
+   "comments": 11,
+   "series": "update",
+   "version": "0.11",
+   "number": 32
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/03/15/ultima-ratio-regum-0-11-update-31-continuing-notes-continuing-books/",
+   "slug": "ultima-ratio-regum-0-11-update-31-continuing-notes-continuing-books",
+   "title": "Ultima Ratio Regum 0.11 Update #31: Continuing Notes, Continuing Books",
+   "published": "2025-03-14T23:47:26+00:00",
+   "modified": "2025-03-15T08:42:07+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "What next?"
+   ],
+   "opening": "Hello everyone! Welcome back to the new and improved fortnightly URR blog update (for the time being, at least, though so far I can truthfully say that a slightly faster turnaround time has been only motivating, and not stressful – touch wood). Two entries ago I discussed in some detail the ongoing generation of the “poem” riddle archetype, which is going to the primary one for the forthcoming 0.11 release,…",
+   "lede": "",
+   "words": 4489,
+   "images": 14,
+   "comments": 10,
+   "series": "update",
+   "version": "0.11",
+   "number": 31
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/03/02/ultima-ratio-regum-0-11-update-30-tutorial-design/",
+   "slug": "ultima-ratio-regum-0-11-update-30-tutorial-design",
+   "title": "Ultima Ratio Regum 0.11 Update #30: Tutorial Design",
+   "published": "2025-03-02T12:05:00+00:00",
+   "modified": "2025-03-01T22:38:38+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "What next?"
+   ],
+   "opening": "Hello friends! This week I’m going to be covering a major addition for 0.11 – the implementation of a tutorial (and the replacement of the guidebook, too). This has been an exciting thing to develop because it really does signal this ongoing transformation from “cool detailed world without too much to actually do” into “game with actual objectives”, and has also been a really interesting design and coding challenge for…",
+   "lede": "",
+   "words": 3211,
+   "images": 15,
+   "comments": 7,
+   "series": "update",
+   "version": "0.11",
+   "number": 30
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/02/16/ultima-ratio-regum-0-11-update-29-riddle-generation-3-poems/",
+   "slug": "ultima-ratio-regum-0-11-update-29-riddle-generation-3-poems",
+   "title": "Ultima Ratio Regum 0.11 Update #29: Riddle Generation 3: Poems",
+   "published": "2025-02-16T01:27:11+00:00",
+   "modified": "2025-03-01T11:05:15+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "What next?"
+   ],
+   "opening": "Hello everyone! Welcome back. This week we’re going to be delving into the generation of one of the clue types, which is going to be the main clue type for the 0.11 release. In the screenshots I’ve shown off previously I just used some relatively simple placeholder generators in order to give a sense of what these clues should look like when generated, but it’s not time to build the…",
+   "lede": "",
+   "words": 4651,
+   "images": 15,
+   "comments": 11,
+   "series": "update",
+   "version": "0.11",
+   "number": 29
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/01/25/ultima-ratio-regum-0-11-update-28-quest-design-1/",
+   "slug": "ultima-ratio-regum-0-11-update-28-quest-design-1",
+   "title": "Ultima Ratio Regum 0.11 Update #28: Quest Design #1",
+   "published": "2025-01-25T22:24:09+00:00",
+   "modified": "2025-01-30T12:24:45+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "What next?"
+   ],
+   "opening": "(I’ve just posted a full summary of the year’s dev work on Reddit – you can check it out here!)",
+   "lede": "",
+   "words": 3340,
+   "images": 10,
+   "comments": 9,
+   "series": "update",
+   "version": "0.11",
+   "number": 28
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2025/01/05/some-games-i-played-in-2024-and-what-i-thought-of-them/",
+   "slug": "some-games-i-played-in-2024-and-what-i-thought-of-them",
+   "title": "Some Games I Played in 2024 and What I Thought Of Them",
+   "published": "2025-01-05T09:51:00+00:00",
+   "modified": "2025-01-18T09:10:59+00:00",
+   "categories": [
+    "Commentary",
+    "Game Design"
+   ],
+   "tags": [],
+   "sections": [
+    "Returnal",
+    "Skald: Against the Black Priory",
+    "Scorn",
+    "Loop Hero",
+    "Into the Breach (Mods)",
+    "Slay the Spire (Mods)",
+    "Zuzatan: The Forgotten City",
+    "Eldritchvania",
+    "The Sorcerer’s Detritus",
+    "Tunic",
+    "So there we have it!"
+   ],
+   "opening": "Welcome, friends, to 2024’s edition of “Some Games I Played in [Year] and What I Thought Of Them”!",
+   "lede": "Returnal is one of the rare, rare times, that a big company actually demonstrates they know what they’re doing when they make a game with lots of procedural content generation in it. I adore From Software’s games, but Bloodborne ‘s Chalice Dungeons are definitely not its strongest suit; I thought the new God of War was magnificent, but the Niflheim section didn’t exactly thrill. Returnal, however, absolutely knocks it out…",
+   "words": 8085,
+   "images": 15,
+   "comments": 8,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2024/12/14/ultima-ratio-regum-0-11-update-27-more-bug-fixing-and-0-10-3-release/",
+   "slug": "ultima-ratio-regum-0-11-update-27-more-bug-fixing-and-0-10-3-release",
+   "title": "Ultima Ratio Regum 0.11 Update #27: More Bug Fixing and 0.10.3 Release",
+   "published": "2024-12-14T21:38:49+00:00",
+   "modified": "2024-12-15T22:47:39+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Bugs resolved / polishes introduced:"
+   ],
+   "opening": "Hello everyone, welcome back! As we move towards the holiday period it’s going to be a short-ish post today – but a productive one. Firstly, here’s a list of all the bugs and whatnot fixed in the last few weeks…",
+   "lede": "…and now, I’m pleased to say that 0.10.3 is out! Given that I plan a massive fanfare for 0.11 (most on this to follow, but it includes a competition that only one person will be able to win…!) I’m keeping 0.10.3 pretty quiet, especially as it’s largely loads of polishes and improvements from 0.10.2, lots of new features and graphics, and the foundations for a lot of stuff that’s coming…",
+   "words": 1126,
+   "images": 4,
+   "comments": 26,
+   "series": "update",
+   "version": "0.11",
+   "number": 27
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2024/11/22/ultima-ratio-regum-0-11-update-26-more-bugs-and-more-polishing/",
+   "slug": "ultima-ratio-regum-0-11-update-26-more-bugs-and-more-polishing",
+   "title": "Ultima Ratio Regum 0.11 Update #26: More Bugs and More Polishing",
+   "published": "2024-11-22T23:45:58+00:00",
+   "modified": "2024-11-22T23:46:01+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Bug, tweaks, and changes:",
+    "What now?"
+   ],
+   "opening": "Hello everyone! Welcome back. Last time I unveiled a huge amount of the key features that’ll be appearing in 0.11 and the releases to follow, and so now we’re coming back down to earth a little bit to refocus back on the more everyday stuff. I’ve decided to try to get 0.10.3 released before the end of 2024, since almost the entirety of that version is there, and it’s really…",
+   "lede": "Whew! That’s a lot – it’s over 75% of the bugs I need to fix for the 0.10.3 release (and therefore, by extension, for 0.11). The remaining 25% of the bugs are amongst the harder ones, but I’m in a good rhythm now, and I’m confident I should be able to get this sorted, and 0.10.3 released, three weeks from now. Given the degree of fanfare and advertising I intend…",
+   "words": 3754,
+   "images": 9,
+   "comments": 12,
+   "series": "update",
+   "version": "0.11",
+   "number": 26
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2024/11/02/ultima-ratio-regum-0-11-update-25-riddle-generation-2/",
+   "slug": "ultima-ratio-regum-0-11-update-25-riddle-generation-2",
+   "title": "Ultima Ratio Regum 0.11 Update #25: Riddle Generation 2",
+   "published": "2024-11-02T09:34:18+00:00",
+   "modified": "2024-11-02T12:07:37+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Hello everyone and welcome! This is a really cool blog post I’ve been building up to for quite some time now, and I’m excited to finally show it off. To start with, longer-term readers will remember that about a year or so ago I showed off the initial steps in procedurally generated riddles – one of the key novel features at the core of this game – and indeed I…",
+   "lede": "",
+   "words": 6224,
+   "images": 33,
+   "comments": 13,
+   "series": "update",
+   "version": "0.11",
+   "number": 25
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2024/10/12/ultima-ratio-regum-0-11-update-24-brooches-statues-and-furniture/",
+   "slug": "ultima-ratio-regum-0-11-update-24-brooches-statues-and-furniture",
+   "title": "Ultima Ratio Regum 0.11 Update #24: Brooches,  Statues, Furniture and Mansions",
+   "published": "2024-10-12T03:31:21+00:00",
+   "modified": "2024-10-12T04:22:06+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Brooches",
+    "New gods",
+    "Furniture",
+    "Mansions and signs",
+    "What next?"
+   ],
+   "opening": "Hello everyone, and welcome back:). These last few weeks have been very productive on the coding front, and I’m pretty much ready now to show off major developments in quest generation and clue generation things of this sort. However, since this is a major development I really want to get it some proper attention when it comes out, and so I do need a another week or two to really…",
+   "lede": "First off, we have a rather lovely new jewellery item. For the longest while the two jewellery items in the game have been necklaces and rings. Necklaces would display things like social rank in a very hierarchic civilization, or just be artistic and pleasant and interesting in their own right. Rings could display a range of things, such as religious symbols, national flags, military ranks, and so on. Both of…",
+   "words": 3977,
+   "images": 27,
+   "comments": 7,
+   "series": "update",
+   "version": "0.11",
+   "number": 24
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2024/09/21/ultima-ratio-regum-0-11-update-23-universities-masks-statues-and-clues/",
+   "slug": "ultima-ratio-regum-0-11-update-23-universities-masks-statues-and-clues",
+   "title": "Ultima Ratio Regum 0.11 Update #23: Universities, Masks, Statues and Clues",
+   "published": "2024-09-21T23:55:13+00:00",
+   "modified": "2024-10-04T02:20:13+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Universities Part II",
+    "Masks Part II",
+    "Face statues",
+    "Categorising clues",
+    "To conclude:"
+   ],
+   "opening": "Hello everyone, and welcome to this week’s URR update! It has been lovely to see all the positive feedback to the previous update, both here and on the various other sites where I post it, and I also of course appreciate the critiques, the comments, the alternative suggestions, and so on. All these things are really essential to polishing the game to the highest level I can get it, and…",
+   "lede": "Last week’s main update was of course looking at universities. I talked about how the universities were generated in terms of location and name, how the actual map tile the university sits on is generated, then the main buildings we’re looking at – a great hall, classrooms, student accommodation, and any specific national religious or cultural things which should be included in a given university campus. We also looked inside…",
+   "words": 3925,
+   "images": 23,
+   "comments": 14,
+   "series": "update",
+   "version": "0.11",
+   "number": 23
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2024/09/01/ultima-ratio-regum-0-11-update-22-universities/",
+   "slug": "ultima-ratio-regum-0-11-update-22-universities",
+   "title": "Ultima Ratio Regum 0.11 Update #22: Universities",
+   "published": "2024-09-01T03:00:58+00:00",
+   "modified": "2024-09-01T03:01:00+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Universities",
+    "Great hall",
+    "Classrooms",
+    "Student accommodation",
+    "Library",
+    "Halls of worship",
+    "Museum",
+    "Final thoughts"
+   ],
+   "opening": "Those who are long term readers will know that I’ve been working on procedurally generating universities for a while now, with the intention of this now being the place where the player starts, both in the next versions (0.10.3 / 0.11) and indefinitely into the future. I wasn’t expecting this to be this week’s blog post however, but the other two which are currently part-written are not finished, and there…",
+   "lede": "For a while now starting outside an upper-class building in a city district hasn’t really necessarily meant a great deal in terms of conveying information to the player and giving some sense of what they’re doing and what they’re meant to be doing, so I thought the time had come to make a major change here. In some recent previous blog posts I had commented on the intention to shift…",
+   "words": 4765,
+   "images": 45,
+   "comments": 13,
+   "series": "update",
+   "version": "0.11",
+   "number": 22
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2024/08/11/ultima-ratio-regum-0-11-update-21-bugs-and-polishing/",
+   "slug": "ultima-ratio-regum-0-11-update-21-bugs-and-polishing",
+   "title": "Ultima Ratio Regum 0.11 Update #21: Bugs and Polishing",
+   "published": "2024-08-11T00:49:53+00:00",
+   "modified": "2024-08-12T00:54:37+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Bug, tweaks, and changes:",
+    "What next?"
+   ],
+   "opening": "So this week – in a similar vein to alternating for the last few updates between big new features and additions, and polishing and tweaking and completing existing features – we are swinging back away from last week’s massive bunch of new items, to a major process of fixing and improving existing things. The number of bugs at present had reached the level where over 100 were being tracked on…",
+   "lede": "So, there we are! Almost a full hundred bugs resolved or minor fixes deployed, or minor additions added (what else would an addition be?), and my list of these small issues to resolve has been significantly shortened – although I confess it still remains intimidatingly large, even if it is far less so than was the case three months ago. This is not the only mega bug purge required at…",
+   "words": 3594,
+   "images": 9,
+   "comments": 10,
+   "series": "update",
+   "version": "0.11",
+   "number": 21
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2024/07/21/ultima-ratio-regum-0-11-update-20-items-items-items/",
+   "slug": "ultima-ratio-regum-0-11-update-20-items-items-items",
+   "title": "Ultima Ratio Regum 0.11 Update #20: Items, Items, Items!",
+   "published": "2024-07-21T10:44:00+00:00",
+   "modified": "2024-07-02T01:46:30+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "What next?"
+   ],
+   "opening": "Hello friends! This week is all new items – so, get ready! There’s a lot, I think they’re all lovely to look at and have really interesting generators, and they fill in a lot of gaps and add a lot of new mechanics as well, so without further ado:",
+   "lede": "",
+   "words": 4264,
+   "images": 34,
+   "comments": 11,
+   "series": "update",
+   "version": "0.11",
+   "number": 20
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2024/06/30/ultima-ratio-regum-0-11-update-19-halting-the-sprawl-part-2-of-2/",
+   "slug": "ultima-ratio-regum-0-11-update-19-halting-the-sprawl-part-2-of-2",
+   "title": "Ultima Ratio Regum 0.11 Update #19: Halting the Sprawl (Part 2 of 2)",
+   "published": "2024-06-30T09:28:27+00:00",
+   "modified": "2024-06-30T09:28:29+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Religious donations",
+    "Religious rewards",
+    "Naming oases",
+    "Improving chests",
+    "Additional face generation",
+    "Finishing off throwing",
+    "Firing",
+    "Missing items (partially)",
+    "World generation",
+    "What next?"
+   ],
+   "opening": "Welcome back to the second half in the recent and critically-acclaimed halting the sprawl series, in which I try to resist the urge to keep adding new features while the other features are only 95% done, and instead take the time to ensure that new features I’ve been working on this year and last are actually completely finished before I move onto the next exciting, shiny bauble. I will fully…",
+   "lede": "Firstly, we come to making sure all possible religious donations are implemented. This wasn’t fully in place when I released the previous religion post – some were, but some were not – simply because there are just so many possibilities here (once more I curse myself with the level of variation and difference I am determined to consistently add into the game). The code for donating alcohols to religions that…",
+   "words": 4119,
+   "images": 45,
+   "comments": 8,
+   "series": "update",
+   "version": "0.11",
+   "number": 19
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2024/06/09/ultima-ratio-regum-0-11-update-18-staves-chats-hands-sphinxes-and-ponderings/",
+   "slug": "ultima-ratio-regum-0-11-update-18-staves-chats-hands-sphinxes-and-ponderings",
+   "title": "Ultima Ratio Regum 0.11 Update #18: Staves, Chats, Hands, Sphinxes, and Ponderings",
+   "published": "2024-06-09T13:26:00+00:00",
+   "modified": "2024-05-27T13:30:44+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "ITEM INTERACTIONS",
+    "RELIGIONS",
+    "QUEST THREAD FROM START TO END",
+    "OTHER STUFF",
+    "MORE OPTMIZATIONS / BUG FIXING / POLISHING",
+    "Staves",
+    "Conversation system",
+    "Hands",
+    "Mysteriousness",
+    "Release schedule",
+    "What next?",
+    "Thanks so much for reading, everyone:)."
+   ],
+   "opening": "Welcome back everyone! A hugely productive three weeks this time around with a ton of new graphics, a new of new quest stuff, a ton of updates and improvements over existing features, and I think it’s all pretty fantastic, honestly. Firstly though, here’s the updated current status of 0.11’s development, where BLUE denotes something finished and GREEN denotes something currently being worked on. I have updated this significantly since the…",
+   "lede": "So it turns out I wasn’t quite done with religions just yet. I’ve now added a number of really, really cool generators for creating unique staves for each religion which priests, abbots, and (later) religious leaders and inquisitors will carry with them (the average believer will not, and the average monk in a monastery will not, as they are presumably too busy illustrating a manuscript to lug around a great…",
+   "words": 4386,
+   "images": 44,
+   "comments": 13,
+   "series": "update",
+   "version": "0.11",
+   "number": 18
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2024/05/19/ultima-ratio-regum-0-11-update-17-halting-the-sprawl-part-1-of-2/",
+   "slug": "ultima-ratio-regum-0-11-update-17-halting-the-sprawl-part-1-of-2",
+   "title": "Ultima Ratio Regum 0.11 Update #17: Halting the Sprawl (Part 1 of 2)",
+   "published": "2024-05-19T01:29:45+00:00",
+   "modified": "2024-05-12T01:31:16+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Naming farms and slums",
+    "Updated map viewer",
+    "Finishing off relics",
+    "Volcanoes!",
+    "Mesas and chasms",
+    "Desert tombs",
+    "Notes",
+    "Elite fighting groups",
+    "Chests",
+    "What next?"
+   ],
+   "opening": "Hello everyone! Welcome back. Over the past few weeks I’ve noticed that the situation I find is that a lot of the new features for 0.11 are 90% done, or even more so, but aren’t totally finished, or still have a few bugs, or things of this sort – and I’ve realized that I really (psychologically) need to get these sorted out before I can go any further. As such,…",
+   "lede": "Firstly, we return to the map and the world detail. Much of the world map has been named in detail until now, but a few things were missing, so I’ve gone back and designed generators for all of those. The first thing was farms, so there are now a half-dozen farm name “archetypes” and within each archetypes, thousands or millions of permutations. Here’s an example of a large number of…",
+   "words": 2526,
+   "images": 38,
+   "comments": 13,
+   "series": "update",
+   "version": "0.11",
+   "number": 17
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2024/04/28/ultima-ratio-regum-0-11-update-16-finishing-religions/",
+   "slug": "ultima-ratio-regum-0-11-update-16-finishing-religions",
+   "title": "Ultima Ratio Regum 0.11 Update #16: Finishing Religions",
+   "published": "2024-04-28T03:06:23+00:00",
+   "modified": "2024-05-05T10:00:28+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "ITEM INTERACTIONS",
+    "RELIGIONS",
+    "TREASURE MAPS",
+    "OTHER STUFF",
+    "MORE OPTMIZATIONS / BUG FIXING / POLISHING",
+    "Everything remaining for religions",
+    "What next?"
+   ],
+   "opening": "Hello everyone! A ton of exciting and cool stuff to cover this week, and thank you for being patient while I put this entry together. There has still been even more admin and bureaucratic stuff to deal with involved in owning a home for the first time (even just a cozy little one-bed flat!) and that stuff has been taking up a lot of my time – although it is,…",
+   "lede": "So firstly, you can now properly join a religion. By joining here I mean sort of officially declaring oneself to be a worshipper, rather than being someone who might indeed enter their religious buildings, and indeed even say their prayers (see the previous entry for some really rather excellent procedurally generated prayers). By joining, therefore, what I really mean is performing some kind of ritual or some kind of act…",
+   "words": 2438,
+   "images": 22,
+   "comments": 14,
+   "series": "update",
+   "version": "0.11",
+   "number": 16
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2024/03/23/ultima-ratio-regum-0-11-update-15-shurikens-prayers-masks-names/",
+   "slug": "ultima-ratio-regum-0-11-update-15-shurikens-prayers-masks-names",
+   "title": "Ultima Ratio Regum 0.11 Update #15: Shurikens, Prayers, Masks, Names",
+   "published": "2024-03-23T08:57:23+00:00",
+   "modified": "2024-03-23T08:57:26+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "ITEM INTERACTIONS",
+    "RELIGIONS",
+    "TREASURE MAPS",
+    "OTHER STUFF",
+    "MORE OPTMIZATIONS / BUG FIXING / POLISHING",
+    "Throwing weapons",
+    "And here are some of the weapons in my inventory:",
+    "Generating prayers for generated religions",
+    "Crocodile God, within the “animal god” archetype:",
+    "Demonic God, within the devil / inferno god archetype:",
+    "“Normal” God, in this case a god whose myth is focused on rebirth:",
+    "Lovecraftian God, in this case one with many arms:",
+    "Pantheon Gods, in this case a set who are a court with a focus on the cold:",
+    "Masks",
+    "Naming places",
+    "0.11 Remaining Stuff",
+    "Bugs, polishes, and the like",
+    "Home update",
+    "What next?"
+   ],
+   "opening": "Welcome back to regular updates, friends! A really exciting set of both gameplay and worldbuilding updates this month, so let’s get to them. Firstl y, here’s the updated current status of 0.11’s development, where BLUE denotes something finished and GREEN denotes something currently being worked on:",
+   "lede": "Another inch towards combat in 0.12 (I continue trying to work these in wherever I can) is the introduction of throwing weapons. In the previous update I mentioned when discussing the generation of the name and details of elite military forces for various nations and cultures that some of them would have something “special” alongside their use of a primary weapon and some kind of armour, and one of those…",
+   "words": 4393,
+   "images": 31,
+   "comments": 16,
+   "series": "update",
+   "version": "0.11",
+   "number": 15
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2024/02/21/ultima-ratio-regum-0-11-update-14-interludus-continuus/",
+   "slug": "ultima-ratio-regum-0-11-update-14-interludus-continuus",
+   "title": "Ultima Ratio Regum 0.11 Update #14: Interludus Continuus",
+   "published": "2024-02-21T10:05:29+00:00",
+   "modified": "2024-02-21T16:43:27+00:00",
+   "categories": [
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Just wanted to give you all another brief update. I am pleased to report that I have signed on buying a flat here in Sydney! It’s very spacious, on a high floor of a tall and attractive building, has a nice big balcony with a great view, and is actually significantly cheaper than my “max”, which is an additional nice little part of the whole deal. Barring any catastrophes (e.g.…",
+   "lede": "",
+   "words": 262,
+   "images": 2,
+   "comments": 7,
+   "series": "update",
+   "version": "0.11",
+   "number": 14
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2024/01/24/ultima-ratio-regum-0-11-update-13-a-brief-interlude/",
+   "slug": "ultima-ratio-regum-0-11-update-13-a-brief-interlude",
+   "title": "Ultima Ratio Regum 0.11 Update #13: A Brief Interlude",
+   "published": "2024-01-24T01:18:09+00:00",
+   "modified": "2024-01-24T01:19:35+00:00",
+   "categories": [
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Welcome to a very short URRpdate entry. Specifically, this is just one to say – this month unfortunately isn’t going to come with a full-sized update. This is because I am currently embarking on a major life project, which is to say, buying a home for the first time. Those of you who have done this will know this is a huge thing to contemplate – especially first time around…",
+   "lede": "",
+   "words": 408,
+   "images": 3,
+   "comments": 9,
+   "series": "update",
+   "version": "0.11",
+   "number": 13
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2024/01/06/some-games-i-played-in-2023-and-what-i-thought-of-them/",
+   "slug": "some-games-i-played-in-2023-and-what-i-thought-of-them",
+   "title": "Some Games I Played in 2023 and What I Thought Of Them",
+   "published": "2024-01-06T01:41:58+00:00",
+   "modified": "2024-01-06T01:42:01+00:00",
+   "categories": [
+    "Commentary"
+   ],
+   "tags": [],
+   "sections": [
+    "La-Mulana 2",
+    "Horizon Zero Dawn",
+    "Cannon Fodder II",
+    "Into the Breach (Advanced Edition)",
+    "Environmental Station Alpha",
+    "Sonic Dreams Collection",
+    "Civilization",
+    "Heavenly Bodies",
+    "Enter the Gungeon",
+    "Hollow Knight",
+    "Don’t Starve Together (continued)",
+    "Noita",
+    "In summary:"
+   ],
+   "opening": "Welcome to 2023’s edition of “Some Games I Played in [Year] and What I Thought Of Them”! This has been a very busy year for me – much of the time was spent applying for, and subsequently getting (phew!), both promotion (to “Senior Lecturer”, roughly equivalent to Associate Professor in North America) and tenure at my university, as well as writing and editing a book – simply called “Twitch” and…",
+   "lede": "You know something, friends? I really thought this was going to be my favourite game of the year.",
+   "words": 8900,
+   "images": 19,
+   "comments": 8,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2023/12/19/ultima-ratio-regum-0-11-update-12-relics-weapons-clockwork/",
+   "slug": "ultima-ratio-regum-0-11-update-12-relics-weapons-clockwork",
+   "title": "Ultima Ratio Regum 0.11 Update #12: Relics, Weapons, Clockwork",
+   "published": "2023-12-19T01:24:00+00:00",
+   "modified": "2023-12-25T05:37:41+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "ITEM INTERACTIONS",
+    "RELIGIONS",
+    "TREASURE MAPS",
+    "OTHER STUFF",
+    "MORE OPTMIZATIONS / BUG FIXING / POLISHING",
+    "Relics",
+    "Elite forces",
+    "Weapons, Shields",
+    "Clockwork",
+    "Time, hair, eyes, loading",
+    "Bugs, etc",
+    "What next?"
+   ],
+   "opening": "Welcome back friends! A few really juicy updates this week. First, here’s the (updated) current status of 0.11’s development, where BLUE denotes something finished and GREEN denotes something currently being worked on:",
+   "lede": "Religious relics are now finished, and integrated into the game! This has been a big task, but they’re looking interesting and striking throughout the game world, and can now begin to take their place as a major potential element for quests and riddles and the like, a key element of worldbuilding, and potentially more besides. There were many stages to this in the last few weeks…",
+   "words": 3774,
+   "images": 24,
+   "comments": 6,
+   "series": "update",
+   "version": "0.11",
+   "number": 12
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2023/11/18/ultima-ratio-regum-0-11-update-11/",
+   "slug": "ultima-ratio-regum-0-11-update-11",
+   "title": "Ultima Ratio Regum 0.11 Update #11: Throwing, Snowing, and Going (Bounty Hunting)",
+   "published": "2023-11-18T15:38:37+00:00",
+   "modified": "2023-11-18T15:41:03+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "ITEM INTERACTIONS",
+    "RELIGIONS",
+    "TREASURE MAPS",
+    "OTHER STUFF",
+    "MORE OPTMIZATIONS / BUG FIXING / POLISHING",
+    "Throwing",
+    "Visual effects",
+    "Wanted posters",
+    "Canteens",
+    "Unpleasantness",
+    "Removing storage, removing weight, updating inventory",
+    "Bookmarks",
+    "New & updated features & graphics",
+    "Final god statues",
+    "And lastly…",
+    "Bugs, polishes, etc",
+    "What next?"
+   ],
+   "opening": "Firstly, most of you will be aware that around a month ago I spoke at this year’s Roguelike Celebration, essentially about the previous blog update, and now here’s the video:). Enjoy!",
+   "lede": "And now let’s get started with this month’s updates, which are many, and very diverse, and really quite cool:",
+   "words": 5740,
+   "images": 52,
+   "comments": 12,
+   "series": "update",
+   "version": "0.11",
+   "number": 11
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2023/10/21/ultima-ratio-regum-0-11-update-10-riddle-generation-1/",
+   "slug": "ultima-ratio-regum-0-11-update-10-riddle-generation-1",
+   "title": "Ultima Ratio Regum 0.11 Update #10: Riddle Generation 1",
+   "published": "2023-10-21T14:43:23+00:00",
+   "modified": "2023-10-22T18:10:26+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Text Riddles",
+    "Letter Riddles",
+    "Other Riddles",
+    "Writings on the wall",
+    "Book presentation",
+    "And finally…",
+    "0.10.2 Released!",
+    "MASSIVE AMOUNT OF BUGFIXING",
+    "What’s next?"
+   ],
+   "opening": "I normally start each blog post with an update about 0.11’s development status in terms of what is finished, what is being done, what has not yet been started, and so forth, but this week I’m unveiling progress on something so novel and interesting that I’m going to skip that and get straight to the point. At the Roguelike Celebration this week I’m giving a talk about the initial stages…",
+   "lede": "Ultima Ratio Regum can now (begin to) generate actual textual riddles, which actually point to real locations in the world map, but do so in a suitably cryptic and multi-layered way. Here’s an example of what one of these might look like, on the new “note” item type:",
+   "words": 5011,
+   "images": 20,
+   "comments": 18,
+   "series": "update",
+   "version": "0.11",
+   "number": 10
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2023/09/30/ultima-ratio-regum-0-11-update-9-death-keys-statues-messages-weather/",
+   "slug": "ultima-ratio-regum-0-11-update-9-death-keys-statues-messages-weather",
+   "title": "Ultima Ratio Regum 0.11 Update #9: Death, Keys, Statues, Messages, Weather",
+   "published": "2023-09-30T14:20:31+00:00",
+   "modified": "2025-08-10T09:10:21+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "ITEM INTERACTIONS",
+    "RELIGIONS",
+    "TREASURE MAPS",
+    "OTHER STUFF",
+    "MORE OPTMIZATIONS / BUG FIXING / POLISHING",
+    "Death",
+    "Keys",
+    "Open areas and fast travel",
+    "New statues",
+    "Food and survival",
+    "Complete redevelopment of message system",
+    "Sidebar, weather, and moon",
+    "World gen polish",
+    "0.10.2 is coming",
+    "Bugs and polishes",
+    "What next?"
+   ],
+   "opening": "Firstly, before anything else, I am speaking at this year’s Roguelike Celebration. Here’s the info about my talk:",
+   "lede": "Firstly, the player can now perish if the number of years they spend on earth simply becomes too high. However, I don’t want this to be something that just happens suddenly as that would be only frustrating (you’ve had a character for 50 in-game years, you’re just approaching the end of a core quest, and then your character suddenly keels over and you’re done), so I gave some thought about…",
+   "words": 5557,
+   "images": 32,
+   "comments": 16,
+   "series": "update",
+   "version": "0.11",
+   "number": 9
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2023/09/09/ultima-ratio-regum-0-11-update-8-faces-wounds-altars-travel-diseases/",
+   "slug": "ultima-ratio-regum-0-11-update-8-faces-wounds-altars-travel-diseases",
+   "title": "Ultima Ratio Regum 0.11 Update #8: Faces, Wounds, Altars, Travel, Diseases",
+   "published": "2023-09-09T09:00:59+00:00",
+   "modified": "2024-10-24T22:24:11+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "ITEM INTERACTIONS",
+    "RELIGIONS",
+    "TREASURE MAPS",
+    "MORE OPTMIZATIONS / BUG FIXING / POLISHING",
+    "New face variation",
+    "Body status",
+    "Item interactions",
+    "Reworked pantheon altars",
+    "Indoor bookmarking and fast travel",
+    "New generated religious relics",
+    "Bugs and the like",
+    "What next?"
+   ],
+   "opening": "Big gameplay progress this week and a whole ton of worldbuilding stuff too alongside the usual suite of bugs and minor issues resolved, so let’s get right into it.",
+   "lede": "We added faces back in 0.8 but I increasingly feel that there’s just not quite enough variation here, especially when you’re talking to lots of people within a given culture and seeing lots of faces which do end up looking a little bit similar. The core issue here is that many of the super-rare facial variations – slave collars, slave brands, facial tattoos, scarification, and so on – are very…",
+   "words": 4675,
+   "images": 50,
+   "comments": 8,
+   "series": "update",
+   "version": "0.11",
+   "number": 8
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2023/08/07/ultima-ratio-regum-0-11-update-7-allegiances-eldritch-horrors-and-fast-travel/",
+   "slug": "ultima-ratio-regum-0-11-update-7-allegiances-eldritch-horrors-and-fast-travel",
+   "title": "Ultima Ratio Regum 0.11 Update #7: Allegiances, Eldritch Horrors, and Time Travel",
+   "published": "2023-08-07T06:22:49+00:00",
+   "modified": "2023-08-08T00:49:20+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "ITEM INTERACTIONS",
+    "RELIGIONS",
+    "TREASURE MAPS",
+    "MORE OPTMIZATIONS / BUG FIXING / POLISHING",
+    "Factions",
+    "Lovecraftian and nature god statues",
+    "Waiting",
+    "Bug fixing etc",
+    "What next?"
+   ],
+   "opening": "Hello everyone, welcome back! Lots of progress this month, so let’s get to it. Here’s the current status of 0.11’s development, where BLUE denotes something finished and GREEN denotes something currently being worked on:",
+   "lede": "You’ll see a great deal more green in the religions area – which is what I’ll be starting off with this week – and we’ve also moved closer again to completing the first objective in the religions set, as well as making a lot of progress in other areas as well. So, to begin with:",
+   "words": 4845,
+   "images": 21,
+   "comments": 6,
+   "series": "update",
+   "version": "0.11",
+   "number": 7
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2023/07/12/ultima-ratio-regum-0-11-update-6-relics-lands-and-statues/",
+   "slug": "ultima-ratio-regum-0-11-update-6-relics-lands-and-statues",
+   "title": "Ultima Ratio Regum 0.11 Update #6: Relics, Lands, and Statues",
+   "published": "2023-07-12T06:07:15+00:00",
+   "modified": "2023-07-12T06:07:16+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "ITEM INTERACTIONS",
+    "RELIGIONS",
+    "TREASURE MAPS",
+    "MORE OPTMIZATIONS / BUG FIXING / POLISHING",
+    "Religious relics",
+    "Chasms and abysses",
+    "Statues",
+    "Mesas",
+    "Lower class housing",
+    "Bugs, fixes, etc (a lot this time!)",
+    "What next?"
+   ],
+   "opening": "Hello everyone, welcome back! 0.11 continues to crack along at a, er, cracking pace, and I’ve got a whole bunch of great updates for you this week. The last update was heavily focused on the development of some of the core mechanics, and this week I’ve gone back to further expanding the world that all these take place in. Here’s the current status of 0.11’s development, where BLUE denotes something…",
+   "lede": "As ever, if you enjoy these posts, please do think about sharing them around the internet, or on forums, or tweeting it out, or to fellow gamers who might be interested – it takes a heck of a lot of effort to write these things up and I really do appreciate it a ton. (And please do leave a comment!)",
+   "words": 4154,
+   "images": 27,
+   "comments": 19,
+   "series": "update",
+   "version": "0.11",
+   "number": 6
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2023/06/03/ultima-ratio-regum-0-11-update-5-relics-crowns-and-buildings/",
+   "slug": "ultima-ratio-regum-0-11-update-5-relics-crowns-and-buildings",
+   "title": "Ultima Ratio Regum 0.11 Update #5: Relics, Crowns and Buildings",
+   "published": "2023-06-03T02:17:47+00:00",
+   "modified": "2023-06-03T02:17:48+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "ITEM INTERACTIONS",
+    "RELIGIONS",
+    "TREASURE MAPS",
+    "MORE OPTMIZATIONS / BUG FIXING / POLISHING",
+    "Procedurally generated religious relics",
+    "Shovels and pickaxes",
+    "Items you don’t own",
+    "Crown Generation",
+    "Castle exteriors and castle courtyards",
+    "Additional world generation screen",
+    "New buildings",
+    "Bugs and miscellany",
+    "What next?"
+   ],
+   "opening": "Hello everyone! Welcome back – I do hope you’re all enjoying these regular updates:). I certainly am. To begin with here’s the latest update on progress, where BLUE denotes something finished and GREEN denotes something currently being worked on:",
+   "lede": "As ever, if you enjoy these posts, please do think about sharing them around the internet, or on forums, or tweeting it out, or to fellow gamers who might be interested – it takes a heck of a lot of effort to write these things up and I really do appreciate it a ton. And please do leave a comment if you feel inclined!",
+   "words": 3103,
+   "images": 26,
+   "comments": 6,
+   "series": "update",
+   "version": "0.11",
+   "number": 5
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2023/05/11/ultima-ratio-regum-0-11-update-4-buried-treasure/",
+   "slug": "ultima-ratio-regum-0-11-update-4-buried-treasure",
+   "title": "Ultima Ratio Regum 0.11 Update #4: Buried Treasure",
+   "published": "2023-05-11T04:50:59+00:00",
+   "modified": "2024-03-28T01:29:45+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "ITEM INTERACTIONS",
+    "RELIGIONS",
+    "TREASURE MAPS",
+    "MORE OPTMIZATIONS / BUG FIXING / POLISHING",
+    "Treasure Maps",
+    "What next?"
+   ],
+   "opening": "Hello everyone, welcome back! This fortnight’s update is entirely about some huge developments on hunting down treasure in the game. First though, here’s where things currently stand on 0.11 development, with BLUE items being things which are finished and GREEN items being those that are partly developed. As you can see, things are cracking along nicely:",
+   "lede": "Today though it’s all about treasure maps – for a game about solving procedurally-generated mysteries, puzzles and riddles, having the player be able to hunt down specific areas on such a vast world map is an essential part, and will be part of the win condition finally finding its way into URR in 0.11! As ever, if you enjoy these posts, please do think about sharing them around the internet,…",
+   "words": 2450,
+   "images": 22,
+   "comments": 11,
+   "series": "update",
+   "version": "0.11",
+   "number": 4
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2023/04/01/ultima-ratio-regum-0-11-update-3/",
+   "slug": "ultima-ratio-regum-0-11-update-3",
+   "title": "Ultima Ratio Regum 0.11 Update #3",
+   "published": "2023-04-01T01:07:00+00:00",
+   "modified": "2023-04-01T01:07:01+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "ITEM INTERACTIONS",
+    "RELIGIONS",
+    "TREASURE MAPS",
+    "MORE OPTMIZATIONS / BUG FIXING / POLISHING",
+    "Procedural relic generation",
+    "Indoor general messages",
+    "Chest generation",
+    "Religion rework begins",
+    "New civilization names",
+    "Crown names",
+    "Using items",
+    "Bugs etc"
+   ],
+   "opening": "Hello everyone! Welcome back – I do hope you’re all enjoying these regular updates:). I certainly am. To begin with here’s the latest update on progress, where BLUE denotes something finished and GREEN denotes something currently being worked on:",
+   "lede": "As ever, if you enjoy these posts, please do think about sharing them around the internet, or on forums, or tweeting it out, or to fellow gamers who might be interested – it takes a heck of a lot of effort to write these things up and I really do appreciate it a ton.",
+   "words": 5056,
+   "images": 19,
+   "comments": 2,
+   "series": "update",
+   "version": "0.11",
+   "number": 3
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2023/03/11/ultima-ratio-regum-0-11-update-2/",
+   "slug": "ultima-ratio-regum-0-11-update-2",
+   "title": "Ultima Ratio Regum 0.11 Update #2",
+   "published": "2023-03-11T01:34:07+00:00",
+   "modified": "2024-10-25T04:00:19+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Uncategorized",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "ITEM INTERACTIONS",
+    "RELIGIONS",
+    "TREASURE MAPS",
+    "MORE OPTMIZATIONS / BUG FIXING / POLISHING",
+    "Procedural relic generation",
+    "Item Interaction Choices",
+    "Dropping and Picking Up",
+    "Presenting",
+    "Destroying",
+    "Guidebook update",
+    "Bugs etc",
+    "What next?"
+   ],
+   "opening": "To begin with, let’s take stock. I think I’ll make this a thing at the start of each update from now on for this year and see how that goes. The colour-coding is going to be that GREEN is something I am now working on, BLUE is something done, and BLACK is something I haven’t yet started on. So, here’s where I am at the point of publishing this entry:",
+   "lede": "So as you can see, quite a bit of new progress (those first blues) since last time, and also more progress has been done on the relics, and on bug-fixing, and on a few other minor things as well. So let’s get to it (and as ever, if you enjoy these blog entries, please do think about posting them online in places where others might be interested in them! These…",
+   "words": 2708,
+   "images": 15,
+   "comments": 6,
+   "series": "update",
+   "version": "0.11",
+   "number": 2
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2023/02/25/ultima-ratio-regum-0-11-update-1/",
+   "slug": "ultima-ratio-regum-0-11-update-1",
+   "title": "Ultima Ratio Regum 0.11 Update #1",
+   "published": "2023-02-25T12:16:17+00:00",
+   "modified": "2023-02-25T12:16:19+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Welcome to the first update for Ultima Ratio Regum 0.11.",
+    "0.11 Plans",
+    "ITEM INTERACTIONS",
+    "RELIGIONS",
+    "TREASURE MAPS",
+    "MORE OPTMIZATIONS / BUG FIXING / POLISHING",
+    "Procedural Relic Generation",
+    "Item Use Options",
+    "City centre improvements",
+    "Survival items actually help survival",
+    "And lastly:",
+    "Bugs and minor fixes",
+    "What’s next?"
+   ],
+   "opening": "Whereas 0.10 was a small release focused primarily on fixing a lot of bugs, optimising a huge amount of code, and adding in a few new features such as plant generation, survival, death, some new items, and bookmarks and fast travel, 0.11 is focused on finally (after 11 years!) introducing a core objective. In the longer term this core objective – solving a treasure map – will be only one…",
+   "lede": "",
+   "words": 3801,
+   "images": 18,
+   "comments": 6,
+   "series": "update",
+   "version": "0.11",
+   "number": 1
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2023/02/12/ultima-ratio-regum-0-10-released/",
+   "slug": "ultima-ratio-regum-0-10-released",
+   "title": "Ultima Ratio Regum 0.10 Released!",
+   "published": "2023-02-12T14:31:49+00:00",
+   "modified": "2023-02-12T14:32:02+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Ultima Ratio Regum 0.10",
+    "Released!",
+    "MAJOR FEATURES:",
+    "PLAY IT:",
+    "You can download it here.",
+    "THE FUTURE:"
+   ],
+   "opening": "This is a smaller release with a focus on polishing and optimizing many game systems, as well as implementing a handful of new features that will stand the game in good stead going forward. Specifically:",
+   "lede": "",
+   "words": 833,
+   "images": 6,
+   "comments": 21,
+   "series": "urr",
+   "version": "0.10",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2023/02/04/ultima-ratio-regum-0-10-update-8/",
+   "slug": "ultima-ratio-regum-0-10-update-8",
+   "title": "Ultima Ratio Regum 0.10 Update #8",
+   "published": "2023-02-04T02:08:52+00:00",
+   "modified": "2023-02-04T02:08:55+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Well, I think we’re basically done! I have three extremely minor bugs to fix and aside from that I’m just playtesting. I was hoping to release today but we’re just not quite there – it is now going to be next week, but 0.10 is essentially finished. I’m just playing and playing and testing and testing and having a few friends and colleagues test as well to make sure the…",
+   "lede": "",
+   "words": 298,
+   "images": 5,
+   "comments": 2,
+   "series": "update",
+   "version": "0.10",
+   "number": 8
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2023/01/22/ultima-ratio-regum-0-10-update-7/",
+   "slug": "ultima-ratio-regum-0-10-update-7",
+   "title": "Ultima Ratio Regum 0.10 Update #7",
+   "published": "2023-01-22T09:50:30+00:00",
+   "modified": "2023-01-22T09:50:33+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Death",
+    "Number items and weight",
+    "Religious issues",
+    "On foot",
+    "Fungus",
+    "Bugs and the like",
+    "What next?"
+   ],
+   "opening": "Welcome back, friends! This is probably now the final (or penultimate) update before release, which I am tentatively going to schedule for the first week of February. A slightly slower couple of weeks this time as there has been a lot of start of term work to get sorted (and my only family member is over here in Sydney visiting me at the moment) but I’m pleased with all the…",
+   "lede": "You can now die in URR! A tremendous addition, I think we can all agree. Upon death the player is given a record of everything that they achieved in that particular playthrough – how many cities they discovered, how many universities they visited, how many shipwrecks were uncovered (it’ll be fun to add these!), and also how many of what I think will be the three distinctive quest elements –…",
+   "words": 2287,
+   "images": 16,
+   "comments": 10,
+   "series": "update",
+   "version": "0.10",
+   "number": 7
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2023/01/07/ultima-ratio-regum-0-10-update-6/",
+   "slug": "ultima-ratio-regum-0-10-update-6",
+   "title": "Ultima Ratio Regum 0.10 Update #6",
+   "published": "2023-01-07T01:07:36+00:00",
+   "modified": "2023-04-02T00:35:01+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Multiple purchases of supplies",
+    "More speed improvements",
+    "Wilderness general messages",
+    "Indoor speed optimisations",
+    "Custom bookmarks without normal bookmarks",
+    "Custom bookmarks in the wilderness",
+    "Draining the marshes (for now)",
+    "Vines",
+    "Bugs and the like",
+    "What next?"
+   ],
+   "opening": "Welcome back everyone! I think barring catastrophes this should release in around a fortnight, so this will either be the final update, or the penultimate update, before getting 0.10 out. I’m determined to stick to my schedule of putting out a new release every year – even if this is a relatively small release, albeit one that I’m really very happy with – and 0.10 will be put out some…",
+   "lede": "To begin with, I have now implemented a ton more stuff in the “buying supplies” page which you can access whenever you enter or leave a city. The first thing you’ll notice are these five extra and appropriately colour-coded lines which tell you again what your current state of affairs is when it comes to supplies – how many canteens you have, how much water you have and how much…",
+   "words": 4395,
+   "images": 24,
+   "comments": 8,
+   "series": "update",
+   "version": "0.10",
+   "number": 6
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2022/12/31/some-games-i-played-in-2022-and-what-i-thought-of-them/",
+   "slug": "some-games-i-played-in-2022-and-what-i-thought-of-them",
+   "title": "Some Games I Played in 2022 and What I Thought Of Them",
+   "published": "2022-12-31T14:43:35+00:00",
+   "modified": "2022-12-31T14:43:37+00:00",
+   "categories": [
+    "Commentary",
+    "Game Design"
+   ],
+   "tags": [],
+   "sections": [
+    "Blasphemous",
+    "Give Up The Ghost",
+    "Celeste",
+    "Halo Infinite",
+    "Axiom Verge",
+    "Pico’s School: Love Conquers All",
+    "Don’t Starve Together",
+    "Elden Ring",
+    "Grand Theft Auto",
+    "Other Puzzlescript Games",
+    "La-Mulana",
+    "So:"
+   ],
+   "opening": "Welcome to 2022’s edition of “Some Games I Played in [Year] and What I Thought Of Them”! This year I’ve played relatively few games compared to recent years, but that’s in part because the ones I have played have been unusually time-consuming; also in part because of Covid becoming more manageable and therefore being able to get out of the house more (!); and in part because in the last…",
+   "lede": "A strong and early contender for 2022’s game of the year is the answer to the question “What would happen if H P Lovecraft or Jeff Vandermeer wrote a novel set during the Spanish Inquisition?” – and that answer is Blasphemous. Blasphemous is a Metroidvania platformer – with some clearly Souls-esque elements and inspiration – set in a vast and bizarre medieval world which has been both afflicted and “blessed”…",
+   "words": 9255,
+   "images": 17,
+   "comments": 18,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2022/12/26/ultima-ratio-regum-0-10-update-5/",
+   "slug": "ultima-ratio-regum-0-10-update-5",
+   "title": "Ultima Ratio Regum 0.10 Update #5",
+   "published": "2022-12-26T00:21:23+00:00",
+   "modified": "2022-12-26T00:21:25+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Field of view / map drawing optimizations",
+    "Map grid generation optimisation",
+    "Fast travel within a map grid",
+    "Farms, fences, hedges",
+    "Bookmark fast travel returning",
+    "Bugs, miscellany, errata, etc",
+    "What next?"
+   ],
+   "opening": "Hello! Since the last update I’ve made some major progress on a large number of major optimizations and improvements to the code and speed of the game, and in also in the development of new features, for URR 0.10. So, let’s have a look:",
+   "lede": "The first place I found to improve matters was in discovering that the fov computation was going significantly beyond the actual scope of the area the player can see. In URR you have a directional field of view, so what the player is able to see is dependent on which of eight directions (i.e. the eight main compass directions) they are facing, with a roughly 140 degree range of sight.…",
+   "words": 4988,
+   "images": 27,
+   "comments": 9,
+   "series": "update",
+   "version": "0.10",
+   "number": 5
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2022/12/16/ultima-ratio-regum-0-10-update-4/",
+   "slug": "ultima-ratio-regum-0-10-update-4",
+   "title": "Ultima Ratio Regum 0.10 Update #4",
+   "published": "2022-12-16T06:07:09+00:00",
+   "modified": "2022-12-16T06:07:11+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Supply consumption and use",
+    "General messages finished",
+    "Bookmarks",
+    "Plants",
+    "Bugs / polishes / etc:",
+    "What next?"
+   ],
+   "opening": "Lots more has been coded in the past couple of weeks, so let’s get to it!",
+   "lede": "I have now implemented an initial working draft of supply consumption use as you walk around the game world. So first off, here I am after a few days of walking around in a city (exactly 24 hours / one day increments each time you change map tile, whereas it’s in moving around on a map tile that moves time forward on a minute-by-minute level) and you’ll see that there…",
+   "words": 2750,
+   "images": 24,
+   "comments": 4,
+   "series": "update",
+   "version": "0.10",
+   "number": 4
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2022/11/29/ultima-ratio-regum-0-10-update-3/",
+   "slug": "ultima-ratio-regum-0-10-update-3",
+   "title": "Ultima Ratio Regum 0.10 Update #3",
+   "published": "2022-11-29T06:12:56+00:00",
+   "modified": "2022-11-29T06:12:58+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Buying supplies",
+    "Location discovery",
+    "Image improvements",
+    "Flavour messages",
+    "Starting Relic Generation",
+    "University planning",
+    "Bug fixes / tweaks / etc",
+    "What next?"
+   ],
+   "opening": "When you enter or leave cities you can now stock up on supplies. These take four forms – canteens, food, water, and equipment. Canteens, food ration bags and equipment have generated images while water is a slightly more abstract image. In the case of canteens, these are empty containers that can be filled up with any liquid, and the player starts off with a canteen filled with ten units of…",
+   "lede": "",
+   "words": 3143,
+   "images": 15,
+   "comments": 9,
+   "series": "update",
+   "version": "0.10",
+   "number": 3
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2022/11/02/ultima-ratio-regum-0-10-update-2/",
+   "slug": "ultima-ratio-regum-0-10-update-2",
+   "title": "Ultima Ratio Regum 0.10 Update #2",
+   "published": "2022-11-02T09:12:50+00:00",
+   "modified": "2022-11-03T00:57:39+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Banking",
+    "Holy Books and Ingots",
+    "Relic generation",
+    "Building memory",
+    "Bug fixes / polishes / etc",
+    "Next?"
+   ],
+   "opening": "Welcome to the second URRpdate for the 0.10 release coming at the end of December! Quite a bit has been added in the last few weeks, so let’s get started:",
+   "lede": "To begin with, you are now able to deposit any amount of your money into the bank in a given civilization, which will then – slowly – accumulate income over time. Right now the system will be that you can deposit any currency into a bank, but the currency of that bank’s home nation will accrue income much faster than other currencies. I’ve been doing a bit of experimenting with…",
+   "words": 1998,
+   "images": 7,
+   "comments": 6,
+   "series": "update",
+   "version": "0.10",
+   "number": 2
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2022/10/06/ultima-ratio-regum-0-10-update-1/",
+   "slug": "ultima-ratio-regum-0-10-update-1",
+   "title": "Ultima Ratio Regum 0.10 Update #1",
+   "published": "2022-10-06T04:08:05+00:00",
+   "modified": "2022-10-06T04:08:12+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "New Items",
+    "Speech",
+    "Survival",
+    "Thrones",
+    "Bug fixes",
+    "0.10 Begins"
+   ],
+   "opening": "My first plan for 0.10 was procedural book generation. We already had the books generating as items and – if you’ll allow me – they’re one of the things I was proudest of in the 0.9 release:",
+   "lede": "To begin with, we have some new items! These appear in a variety of logical shops and are items that contribute to your navigation of the world and to surviving in the world (see below). The first of these is the compass, which (like everything) can be found in various qualities and various shapes depending on the civilization you buy it from. The compass reduces how much water the player…",
+   "words": 2262,
+   "images": 11,
+   "comments": 6,
+   "series": "update",
+   "version": "0.10",
+   "number": 1
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2022/06/11/some-games-i-played-in-2021-and-what-i-thought-of-them/",
+   "slug": "some-games-i-played-in-2021-and-what-i-thought-of-them",
+   "title": "Some Games I Played in 2021 and What I Thought Of Them",
+   "published": "2022-06-11T08:39:39+00:00",
+   "modified": "2022-06-11T08:39:42+00:00",
+   "categories": [
+    "Commentary"
+   ],
+   "tags": [],
+   "sections": [
+    "The Curious Expedition",
+    "HyperRogue",
+    "Slay the Spire",
+    "Nuclear Throne",
+    "Bioshock Infinite",
+    "Hellpoint",
+    "Age of Empires II",
+    "Halo 4",
+    "Ancient Domains of Mystery",
+    "DOOM Eternal (again)",
+    "I’m not.",
+    "Baba Is You",
+    "Z",
+    "Control",
+    "Streets of Rage 4",
+    "Handmade Logic Puzzles",
+    "Stellaris (again)",
+    "The Outer Wilds",
+    "2021 -> 2022"
+   ],
+   "opening": "Welcome all to 2021’s (six months delayed) edition of “Some Games I Played in [Year] and What I Thought Of Them”! What a year it was. Much to my surprise (and I’m sure the surprise of everyone else) I released Ultima Ratio Regum 0.9 and I’m now actually beginning work on URR 0.10 (!) with hopefully a yearly model for major releases, barring further health disasters and so forth. I…",
+   "lede": "We start, of course, with a roguelike, and one I have been looking forward to playing for a long while. The idea of a roguelike-y game set in the age of exploration sounded absolutely gripping to me (and not just because I’ve been reading Patrick O’Brian’s genuinely fabulous Aubrey-Maturin series in the past year so, which I’ve had to carefully space it out in order to not exhaust its wonders…",
+   "words": 13577,
+   "images": 24,
+   "comments": 25,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2022/06/08/getting-back-to-it/",
+   "slug": "getting-back-to-it",
+   "title": "Getting Back To It",
+   "published": "2022-06-08T03:33:48+00:00",
+   "modified": "2022-06-08T03:33:52+00:00",
+   "categories": [
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Hi everyone – thank you so much for the messages of support both on the blog and by email / Twitter, I really do appreciate them.",
+   "lede": "",
+   "words": 221,
+   "images": 1,
+   "comments": 4,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2022/03/17/illness-revisited/",
+   "slug": "illness-revisited",
+   "title": "Illness, Revisited",
+   "published": "2022-03-17T03:42:11+00:00",
+   "modified": "2022-03-17T03:42:13+00:00",
+   "categories": [
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Hi everyone – just a quick update. The first half of January was very productive – I released 0.9.0a, 0.9.0b, 0.9.0c, did most of the work on 0.9.0d (which is done, I just need to release it) and made some major initial progress on 0.10, but the middle of Jan saw the resurgence of a major health issue (and all the psychological stuff that comes with it), which has continued…",
+   "lede": "",
+   "words": 285,
+   "images": 1,
+   "comments": 11,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/12/31/ultima-ratio-regum-0-9-released/",
+   "slug": "ultima-ratio-regum-0-9-released",
+   "title": "Ultima Ratio Regum 0.9 Released!",
+   "published": "2021-12-31T13:10:47+00:00",
+   "modified": "2022-01-02T00:48:24+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Ultima Ratio Regum 0.9",
+    "Released!",
+    "MAJOR FEATURES:",
+    "MINOR FEATURES:",
+    "BUG FIXES / OPTIMISATIONS / ETC:",
+    "PLAY IT:",
+    "You can download it here.",
+    "THE FUTURE:"
+   ],
+   "opening": "As before, the game is made for Windows though I do plan on Mac / Linux versions one day, probably after / alongside 1.0 in a couple of years. For Linux I recommend Wine, and for Macs I’ve seen a range of different solutions though Wine also seems to work there. Adding the exe to a Steam library and setting Proton compatibility also works (though might take a minute to…",
+   "lede": "",
+   "words": 2545,
+   "images": 5,
+   "comments": 53,
+   "series": "urr",
+   "version": "0.9",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/12/06/urr-0-9-update-buying-selling-trading/",
+   "slug": "urr-0-9-update-buying-selling-trading",
+   "title": "URR 0.9 Update: Buying, Selling, Trading",
+   "published": "2021-12-06T05:56:12+00:00",
+   "modified": "2021-12-06T05:56:14+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Ultima Ratio Regum 0.9 is mostly about procedurally generating the game’s items:"
+   ],
+   "opening": "Ultima Ratio Regum 0.9 is mostly about procedurally generating the game’s items:",
+   "lede": "With the item generation itself complete (and with coins and currencies also generating), the next thing was to get items appearing in shops. This meant returning to the code that generates all possible items, and then integrating that with the code for generating a shop; now when a shop is first created the game creates a list of possible items that might appear in that shop from the much wider…",
+   "words": 2087,
+   "images": 15,
+   "comments": 14,
+   "series": "urr",
+   "version": "0.9",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/11/29/procedurally-generating-treasure-maps/",
+   "slug": "procedurally-generating-treasure-maps",
+   "title": "Procedurally generating treasure maps",
+   "published": "2021-11-29T01:31:06+00:00",
+   "modified": "2021-12-06T03:19:04+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "In conclusion…"
+   ],
+   "opening": "Ultima Ratio Regum 0.9 (release date: December 31st 2021) is generating the graphics and details and interactions for dozens upon dozens of different sorts of in-game items and currencies and trade goods and more, and one of these is TREASURE MAPS. I often get asked for more information about generating the various in-game visuals, and I thought these would make an interesting case study – so let’s get started.",
+   "lede": "Whew! Thank you so much for reading this, friends. I do hope it was worth your time.",
+   "words": 3205,
+   "images": 18,
+   "comments": 16,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/10/26/urr-0-9-update-graphics-complete/",
+   "slug": "urr-0-9-update-graphics-complete",
+   "title": "URR 0.9 Update: Graphics Complete!",
+   "published": "2021-10-26T12:45:26+00:00",
+   "modified": "2021-10-26T12:45:29+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Coins",
+    "Alcohol bottles",
+    "Whale Oil",
+    "Ambergris",
+    "Philosophy books",
+    "History books",
+    "Biography books",
+    "Novel books",
+    "Religious books",
+    "Death books",
+    "Cult books",
+    "Language books",
+    "Fences",
+    "Textiles",
+    "Short weapons",
+    "Long weapons",
+    "Heavy weapons",
+    "Slashing weapons",
+    "Rings",
+    "Cult shrines",
+    "Hedges",
+    "Thrones",
+    "Feudal shields",
+    "Nomadic shields"
+   ],
+   "opening": "Hello everyone! I am so pleased to say that the first major milestone for 0.9 has been accomplished: all new graphics for Ultima Ratio Regum 0.9 are now finished! Every possible item you can find in the new release is procedurally generated, with most generators have millions permutations; quite a few having billions; and a mere handful having “only” a few tens or hundreds of thousands of possibilities. So without…",
+   "lede": "Every feudal civilization has its own currency and nomadic civilizations are willing to use any currency from any state. All currencies have different values and exchange rates, and lovely procedurally-generated coins. The player starts with an appropriate number of coins (including potentially smaller-denomination coins) for their starting civ.",
+   "words": 3190,
+   "images": 49,
+   "comments": 31,
+   "series": "urr",
+   "version": "0.9",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/10/14/urr-0-9-update-reworking-ships/",
+   "slug": "urr-0-9-update-reworking-ships",
+   "title": "URR 0.9 Update: Reworking Ships",
+   "published": "2021-10-14T08:39:50+00:00",
+   "modified": "2021-10-14T10:02:21+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Some very exciting developments this week! Ships have been reworked for 0.9 and made about a hundred times more diverse, and more interesting, and have some actual gameplay around them now. So firstly, in 0.8 I created a system for establishing travel and trade routes that ships would use, as seen in the picture below (players would not see this directly in-game). The system was specifically designed so that whenever…",
+   "lede": "",
+   "words": 1252,
+   "images": 11,
+   "comments": 2,
+   "series": "urr",
+   "version": "0.9",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/09/25/what-clock-should-urr-have/",
+   "slug": "what-clock-should-urr-have",
+   "title": "What “clock” should URR have?",
+   "published": "2021-09-25T14:11:03+00:00",
+   "modified": "2021-09-26T14:33:35+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "What kind of “food clock” should Ultima Ratio Regum have?",
+    "(A request for feedback)"
+   ],
+   "opening": "URR is back in active development and zooming towards a 1.0 release, with a 0.9 now well over 70% developed and due to be released at the end of this year. As I come to implement items, objectives, trade and so forth, I realise I now need to figure out what the main “food clock” in the game will be. Given the readership of my blog I shall assume most…",
+   "lede": "",
+   "words": 1681,
+   "images": 7,
+   "comments": 30,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/08/31/0-9-august-urrpdate-procedural-weapon-and-shield-generation/",
+   "slug": "0-9-august-urrpdate-procedural-weapon-and-shield-generation",
+   "title": "0.9 August URRpdate: Procedural Weapon and Shield Generation",
+   "published": "2021-08-31T10:55:38+00:00",
+   "modified": "2021-08-31T10:57:04+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "For too long have the NPCs (and the player, for that matter) in URR walked around without the appropriate protection required in the dangerous, unpredictable, sort-of-medieval and sort-of-Renaissance and sort-of-Industrial-Revolution world of Ultima Ratio Regum. But, no longer! The many new sets of items coming with this release include all kinds of melee weapons (and others I’ll show off later), shields, and armour (again, I’ll show these off later).",
+   "lede": "",
+   "words": 1974,
+   "images": 8,
+   "comments": 10,
+   "series": "urr",
+   "version": "0.9",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/08/18/generative-design-in-minecraft-competition-gdmc-judging/",
+   "slug": "generative-design-in-minecraft-competition-gdmc-judging",
+   "title": "Generative Design in Minecraft Competition (GDMC) Judging",
+   "published": "2021-08-18T07:04:00+00:00",
+   "modified": "2021-08-10T05:28:30+00:00",
+   "categories": [
+    "Academic",
+    "Commentary",
+    "Game Design"
+   ],
+   "tags": [],
+   "sections": [
+    "Entry #1:",
+    "Entry #2:",
+    "Entry #3:",
+    "Entry #4:",
+    "Entry #5:",
+    "Entry #6:",
+    "Entry #7:",
+    "Entry #8:",
+    "Entry #9:",
+    "Entry #10:",
+    "Entry #11:",
+    "Entry #12:",
+    "Entry #13:",
+    "Entry #14:",
+    "Entry #15:",
+    "Entry 16:",
+    "Entry #17:",
+    "Entry #18:",
+    "Entry #19:",
+    "Entry #20:",
+    "So, where now?"
+   ],
+   "opening": "For the last several years a number of folks in the PCG world, especially those who are or were based at NYU, have been running the “Generative Design in Minecraft Competition” or GDMC, in which people are challenged to create an AI that can construct a logical, functional, appropriate, and aesthetically-pleasing, settlement within Minecraft. I was very flattered a few years ago to be invited onto the judging board for…",
+   "lede": "This generator created some really lovely homes – I liked the archetype and there was some good variety in how they looked. The interiors worked well and were not simply empty (interiors are definitely something “secondary” in a lot of generators) and showed nice variety and difference between the various houses one could explore. The buildings were quite sparse in this one when compared to some other generators but this…",
+   "words": 5120,
+   "images": 36,
+   "comments": 8,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/08/10/0-9-urrpdate-1-the-next-release/",
+   "slug": "0-9-urrpdate-1-the-next-release",
+   "title": "0.9 URRpdate #1: The Next Release",
+   "published": "2021-08-10T05:04:13+00:00",
+   "modified": "2021-08-10T05:04:15+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "I am working on 0.9!",
+    "As such, this release will have four main components:",
+    "MONEY",
+    "ITEMS",
+    "TRAVEL",
+    "STABILITY"
+   ],
+   "opening": "Hello everyone! It is with great pleasure that I think the time has come to publicly state what has probably become obvious already given some of the recent blog posts:",
+   "lede": "And, even better, I have been cracking along with it. We’re just a bit over half-way through 2021 and I am past half-way through development. At least 85% of the new graphics are done and 30% of the new code is done. I am prioritising URR dev each weekend and sometimes in the evenings and this is yielding a tremendous and steady amount of progress. Just as importantly, however, given…",
+   "words": 1891,
+   "images": 4,
+   "comments": 11,
+   "series": "urr",
+   "version": "0.9",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/07/27/procedural-book-generation/",
+   "slug": "procedural-book-generation",
+   "title": "Procedural book generation!",
+   "published": "2021-07-27T01:46:13+00:00",
+   "modified": "2021-07-27T01:46:15+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Hello friends! There is so much work I’ve done on 0.9 already I cannot wait to share with you all, but I haven’t yet finished the “0.9 Dev Announcement” blog post, so in the meantime, here is procedural book generation. I am… incredibly happy with this. Books can be religious books, cult books, philosophy books, novels, history books, records of deaths, language books, and in the future we’ll add two…",
+   "lede": "",
+   "words": 225,
+   "images": 3,
+   "comments": 12,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/06/12/procedural-throne-generation/",
+   "slug": "procedural-throne-generation",
+   "title": "Procedural throne generation",
+   "published": "2021-06-12T14:05:22+00:00",
+   "modified": "2021-06-12T14:10:59+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "For quite a while now there have been a number of terrain features in the game that do not possess proper look-up images. The three that have stood out have been paintings (in castles, galleries, private homes, etc), statues (in parks, districts, castles, galleries, etc), and thrones (in castles). Procedurally generating paintings and statues is – obviously – going to be a fairly complex process so I’ve been leaving that…",
+   "lede": "",
+   "words": 685,
+   "images": 2,
+   "comments": 0,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/05/29/procedural-alcohol-generation/",
+   "slug": "procedural-alcohol-generation",
+   "title": "Procedural alcohol generation",
+   "published": "2021-05-29T23:42:37+00:00",
+   "modified": "2021-05-29T23:42:39+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "URR 0.8.3 is all but done! All the three main new features have been implemented (three new policies), a range of bugs have been fixed, and right now I’m just playtesting all this new content to try to make sure there aren’t any new crash bugs introduced by adding this new stuff. Assuming nothing monstrous presents itself, I plan to release this coming weekend at the latest. The main focus…",
+   "lede": "",
+   "words": 614,
+   "images": 2,
+   "comments": 13,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/05/20/procedural-cult-generation/",
+   "slug": "procedural-cult-generation",
+   "title": "Procedural cult generation",
+   "published": "2021-05-20T00:48:12+00:00",
+   "modified": "2021-05-20T00:48:14+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Hello friends! Let us begin this week with some exciting news: 0.8.3 is on its way! I have been working on it for the last couple of months and – unless it contains some kind of monstrous bug I need to fix with a quick 0.8.3a – this will be the final release in the 0.8 sequence. Alongside some continued bug-fixing its main new thing is that it contains 3…",
+   "lede": "",
+   "words": 407,
+   "images": 2,
+   "comments": 10,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/04/17/procedural-coin-generation/",
+   "slug": "procedural-coin-generation",
+   "title": "Procedural coin generation",
+   "published": "2021-04-17T23:14:54+00:00",
+   "modified": "2021-05-20T00:49:39+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "",
+   "lede": "",
+   "words": 9,
+   "images": 2,
+   "comments": 19,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/04/09/ai-and-games-interview/",
+   "slug": "ai-and-games-interview",
+   "title": "AI and Games Interview",
+   "published": "2021-04-09T05:40:15+00:00",
+   "modified": "2021-04-09T05:40:17+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Given the topics of my blog (and the impressive and incredibly pleasing success the channel in question has enjoyed) I am sure that many of my readers are aware of the AI and Games YouTube channel, run by Dr Tommy Thompson, a colleague and friend I first met at ProcJam all the way back in 2014. I was hugely flattered a few months ago to discover that his Patreon supporters…",
+   "lede": "",
+   "words": 170,
+   "images": 1,
+   "comments": 10,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/03/03/ultima-ratio-regum-0-8-2-released/",
+   "slug": "ultima-ratio-regum-0-8-2-released",
+   "title": "Ultima Ratio Regum 0.8.2 Released!",
+   "published": "2021-03-03T06:59:06+00:00",
+   "modified": "2021-03-05T01:11:12+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Ultima Ratio Regum 0.8.2 released!",
+    "Download it here.",
+    "BUG FIXES:",
+    "FEATURES:",
+    "Enjoy!"
+   ],
+   "opening": "5/3/2021 update: 0.8.2b released, with two important quick fixes resolving a common crash bug when looking at things inside buildings, and (re)fixing moving up/down stairs.",
+   "lede": "",
+   "words": 1850,
+   "images": 12,
+   "comments": 12,
+   "series": "urr",
+   "version": "0.8",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/02/13/ultima-ratio-regum-0-8-1-released/",
+   "slug": "ultima-ratio-regum-0-8-1-released",
+   "title": "Ultima Ratio Regum 0.8.1 Released!",
+   "published": "2021-02-13T02:19:20+00:00",
+   "modified": "2021-02-13T02:19:23+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Changelog:"
+   ],
+   "opening": "As well as the above though, I have actually added several new things for 0.8.1! Specifically:",
+   "lede": "",
+   "words": 2126,
+   "images": 8,
+   "comments": 26,
+   "series": "urr",
+   "version": "0.8",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/01/17/some-games-i-played-in-2020-and-what-i-thought-of-them/",
+   "slug": "some-games-i-played-in-2020-and-what-i-thought-of-them",
+   "title": "Some Games I Played in 2020 and What I Thought Of Them",
+   "published": "2021-01-17T02:24:47+00:00",
+   "modified": "2021-01-17T05:38:25+00:00",
+   "categories": [
+    "Commentary",
+    "Game Design"
+   ],
+   "tags": [],
+   "sections": [
+    "Chrono Trigger",
+    "SwapBot",
+    "Doom Eternal",
+    "Doom 2016 (again)",
+    "Into the Breach",
+    "Supreme Commander",
+    "Antichamber",
+    "Recursed",
+    "Doki Doki Literature Club",
+    "The Witness",
+    "Escape Goat",
+    "Alpha Centauri",
+    "Cyberpunk 2077",
+    "Among Us",
+    "Pony Island",
+    "Rain World",
+    "2020 -> 2021"
+   ],
+   "opening": "Hello friends. What a strange year: and it was a year in which, as well as moving country and finishing URR 0.8 and doing my usual academic work, I allowed myself some proper time to really play some games as the lockdown weeks stretched on (especially around the middle of the year, the height of lockdowns and the like here in Australia). So here are the games I played this…",
+   "lede": "2020 was the first year I played Chrono Trigger – and, indeed, the first time I have ever played a JRPG. I had long been told that Chrono Trigger was the JRPG to play if you didn’t enjoy JRPGs, and that it had a compelling and unique story that was worth playing. Having now finished the thing, I have to say I was impressed, and I see the reasons behind…",
+   "words": 5856,
+   "images": 21,
+   "comments": 26,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2021/01/03/urr-0-8-post-release-thoughts/",
+   "slug": "urr-0-8-post-release-thoughts",
+   "title": "URR 0.8 Post-Release Thoughts",
+   "published": "2021-01-03T02:50:43+00:00",
+   "modified": "2023-06-03T12:41:44+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Well, what a week this has been since release! I’m pleased to say the release overall went very well; I have been sent only a few bug reports, and almost all those I have got are pretty easy to fix (more on this in a moment). The feedback has been extremely positive and I can’t quite say what it means to have such a positive response after such a long…",
+   "lede": "",
+   "words": 585,
+   "images": 1,
+   "comments": 10,
+   "series": "urr",
+   "version": "0.8",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/12/27/ultima-ratio-regum-0-8-released/",
+   "slug": "ultima-ratio-regum-0-8-released",
+   "title": "Ultima Ratio Regum 0.8 Released",
+   "published": "2020-12-27T08:14:46+00:00",
+   "modified": "2020-12-27T08:23:14+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Main features:"
+   ],
+   "opening": "It is with immense pleasure that after around five years (!!?!) of development, including a year “off” when I thought / feared I might never return: Ultima Ratio Regum 0.8 is done!",
+   "lede": "I have no idea whether this is the last version or not, but it’s done. And more importantly it contains everything I hoped for and everything I wanted; a living breathing talking moving world, with vast numbers of people, procedurally-generated dialects and speech patterns, faces, clothing, NPC schedules, and a million other things I probably mentioned somewhere back in the blog’s history but forgot about, in the long period between…",
+   "words": 564,
+   "images": 10,
+   "comments": 87,
+   "series": "urr",
+   "version": "0.8",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/12/20/urr-finale-update-xix-the-last-one/",
+   "slug": "urr-finale-update-xix-the-last-one",
+   "title": "URR Finale Update XIX – The Last One?",
+   "published": "2020-12-20T04:23:22+00:00",
+   "modified": "2020-12-20T04:35:10+00:00",
+   "categories": [
+    "Uncategorized"
+   ],
+   "tags": [],
+   "sections": [
+    "Well, my friends – I think we’re done."
+   ],
+   "opening": "URR works on at least seven different Windows 10 systems without crashing and without triggering virus warnings upon download; the memory leakage issue and the saving/loading issues you’ll remember from a few weeks ago are all fixed; and more bugs have been dealt with in the interim.",
+   "lede": "",
+   "words": 338,
+   "images": 1,
+   "comments": 30,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/12/13/urr-finale-update-xviii/",
+   "slug": "urr-finale-update-xviii",
+   "title": "URR Finale Update XVIII",
+   "published": "2020-12-13T08:07:19+00:00",
+   "modified": "2020-12-13T08:08:28+00:00",
+   "categories": [
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Hello everyone! Not much to report this week. Sadly – having just said in last week’s entry how much better my head is doing – I’ve had a week of head / eye complaint. It’s all psychological rather than physiological (I haven’t had any concussion symptoms in over a year now) but as anyone whose mental health isn’t pristine will tell you, that of course doesn’t mean it’s not real.…",
+   "lede": "",
+   "words": 215,
+   "images": 1,
+   "comments": 10,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/12/06/urr-finale-update-xvii/",
+   "slug": "urr-finale-update-xvii",
+   "title": "URR Finale Update XVII",
+   "published": "2020-12-06T00:56:42+00:00",
+   "modified": "2020-12-06T07:01:35+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "This has been an excellent week of progress! I have moved from where we were last week (after a ton of work in large part courtesy of Greg Scott / Sudasana) with a single working executable, to now a proper pipeline; I can produce and test a new executable whenever I want, and I’ve confirmed the executable works on different Win 10 systems, none of which have Python installed. I…",
+   "lede": "",
+   "words": 714,
+   "images": 1,
+   "comments": 18,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/11/29/urr-finale-update-xvi/",
+   "slug": "urr-finale-update-xvi",
+   "title": "URR Finale Update XVI",
+   "published": "2020-11-29T04:02:45+00:00",
+   "modified": "2020-11-29T04:08:01+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Just a very quick one this week. The Python 3.7 and updated libtcod version of URR… is compiling to exe using PyInstaller!! This is excellent news. The next step is to figure out what DLLs and the like need to be packaged with it.",
+   "lede": "",
+   "words": 129,
+   "images": 1,
+   "comments": 16,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/11/22/urr-finale-update-xv/",
+   "slug": "urr-finale-update-xv",
+   "title": "URR Finale Update XV",
+   "published": "2020-11-22T03:41:17+00:00",
+   "modified": "2020-11-22T03:41:20+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "URR in Python 2.7: my team is trying to get it working, but it’s proving tricky. The combination of an out-of-date Python, an out-of-date version of (lib)tcod, and an out-of-date compiler… is, unsurprisingly, a challenge. But they’re trying it, and I’m amazingly grateful.",
+   "lede": "",
+   "words": 306,
+   "images": 1,
+   "comments": 6,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/11/15/urr-finale-update-xiv/",
+   "slug": "urr-finale-update-xiv",
+   "title": "URR Finale Update XIV",
+   "published": "2020-11-15T00:05:56+00:00",
+   "modified": "2020-11-15T00:07:13+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "This week has been less full than last week so I’ve been able to devote a lot of time to getting URR ready. I am now pursuing two paths, and I’ve made progress on both. Whichever one works out first will be the one I use to release URR 0.8.",
+   "lede": "",
+   "words": 729,
+   "images": 1,
+   "comments": 7,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/11/08/urr-finale-update-xiii/",
+   "slug": "urr-finale-update-xiii",
+   "title": "URR Finale Update XIII",
+   "published": "2020-11-08T08:08:05+00:00",
+   "modified": "2020-11-08T08:08:20+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Not much to report this week, I’m afraid. It has been another extremely busy week of term work-wise (working on a huge grant and beginning to mark student submissions from the class I’m teaching), but I’ve found a little bit of time to continue trying to get the finished URR 0.8 packaged. Right now there are two parallel strands I’m pursuing: I’m consulting with more knowledgeable folks about packaging URR…",
+   "lede": "",
+   "words": 155,
+   "images": 1,
+   "comments": 8,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/11/01/urr-finale-update-xii/",
+   "slug": "urr-finale-update-xii",
+   "title": "URR Finale Update XII",
+   "published": "2020-11-01T02:38:33+00:00",
+   "modified": "2020-11-01T02:38:36+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "So, this week’s headline: incredibly busy week of work that unfortunately consumed my weekday evenings as well as my weekday days, but I spent the weekend attempting to fix the compiling-to-exe problem – although sadly without success. However, thanks to some great comments on the previous entry which I’ve since followed up with my own investigations, I’m reasonably confident the issue lies in x32 / x64 compatibility between the various…",
+   "lede": "",
+   "words": 589,
+   "images": 1,
+   "comments": 17,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/10/25/urr-finale-update-xi/",
+   "slug": "urr-finale-update-xi",
+   "title": "URR Finale Update XI",
+   "published": "2020-10-25T05:33:46+00:00",
+   "modified": "2020-10-25T05:36:32+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Lots more bug-fixes this week, and I now cannot find a crash bug anywhere! I’ve spent many, many hours this week doing everything I can think of doing within the game world, and it has been a long time now since I’ve run into a bug from talking to people, moving around, looking at things, saving/loading areas, generating the world, etc. This means a bunch more bugs have been fixed.…",
+   "lede": "",
+   "words": 785,
+   "images": 1,
+   "comments": 21,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/10/18/urr-finale-update-x/",
+   "slug": "urr-finale-update-x",
+   "title": "URR Finale Update X",
+   "published": "2020-10-18T04:27:56+00:00",
+   "modified": "2020-10-18T09:05:56+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Hello everyone! This week turned into something far busier than I expected with work, but I have not stopped pushing 0.8 to completion. I’ve cleared out a bunch of other serious bugs I’ve found this week, including that bug I mentioned last time where the game appears to have frozen during world generation (but actually hasn’t), and clearing out the debug messages. Specifically:",
+   "lede": "",
+   "words": 504,
+   "images": 1,
+   "comments": 12,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/10/11/urr-week-finale/",
+   "slug": "urr-week-finale",
+   "title": "URR Week Finale",
+   "published": "2020-10-11T12:08:14+00:00",
+   "modified": "2022-09-20T03:50:58+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Welcome back everyone! Thank you all for the kind words in the previous blog posts this week; just like the previous week I dedicated to URR a month or two ago, it has been tremendously rewarding (and productive!) to do the same this time around.",
+   "lede": "",
+   "words": 494,
+   "images": 1,
+   "comments": 11,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/10/08/urr-week-breakthrough/",
+   "slug": "urr-week-breakthrough",
+   "title": "URR Week: Breakthrough!",
+   "published": "2020-10-08T07:09:00+00:00",
+   "modified": "2020-10-08T07:10:53+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "BREAKTHROUGH!"
+   ],
+   "opening": "I have found most of the remaining memory leakage, and I have got the total memory leakage down from [200mb+ every single time you reload] to only [100mb once the first time you reload], and that’s it (and this only happens if you exit your current save and then reload the same save). This is about a 90%+ reduction in memory leakage, and since it now only happens once, and…",
+   "lede": "",
+   "words": 513,
+   "images": 2,
+   "comments": 34,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/10/07/urr-week-continues-well/",
+   "slug": "urr-week-continues-well",
+   "title": "URR Week Continues Well",
+   "published": "2020-10-07T05:47:59+00:00",
+   "modified": "2020-10-07T05:48:03+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "The last three days have been very productive! Here’s what I’ve done:",
+   "lede": "",
+   "words": 559,
+   "images": 1,
+   "comments": 4,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/10/04/urr-week-starts-well/",
+   "slug": "urr-week-starts-well",
+   "title": "URR Week Starts Well!",
+   "published": "2020-10-04T01:30:53+00:00",
+   "modified": "2020-10-04T08:50:15+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Hello all – this is just a short blog post to announce that I’ve cleared out my major pieces of work for last week (and indeed made good progress on work for next week!) and now my attempt to get URR 0.8 finished the coming nine days begins. As mentioned before, I’m not on leave, but I am in a teaching-free week, which gives me a lot more time and…",
+   "lede": "",
+   "words": 306,
+   "images": 1,
+   "comments": 16,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/09/21/mark-the-week-in-your-diaries/",
+   "slug": "mark-the-week-in-your-diaries",
+   "title": "Mark the week in your diaries…",
+   "published": "2020-09-21T04:54:00+00:00",
+   "modified": "2020-09-21T04:54:04+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Hello everyone! A short but promising update here. Since the last update I haven’t been able to really spend any more time bug-fixing, aside from a brief investigation of the memory leak issue which might prove far easier to resolve than I feared. Teaching has begun again and online teaching is unusually demanding (just browse the academic portions of Twitter for evidence of this!), while I’ve also been getting back…",
+   "lede": "",
+   "words": 594,
+   "images": 2,
+   "comments": 16,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/08/15/ultima-ratio-regum-0-8-finale-update-ix/",
+   "slug": "ultima-ratio-regum-0-8-finale-update-ix",
+   "title": "Ultima Ratio Regum 0.8 Finale Update IX",
+   "published": "2020-08-15T00:45:07+00:00",
+   "modified": "2020-08-15T00:45:17+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Well, what a week! The headline is: absolutely everything is now done except for one bug and one technical issue. It is striking and extremely pleasing how much I’ve been able to get done in this past week of really focusing on URR. The list of remaining bugs has just evaporated: and as such, here’s a list of everything that got fixed this week:",
+   "lede": "",
+   "words": 997,
+   "images": 1,
+   "comments": 39,
+   "series": "urr",
+   "version": "0.8",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/08/10/an-update-for-strange-times-iii/",
+   "slug": "an-update-for-strange-times-iii",
+   "title": "An Update for Strange Times III",
+   "published": "2020-08-10T09:28:22+00:00",
+   "modified": "2020-08-10T09:28:25+00:00",
+   "categories": [
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Firstly, hello everyone – sorry for being absent for two months. June and July were very difficult months for me in terms of health, work demands, and other issues, but the gyms reopening here in Australia has done wonders for my mental health, while the conclusion of my first semester of teaching has yielded a lot of extra time to get other elements of my life back on track. As…",
+   "lede": "",
+   "words": 466,
+   "images": 1,
+   "comments": 14,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/05/24/an-update-for-strange-times-ii/",
+   "slug": "an-update-for-strange-times-ii",
+   "title": "An Update for Strange Times II",
+   "published": "2020-05-24T23:44:32+00:00",
+   "modified": "2020-05-24T23:45:15+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Just a very short URRpdate this month. Got more coding done, fixed more bugs, cleared out a few remaining issues. The biggest issues as readers will remember was to do with certain classes of NPCs behaving in rather strange, or sometimes game-crashing, manners. As my priority now is to get it out, I have simply removed these misbehaving NPCs – that is easier than trying to fix them. They are…",
+   "lede": "",
+   "words": 167,
+   "images": 1,
+   "comments": 32,
+   "series": "urr",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/04/29/an-update-for-strange-times-i/",
+   "slug": "an-update-for-strange-times-i",
+   "title": "An Update for Strange Times I",
+   "published": "2020-04-29T11:40:54+00:00",
+   "modified": "2020-04-29T11:40:57+00:00",
+   "categories": [
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Hi everyone – only a short update this month, I’m afraid. It has been a weird few weeks. My head was largely recovering and getting better, then things got far worse again, and now things have got far better again with the same speed things got far worse again, so it’s hard to know what to think. I also got a serious chest-burning cough, and a sore throat, and nausea,…",
+   "lede": "",
+   "words": 738,
+   "images": 2,
+   "comments": 9,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/03/18/ultima-ratio-regum-0-8-finale-update-viii/",
+   "slug": "ultima-ratio-regum-0-8-finale-update-viii",
+   "title": "Ultima Ratio Regum 0.8 Finale Update VIII",
+   "published": "2020-03-18T10:29:13+00:00",
+   "modified": "2023-11-29T03:13:29+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Hello, my friends! I apologise for no February update, the COVID situation threw everything into disarray on the teaching front and it took most of February to get on-board with “online delivery” of teaching content (this being a common experience of many academics at the moment). But here’s the update I was hoping to post in February had a global pandemic not emerged. My head is inching closer and closer…",
+   "lede": "",
+   "words": 977,
+   "images": 3,
+   "comments": 28,
+   "series": "urr",
+   "version": "0.8",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2020/01/31/concussion-recovery-update-iv-finale/",
+   "slug": "concussion-recovery-update-iv-finale",
+   "title": "Concussion Recovery Update IV – Finale?",
+   "published": "2020-01-31T12:11:33+00:00",
+   "modified": "2020-01-31T12:11:33+00:00",
+   "categories": [
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Things are really looking up on the post-concussion front, at last. At time of writing I’m doing about 6 hours of screen work a day, interspersed with some solid breaks, but not really getting too much head tingling or head twinges (the former being a strange prickling sensation which appears to be “paresthesia”, the latter being more like momentary twinges of normal “headache”-y pain). I continue to find that wearing…",
+   "lede": "",
+   "words": 399,
+   "images": 2,
+   "comments": 16,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2019/12/31/concussion-recovery-update-iv/",
+   "slug": "concussion-recovery-update-iv",
+   "title": "Concussion Recovery Update III",
+   "published": "2019-12-31T02:31:10+00:00",
+   "modified": "2019-12-31T02:31:36+00:00",
+   "categories": [
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "A short update again as 2019 comes to an end, but a more optimistic one. I’m at around 4-6 hours of screen work a day at the moment, and the tingling in my head is remaining quite low. It has become apparent, also, that a lot of the remaining tingling is psychosomatic in nature, i.e. resulting from anxiety that had resulted from the concussion (!). In other words, doing screenwork…",
+   "lede": "",
+   "words": 265,
+   "images": 1,
+   "comments": 4,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2019/11/19/concussion-recovery-update-ii/",
+   "slug": "concussion-recovery-update-ii",
+   "title": "Concussion Recovery Update II",
+   "published": "2019-11-19T23:15:46+00:00",
+   "modified": "2019-11-19T23:15:59+00:00",
+   "categories": [
+    "Academic",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Just a quick one this month, friends. Recovery continues. I can now manage quite a few hours (3-5?) of screen work each day, as long as I take long breaks between them and wear sunglasses to reduce the screen glare (and also I’ve reduced the brightness on my screens to the lowest level possible that remains readable). I’m getting back on top of my academic work now, just about, and…",
+   "lede": "",
+   "words": 153,
+   "images": 1,
+   "comments": 8,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2019/10/27/concussion-recovery-update/",
+   "slug": "concussion-recovery-update",
+   "title": "Concussion Recovery Update",
+   "published": "2019-10-27T03:16:26+00:00",
+   "modified": "2019-10-27T03:16:28+00:00",
+   "categories": [
+    "Academic",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "The concussion recovery is ongoing, and not moving as fast as I would like; I can do a few hours of screen work each day before my head starts to complain, but nowhere even close to what I used to be able to do (i.e. unlimited screen time every day without a moment’s pause). This hasn’t been helped by a series of other misfortunes: within a week here in Sydney…",
+   "lede": "",
+   "words": 411,
+   "images": 1,
+   "comments": 9,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2019/09/15/the-joy-of-injury/",
+   "slug": "the-joy-of-injury",
+   "title": "The Joy of Injury",
+   "published": "2019-09-15T15:20:53+00:00",
+   "modified": "2019-09-15T15:20:55+00:00",
+   "categories": [
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "This is just a quick post to say I’m going to be offline for a little bit – I’ve suffered a mild concussion. Don’t worry, as far as I can tell my brain is fine (I did a radio interview that night before I realised this was actually a serious thing, and was every bit cogent and coherent as I would normally hope to be) – but I’ve been told…",
+   "lede": "",
+   "words": 222,
+   "images": 1,
+   "comments": 8,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2019/08/24/ultima-ratio-regum-0-8-finale-update-vii/",
+   "slug": "ultima-ratio-regum-0-8-finale-update-vii",
+   "title": "Ultima Ratio Regum 0.8 Finale Update VII",
+   "published": "2019-08-24T17:53:34+00:00",
+   "modified": "2019-08-24T17:56:00+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Here’s the URRpdate of the last two months. A lot of travel and my laptop breaking while abroad has slowed things down, but a lot of progress has been made both on finishing off the last remaining bug-fixes, and adding the final small “feature” required for 0.8. The game is becoming increasingly stable, as well as increasingly polished, with each passing week. So, here’s what I’ve been up to in…",
+   "lede": "",
+   "words": 1397,
+   "images": 5,
+   "comments": 30,
+   "series": "urr",
+   "version": "0.8",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2019/07/23/new-job-new-country-new-continent/",
+   "slug": "new-job-new-country-new-continent",
+   "title": "New Job, New Country, New Continent",
+   "published": "2019-07-23T18:09:20+00:00",
+   "modified": "2019-07-23T18:17:18+00:00",
+   "categories": [
+    "Academic"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "After four years on the postdoc circuit, at three institutions, two countries and two continents: it’s over! I am incredibly proud (and relieved) to announce I’ve got a new job – as a Lecturer in Digital Cultures (equivalent to North American “Assistant Professor”) in the Department of Media and Communications at the University of Sydney! This isn’t a postdoc, which is a time-limited research-focused academic job – this is a…",
+   "lede": "",
+   "words": 827,
+   "images": 3,
+   "comments": 20,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2019/06/23/ultima-ratio-regum-0-8-finale-update-vi/",
+   "slug": "ultima-ratio-regum-0-8-finale-update-vi",
+   "title": "Ultima Ratio Regum 0.8 Finale Update VI",
+   "published": "2019-06-23T16:52:13+00:00",
+   "modified": "2019-06-23T16:52:15+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Here’s June’s big update. The bugs and fixes continue to get smaller and smaller with each passing fix, and they’re generally taking less time, being more and more obscure, and often involving text or grammar for sentence generation rather than things which actually cause the game to crash. With that said, some new crash bugs around pathfinding have arisen, but – see below – I think they are now all…",
+   "lede": "",
+   "words": 1539,
+   "images": 6,
+   "comments": 20,
+   "series": "urr",
+   "version": "0.8",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2019/05/21/ultima-ratio-regum-0-8-finale-update-v/",
+   "slug": "ultima-ratio-regum-0-8-finale-update-v",
+   "title": "Ultima Ratio Regum 0.8 Finale Update V",
+   "published": "2019-05-21T16:57:16+00:00",
+   "modified": "2019-05-21T17:22:17+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Welcome to May’s URRpdate! Things are still moving along, and rather pleasingly, it has now been a full month of coding since I discovered any more major bugs. Now, maybe that’s tempting fate, but I choose instead to read it as a very encouraging step forward. It does actually seem now that only small bugs remain, and many of these are not even crash bugs. Nevertheless, in the past couple…",
+   "lede": "",
+   "words": 894,
+   "images": 3,
+   "comments": 17,
+   "series": "urr",
+   "version": "0.8",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2019/04/25/ultima-ratio-regum-0-8-finale-update-iv/",
+   "slug": "ultima-ratio-regum-0-8-finale-update-iv",
+   "title": "Ultima Ratio Regum 0.8 Finale Update IV",
+   "published": "2019-04-25T16:54:47+00:00",
+   "modified": "2019-04-25T16:54:50+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Things slowed down a little in the past few weeks due to a lot of unexpected travel and some job negotiations (more on this very soon), but here’s another set of fixes and corrections:",
+   "lede": "",
+   "words": 1173,
+   "images": 4,
+   "comments": 21,
+   "series": "urr",
+   "version": "0.8",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2019/03/30/ultima-ratio-regum-0-8-finale-update-iii/",
+   "slug": "ultima-ratio-regum-0-8-finale-update-iii",
+   "title": "Ultima Ratio Regum 0.8 Finale Update III",
+   "published": "2019-03-30T03:59:54+00:00",
+   "modified": "2024-09-04T01:04:25+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Continuing to chop down the list of URR stuff to be checked before 0.8’s release! Here’s what has happened in the last couple of weeks:",
+   "lede": "",
+   "words": 778,
+   "images": 1,
+   "comments": 25,
+   "series": "urr",
+   "version": "0.8",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2019/02/24/0-8-finale-update-ii/",
+   "slug": "0-8-finale-update-ii",
+   "title": "Ultima Ratio Regum 0.8 Finale Update II",
+   "published": "2019-02-24T21:02:53+00:00",
+   "modified": "2019-03-21T05:25:26+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "More URR progress! I am now down to the final two things before URR 0.8’s release, which are 1) check every line of dialogue as comprehensively as I can, and 2) deal with some strange issues regarding game speed and optimisation which are bothering me. In the mean time, though, the fact we’re now at that point is because I’ve managed to get done all of the following:",
+   "lede": "",
+   "words": 1016,
+   "images": 6,
+   "comments": 31,
+   "series": "urr",
+   "version": "0.8",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2019/02/09/ultima-ratio-regum-0-8-finale-update-i/",
+   "slug": "ultima-ratio-regum-0-8-finale-update-i",
+   "title": "Ultima Ratio Regum 0.8 Finale Update I",
+   "published": "2019-02-09T00:16:32+00:00",
+   "modified": "2019-03-21T05:26:01+00:00",
+   "categories": [
+    "Game Design",
+    "Ultima Ratio Regum",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "It is with immense pleasure that this month’s blog entry is going to be a long and pretty thorough update on what I’ve programmed into URR in the last little while. As many of you readers will know, the latest version – 0.8 – has been about 90% done for over a year, until I restarted development, slowly, a month or two ago. It is now sitting at somewhere around…",
+   "lede": "",
+   "words": 692,
+   "images": 4,
+   "comments": 18,
+   "series": "urr",
+   "version": "0.8",
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2019/01/23/the-unpredictability-of-gameplay-is-out/",
+   "slug": "the-unpredictability-of-gameplay-is-out",
+   "title": "The Unpredictability of Gameplay is out!",
+   "published": "2019-01-23T20:01:44+00:00",
+   "modified": "2019-01-23T20:01:46+00:00",
+   "categories": [
+    "Academic",
+    "Game Design"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "I am very proud to announce my first book, The Unpredictability of Gameplay, is now out and available from Bloomsbury Academic!",
+   "lede": "",
+   "words": 1124,
+   "images": 2,
+   "comments": 8,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2019/01/01/2018-year-in-review/",
+   "slug": "2018-year-in-review",
+   "title": "2018 Year in Review",
+   "published": "2019-01-01T11:21:09+00:00",
+   "modified": "2019-01-01T11:21:09+00:00",
+   "categories": [
+    "Academic",
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [
+    "Academic",
+    "The Impacts of Live Streaming and Twitch.tv on the Video Game Industry.",
+    "Game Dev",
+    "Other"
+   ],
+   "opening": "Another strange and tricky year pulls to a close (a few months after I promised a return to weekly blog entries – we’ll get to that in a moment), and what has happened? Well:",
+   "lede": "Firstly: my book is now out! Counting this post as a slightly-delayed December post, I’m going to do a proper “launch” blog post as January’s blog entry (including a preview of the first chapter), but for the time being, I am incredibly happy to announce the thing is finally out. For the readers of my blog who aren’t in the academy, the price will drop in time as paperbacks emerge,…",
+   "words": 1131,
+   "images": 1,
+   "comments": 8,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2018/08/25/new-website/",
+   "slug": "new-website",
+   "title": "New Website!",
+   "published": "2018-08-25T18:18:49+00:00",
+   "modified": "2018-08-25T18:19:55+00:00",
+   "categories": [
+    "Updates"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "Hello everyone, and welcome to my new website! After several months in development, I must – as noted on the post I’ve just uploaded on my old website – give my profound thanks to the amazing work of NerdCloud, whose website design ability made this all possible. For those who have already read that one, there is a lot of overlap between this and that, and you basically know where…",
+   "lede": "",
+   "words": 806,
+   "images": 1,
+   "comments": 19,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2017/05/15/how-basic-is-basic-gaming-literacy/",
+   "slug": "how-basic-is-basic-gaming-literacy",
+   "title": "How Basic is Basic Gaming Literacy?",
+   "published": "2017-05-15T19:57:21+00:00",
+   "modified": "2018-08-25T18:20:33+00:00",
+   "categories": [
+    "Academic",
+    "Commentary",
+    "Game Design"
+   ],
+   "tags": [],
+   "sections": [],
+   "opening": "I’d like to start this entry with an anecdote, which outlines the basic issue I’m pondering far more effectively than an abstract discussion. A few years ago I found myself in the position of trying to teach someone who had never played a single video game in their life – and had extremely limited experience of board or card games – the very basics of video games. I chose Castle…",
+   "lede": "",
+   "words": 1713,
+   "images": 4,
+   "comments": 0,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2017/01/14/westworld-and-immersive-games/",
+   "slug": "westworld-and-immersive-games",
+   "title": "Westworld and Immersive Games",
+   "published": "2017-01-14T19:54:56+00:00",
+   "modified": "2024-01-10T09:22:45+00:00",
+   "categories": [
+    "Commentary"
+   ],
+   "tags": [],
+   "sections": [
+    "Secrets and Knowledge",
+    "Acting, Theatre and Games",
+    "Maintaining the Illusion",
+    "Games and the Outside World",
+    "Games and the Weight of Decisions",
+    "The Westworld Game"
+   ],
+   "opening": "HBO’s new Westworld series is absolutely essential viewing for anyone with an interest in games. It’s a great mystery, a great thriller, and great science-fiction, but it’s also fundamentally an exploration of games. On one level it is obviously an exploration of immersive or pervasive games – games that expand past traditional boundaries to engage with the “real world”, or physical spaces, or blur the line between the game and…",
+   "lede": "To begin with, there is some interesting discussion about secrets and knowledge in game worlds in Westworld that seems to have been largely overlooked. Several characters as the series goes on discuss the idea that there might be many “secrets” in the game world to be found, and that the surface game world is only for a lesser, or newer, players. One character is compelled to find something which he…",
+   "words": 3575,
+   "images": 6,
+   "comments": 0,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2016/11/26/bloodborne-pcg-and-the-unknowable/",
+   "slug": "bloodborne-pcg-and-the-unknowable",
+   "title": "Bloodborne, PCG, and the Unknowable",
+   "published": "2016-11-26T19:46:57+00:00",
+   "modified": "2018-08-25T18:20:51+00:00",
+   "categories": [
+    "Commentary",
+    "Game Design"
+   ],
+   "tags": [],
+   "sections": [
+    "A Hunter is a Hunter, even in a blog entry…",
+    "Meaning and the Unknown.",
+    "The Uninteresting Unknown",
+    "The Lack of Meaning",
+    "Handmade PCG Worlds",
+    "Too Many Bosses Spoil the Dungeon",
+    "Cosmic Horror and the Unknown",
+    "Problems of the Chalice Dungeons",
+    "Bloodborne Micro-Review"
+   ],
+   "opening": "Regular readers of my blog may remember a comment I made a while back about a game I’ve been deeply anxious to play for some time. This was Hidetaka Miyazaki’s new masterpiece (or so the reviews told me) – Bloodborne. I know I’m rather behind the times here, but these days I have so many obligations of various forms that finding the massive chunk of time required to really delve…",
+   "lede": "",
+   "words": 4349,
+   "images": 10,
+   "comments": 0,
+   "series": "other",
+   "version": null,
+   "number": null
+  },
+  {
+   "url": "https://www.markrjohnsongames.com/2014/07/27/perfect-dark-retrospective/",
+   "slug": "perfect-dark-retrospective",
+   "title": "Perfect Dark Retrospective",
+   "published": "2014-07-27T19:49:17+00:00",
+   "modified": "2018-08-25T18:20:20+00:00",
+   "categories": [
+    "Commentary",
+    "Game Design"
+   ],
+   "tags": [],
+   "sections": [
+    "Area 51: Infiltration / Rescue / Escape",
+    "Deep Sea: Nullify Threat",
+    "Carrington Institute: Defence",
+    "Changing FPS Standards?"
+   ],
+   "opening": "A few years ago Perfect Dark was re-released on Xbox Live Arcade. Whilst it was generally met with a positive reception as an impressive modernization of a classic game, especially since the new engine was built ground-up to be as close a copy of the old engine as possible, several reviewers claimed the game’s level design didn’t hold up well compared to its modern successors. Gamespot suggested the levels are…",
+   "lede": "Towards the middle of the game are three levels within Perfect Dark’s conception of Area 51. These three levels all take place on different parts of a single huge map (as does a bonus mission unlocked when you complete the game, but I won’t cover that one here) and the first level cleverly sets up the ending of the third level. In the first level, Infiltration, you come across the…",
+   "words": 3908,
+   "images": 20,
+   "comments": 3,
+   "series": "other",
+   "version": null,
+   "number": null
+  }
+ ],
+ "updated": "2026-11-02T05:50:44+00:00",
+ "source": "https://www.markrjohnsongames.com/blog/"
+}

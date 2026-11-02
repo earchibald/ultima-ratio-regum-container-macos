@@ -1,0 +1,523 @@
+<title>URR Blog Reader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+:root {
+  --ground: #eceef2;
+  --surface: #f7f8fa;
+  --ink: #1a1d2e;
+  --muted: #5b6177;
+  --faint: #8a90a4;
+  --rule: #d3d7e0;
+  --accent: #8f6210;
+  --new: #a2412c;
+  --bar: #b9bfcd;
+  --focus: #3b5bdb;
+  --display: "IM Fell English", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans: "IBM Plex Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ground: #10121b;
+    --surface: #171a26;
+    --ink: #e7e3d8;
+    --muted: #a0a5ba;
+    --faint: #6f7590;
+    --rule: #282c3d;
+    --accent: #d9ad55;
+    --new: #e3836a;
+    --bar: #3a3f56;
+    --focus: #8ea6ff;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground: #10121b;
+  --surface: #171a26;
+  --ink: #e7e3d8;
+  --muted: #a0a5ba;
+  --faint: #6f7590;
+  --rule: #282c3d;
+  --accent: #d9ad55;
+  --new: #e3836a;
+  --bar: #3a3f56;
+  --focus: #8ea6ff;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font: 15px/1.55 var(--sans);
+  padding-inline: 16px;
+}
+.wrap { max-width: 980px; margin: 0 auto; padding-block: 28px 64px; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 3px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Masthead */
+.eyebrow {
+  font: 500 11px/1.4 var(--mono);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin: 0;
+}
+.eyebrow a { color: var(--muted); text-underline-offset: 3px; overflow-wrap: anywhere; }
+h1 {
+  font: 400 clamp(34px, 6vw, 52px)/1.05 var(--display);
+  margin: 8px 0 12px;
+  text-wrap: balance;
+}
+h1 em { color: var(--accent); }
+.stats {
+  display: flex; flex-wrap: wrap; gap: 6px 18px;
+  font: 13px/1.5 var(--mono);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.stats b { color: var(--ink); font-weight: 500; }
+.newpill { display: inline-flex; align-items: center; gap: 6px; color: var(--new); }
+.newpill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--new); }
+
+/* Cadence strip */
+.cadence { margin: 26px 0 8px; }
+.cadence-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 8px; }
+.clearyear { font: 12px var(--mono); color: var(--accent); background: none; border: 0; cursor: pointer; padding: 2px 0; }
+.bars, .years {
+  display: grid;
+  grid-template-columns: repeat(var(--n, 13), minmax(0, 1fr));
+  gap: 4px;
+}
+.bars { align-items: end; height: 92px; border-bottom: 1px solid var(--rule); }
+.bar {
+  display: flex; flex-direction: column; justify-content: flex-end; align-items: stretch;
+  height: 100%;
+  background: none; border: 0; padding: 0; cursor: pointer;
+  color: var(--faint);
+}
+.bar:disabled { cursor: default; }
+.bar .n { font: 11px var(--mono); text-align: center; margin-bottom: 3px; font-variant-numeric: tabular-nums; }
+.bar .fill { background: var(--bar); border-radius: 2px 2px 0 0; transition: background .15s; }
+.bar:not(:disabled):hover .fill { background: var(--faint); }
+.bar[aria-pressed="true"] .fill { background: var(--accent); }
+.bar[aria-pressed="true"] .n { color: var(--accent); }
+.years { font: 11px var(--mono); color: var(--faint); text-align: center; margin-top: 4px; }
+@media (max-width: 560px) { .years span:nth-child(even) { visibility: hidden; } }
+
+/* Controls */
+.controls {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--ground);
+  display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center;
+  padding-block: 14px 12px;
+  border-bottom: 1px solid var(--rule);
+}
+.search { flex: 1 1 240px; position: relative; }
+.search input {
+  width: 100%;
+  font: 15px var(--sans);
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 8px 34px 8px 12px;
+}
+.search kbd {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  font: 11px var(--mono); color: var(--faint);
+  border: 1px solid var(--rule); border-radius: 3px; padding: 0 5px;
+}
+.seg { display: flex; flex-wrap: wrap; gap: 4px; }
+.seg button, .toggle {
+  font: 500 13px var(--sans);
+  color: var(--muted);
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 5px 11px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.seg button:hover, .toggle:hover { color: var(--ink); }
+.seg button[aria-pressed="true"] { color: var(--ink); background: var(--surface); border-color: var(--rule); }
+.seg button .c { font: 11px var(--mono); color: var(--faint); margin-left: 5px; }
+.right { display: flex; gap: 4px; margin-left: auto; }
+.toggle[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+.summary {
+  font: 12px var(--mono); color: var(--faint);
+  padding-top: 12px;
+  display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+}
+.linkish { font: 12px var(--mono); color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; }
+
+/* List */
+.year-head { display: flex; align-items: baseline; gap: 12px; margin: 30px 0 4px; }
+.year-head h2 { font: 400 30px/1 var(--display); margin: 0; }
+.year-head span { font: 12px var(--mono); color: var(--faint); }
+ol.posts { list-style: none; margin: 0; padding: 0; }
+.post {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr);
+  gap: 4px 16px;
+  padding: 16px 0;
+  border-top: 1px solid var(--rule);
+}
+.post:first-child { border-top: 0; }
+.when { font: 12px/1.5 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 3px; }
+.when .num {
+  display: inline-block; margin-top: 5px;
+  font: 500 12px var(--mono);
+  color: var(--accent);
+  border: 1px solid currentColor; border-radius: 3px;
+  padding: 0 5px;
+}
+.when .era { display: block; margin-top: 4px; color: var(--faint); font-size: 11px; }
+.title-row { display: flex; align-items: flex-start; gap: 10px; }
+.post h3 { margin: 0; font: 600 17px/1.35 var(--sans); text-wrap: balance; flex: 1; }
+.post h3 button { font: inherit; color: inherit; text-align: left; background: none; border: 0; padding: 0; cursor: pointer; }
+.post h3 button:hover { color: var(--accent); }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-top: 8px; flex: none; }
+.post.read .dot { visibility: hidden; }
+.post.read h3 { color: var(--muted); font-weight: 500; }
+.badge-new { font: 500 10px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--new); border: 1px solid currentColor; border-radius: 3px; padding: 3px 4px; margin-top: 3px; flex: none; }
+.excerpt {
+  margin: 6px 0 0; color: var(--muted); max-width: 68ch;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.outline { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; padding: 0; list-style: none; }
+.outline li {
+  font: 12px/1.4 var(--sans);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 2px 7px;
+}
+.outline li.more { color: var(--faint); background: none; border-style: dashed; }
+.meta {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px;
+  margin-top: 10px;
+  font: 12px var(--mono); color: var(--faint);
+  font-variant-numeric: tabular-nums;
+}
+.meta a, .meta button {
+  font: 500 12px var(--mono); color: var(--accent);
+  background: none; border: 0; padding: 0; cursor: pointer; text-decoration: none;
+}
+.meta a:hover, .meta button:hover { text-decoration: underline; text-underline-offset: 3px; }
+.meta .push { margin-left: auto; display: flex; gap: 14px; }
+
+/* Expanded */
+.detail { margin-top: 12px; display: grid; gap: 14px; max-width: 68ch; }
+.detail h4 { font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--faint); margin: 0 0 4px; }
+.detail p { margin: 0; }
+.detail ol { margin: 0; padding-left: 22px; }
+.detail ol li { padding: 1px 0; }
+.detail ol li::marker { font: 12px var(--mono); color: var(--faint); }
+.cats { font: 12px var(--mono); color: var(--muted); }
+.post.open .excerpt { display: none; }
+
+.empty, .error { padding: 48px 0; color: var(--muted); text-align: center; }
+.empty strong, .error strong { display: block; font: 400 24px var(--display); color: var(--ink); margin-bottom: 6px; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule); font: 12px/1.6 var(--mono); color: var(--faint); }
+footer a { color: var(--muted); }
+
+@media (max-width: 600px) {
+  .post { grid-template-columns: 1fr; }
+  .when { display: flex; gap: 8px; align-items: baseline; padding: 0; }
+  .when .num, .when .era { margin: 0; }
+  .right { margin-left: 0; }
+  .meta .push { margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Unofficial reading index &middot; <a href="https://www.markrjohnsongames.com/blog/" target="_blank" rel="noopener">markrjohnsongames.com/blog</a></p>
+    <h1>The <em>Ultima Ratio Regum</em> blog, indexed</h1>
+    <div class="stats" id="stats"><span>Loading posts&hellip;</span></div>
+  </header>
+
+  <section class="cadence" aria-label="Posts per year">
+    <div class="cadence-head">
+      <p class="eyebrow">Posts per year &middot; tap a year to filter</p>
+      <button class="clearyear" id="clearyear" type="button" hidden>Show all years</button>
+    </div>
+    <div class="bars" id="bars"></div>
+    <div class="years" id="years" aria-hidden="true"></div>
+  </section>
+
+  <div class="controls">
+    <label class="search">
+      <span class="sr">Search posts</span>
+      <input id="q" type="search" placeholder="Search titles, sections, excerpts" autocomplete="off">
+      <kbd>/</kbd>
+    </label>
+    <div class="seg" id="collections" role="group" aria-label="Collection"></div>
+    <div class="right">
+      <button class="toggle" id="unread" type="button" aria-pressed="false">Unread only</button>
+      <button class="toggle" id="sort" type="button" aria-pressed="false">Newest first</button>
+    </div>
+  </div>
+  <div class="summary"><span id="count"></span><button class="linkish" id="markall" type="button">Mark shown as read</button></div>
+
+  <main id="list"></main>
+
+  <footer>
+    All writing belongs to Mark R Johnson. This index shows excerpts and section titles so you can find a post; read the full entry on <a href="https://www.markrjohnsongames.com/blog/" target="_blank" rel="noopener">his blog</a>. Read markers are stored in this browser only.
+  </footer>
+</div>
+
+<script id="posts-data" type="application/json">/*POSTS_JSON*/</script>
+<script>
+(function () {
+  const BLOG = "https://www.markrjohnsongames.com/blog/";
+  const COLLECTIONS = [
+    { id: "all", label: "Everything", test: () => true },
+    { id: "urr", label: "URR development", test: p => p.series !== "other" },
+    { id: "update", label: "0.11 updates", test: p => p.series === "update" },
+    { id: "other", label: "Essays & news", test: p => p.series === "other" }
+  ];
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  };
+  const state = {
+    meta: {},
+    posts: [],
+    q: "",
+    coll: store.get("urr.coll", "all"),
+    year: null,
+    unread: store.get("urr.unread", false),
+    oldest: store.get("urr.oldest", false),
+    open: new Set(),
+    read: new Set(store.get("urr.read", [])),
+    lastVisit: store.get("urr.lastVisit", null)
+  };
+  const $ = id => document.getElementById(id);
+  // Every scraped string passes through esc() before it reaches markup.
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const safeUrl = u => /^https:\/\/www\.markrjohnsongames\.com\//.test(u) ? u : BLOG;
+  const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const fmtDay = d => `${String(d.getUTCDate()).padStart(2, "0")} ${MONTHS[d.getUTCMonth()]}`;
+  const fmtLong = d => `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+  const plural = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
+  const setHTML = (el, html) => { el.innerHTML = html; };
+
+  function saveRead() { store.set("urr.read", [...state.read]); }
+
+  function prepare(posts) {
+    // Walk newest to oldest so a URR post without a version inherits the next tagged release.
+    const chrono = posts.slice().sort((a, b) => a.published.localeCompare(b.published));
+    let next = null;
+    for (let i = chrono.length - 1; i >= 0; i--) {
+      const p = chrono[i];
+      if (p.series !== "other" && p.version) next = p.version;
+      p.era = p.series === "other" ? null : (p.version || next);
+    }
+    for (const p of posts) {
+      p.date = new Date(p.published);
+      p.year = p.date.getUTCFullYear();
+      p.minutes = Math.max(1, Math.round(p.words / 230));
+      p.hay = [p.title, p.sections.join(" "), p.opening, p.lede, p.categories.join(" ")].join(" ").toLowerCase();
+    }
+    return posts;
+  }
+
+  const isNew = p => state.lastVisit && p.published > state.lastVisit && !state.read.has(p.slug);
+
+  function filtered() {
+    const coll = COLLECTIONS.find(c => c.id === state.coll) || COLLECTIONS[0];
+    const terms = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+    const out = state.posts.filter(p =>
+      coll.test(p) &&
+      (state.year == null || p.year === state.year) &&
+      (!state.unread || !state.read.has(p.slug)) &&
+      terms.every(t => p.hay.includes(t))
+    );
+    out.sort((a, b) => state.oldest ? a.published.localeCompare(b.published) : b.published.localeCompare(a.published));
+    return out;
+  }
+
+  function renderStats() {
+    const ps = state.posts;
+    const latestNum = ps.reduce((m, p) => p.series === "update" ? Math.max(m, p.number || 0) : m, 0);
+    const first = ps.reduce((m, p) => p.published < m ? p.published : m, ps[0].published);
+    const last = ps.reduce((m, p) => p.published > m ? p.published : m, ps[0].published);
+    const unread = ps.filter(p => !state.read.has(p.slug)).length;
+    const fresh = ps.filter(isNew).length;
+    const synced = state.meta.updated ? fmtLong(new Date(state.meta.updated)) : "unknown";
+    setHTML($("stats"),
+      `<span><b>${ps.length}</b> posts, ${first.slice(0, 4)}\u2013${last.slice(0, 4)}</span>` +
+      `<span>latest 0.11 update <b>#${latestNum}</b></span>` +
+      `<span><b>${unread}</b> unread</span>` +
+      `<span>synced ${esc(synced)}</span>` +
+      (fresh ? `<span class="newpill">${plural(fresh, "new post")} since your last visit</span>` : ""));
+  }
+
+  function renderBars() {
+    const counts = {};
+    for (const p of state.posts) counts[p.year] = (counts[p.year] || 0) + 1;
+    const ys = Object.keys(counts).map(Number);
+    const all = [];
+    for (let y = Math.min(...ys); y <= Math.max(...ys); y++) all.push(y);
+    const max = Math.max(...Object.values(counts));
+    $("bars").style.setProperty("--n", all.length);
+    $("years").style.setProperty("--n", all.length);
+    setHTML($("bars"), all.map(y => {
+      const n = counts[y] || 0;
+      const h = n ? Math.max(3, Math.round((n / max) * 72)) : 0;
+      return `<button class="bar" type="button" data-year="${y}" aria-pressed="${state.year === y}" aria-label="${y}: ${plural(n, "post")}"${n ? "" : " disabled"}>` +
+        `<span class="n">${n || ""}</span><span class="fill" style="height:${h}px"></span></button>`;
+    }).join(""));
+    setHTML($("years"), all.map(y => `<span>'${String(y).slice(2)}</span>`).join(""));
+    $("clearyear").hidden = state.year == null;
+  }
+
+  function renderCollections() {
+    setHTML($("collections"), COLLECTIONS.map(c =>
+      `<button type="button" data-coll="${c.id}" aria-pressed="${state.coll === c.id}">${esc(c.label)}<span class="c">${state.posts.filter(c.test).length}</span></button>`
+    ).join(""));
+  }
+
+  function postHTML(p) {
+    const open = state.open.has(p.slug);
+    const read = state.read.has(p.slug);
+    const shown = p.sections.slice(0, 5);
+    const extra = p.sections.length - shown.length;
+    const excerpt = p.lede || p.opening;
+    const num = p.series === "update" ? `<span class="num">#${Number(p.number)}</span>` : "";
+    const era = p.era ? `<span class="era">${p.series === "update" ? "v" + esc(p.era) : esc(p.era) + " era"}</span>` : "";
+    let detail = "";
+    if (open) {
+      detail = `<div class="detail">` +
+        (p.opening ? `<div><h4>Opening</h4><p>${esc(p.opening)}</p></div>` : "") +
+        (p.lede ? `<div><h4>Main section begins</h4><p>${esc(p.lede)}</p></div>` : "") +
+        (p.sections.length ? `<div><h4>Sections</h4><ol>${p.sections.map(s => `<li>${esc(s)}</li>`).join("")}</ol></div>` : "") +
+        `<div class="cats">${p.categories.map(esc).join(" \u00b7 ")}</div></div>`;
+    }
+    return `<li class="post${read ? " read" : ""}${open ? " open" : ""}" id="${esc(p.slug)}" data-slug="${esc(p.slug)}">` +
+      `<div class="when">${fmtDay(p.date)}${num}${era}</div>` +
+      `<div>` +
+        `<div class="title-row"><span class="dot" aria-hidden="true"></span>` +
+          `<h3><button type="button" data-act="toggle" aria-expanded="${open}">${esc(p.title)}</button></h3>` +
+          (isNew(p) ? `<span class="badge-new">New</span>` : "") +
+        `</div>` +
+        (excerpt ? `<p class="excerpt">${esc(excerpt)}</p>` : "") +
+        (!open && shown.length ? `<ul class="outline">${shown.map(s => `<li>${esc(s)}</li>`).join("")}${extra > 0 ? `<li class="more">+${extra} more</li>` : ""}</ul>` : "") +
+        detail +
+        `<div class="meta"><span>${Number(p.words).toLocaleString("en-US")} words \u00b7 ${p.minutes} min</span>` +
+          (p.comments ? `<span>${plural(Number(p.comments), "comment")}</span>` : "") +
+          (p.images ? `<span>${plural(Number(p.images), "image")}</span>` : "") +
+          `<span class="push"><button type="button" data-act="read">${read ? "Mark unread" : "Mark read"}</button>` +
+          `<a href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener" data-act="open">Read post \u2197</a></span>` +
+        `</div>` +
+      `</div></li>`;
+  }
+
+  function renderList() {
+    const list = filtered();
+    $("count").textContent = `${list.length} of ${state.posts.length} posts` + (state.year ? ` \u00b7 ${state.year}` : "");
+    $("markall").hidden = !list.some(p => !state.read.has(p.slug));
+    if (!list.length) {
+      setHTML($("list"), `<div class="empty"><strong>No posts match.</strong>Try a different search, collection or year.</div>`);
+      return;
+    }
+    const groups = [];
+    for (const p of list) {
+      const g = groups[groups.length - 1];
+      if (g && g.year === p.year) g.items.push(p); else groups.push({ year: p.year, items: [p] });
+    }
+    setHTML($("list"), groups.map(g =>
+      `<div class="year-head"><h2>${g.year}</h2><span>${plural(g.items.length, "post")}</span></div>` +
+      `<ol class="posts">${g.items.map(postHTML).join("")}</ol>`
+    ).join(""));
+  }
+
+  function renderControls() {
+    $("unread").setAttribute("aria-pressed", state.unread);
+    $("sort").setAttribute("aria-pressed", state.oldest);
+    $("sort").textContent = state.oldest ? "Oldest first" : "Newest first";
+  }
+
+  function rerenderPost(slug) {
+    const el = document.querySelector(`.post[data-slug="${CSS.escape(slug)}"]`);
+    const p = state.posts.find(x => x.slug === slug);
+    if (!el || !p) return;
+    const tmp = document.createElement("ol");
+    setHTML(tmp, postHTML(p));
+    el.replaceWith(tmp.firstElementChild);
+  }
+
+  function boot(data) {
+    state.meta = data;
+    state.posts = prepare(data.posts);
+    renderStats(); renderBars(); renderCollections(); renderControls(); renderList();
+
+    const h = location.hash.slice(1);
+    if (h && state.posts.some(p => p.slug === h)) {
+      state.open.add(h);
+      rerenderPost(h);
+      document.getElementById(h)?.scrollIntoView({ block: "start" });
+    }
+    // Remember the newest post seen, so the next visit can flag what arrived since.
+    store.set("urr.lastVisit", state.posts.reduce((m, p) => p.published > m ? p.published : m, ""));
+
+    $("q").addEventListener("input", e => { state.q = e.target.value; renderList(); });
+    $("collections").addEventListener("click", e => {
+      const b = e.target.closest("button[data-coll]"); if (!b) return;
+      state.coll = b.dataset.coll; store.set("urr.coll", state.coll);
+      renderCollections(); renderList();
+    });
+    $("bars").addEventListener("click", e => {
+      const b = e.target.closest(".bar"); if (!b) return;
+      const y = Number(b.dataset.year);
+      state.year = state.year === y ? null : y;
+      renderBars(); renderList();
+    });
+    $("clearyear").addEventListener("click", () => { state.year = null; renderBars(); renderList(); });
+    $("unread").addEventListener("click", () => {
+      state.unread = !state.unread; store.set("urr.unread", state.unread); renderControls(); renderList();
+    });
+    $("sort").addEventListener("click", () => {
+      state.oldest = !state.oldest; store.set("urr.oldest", state.oldest); renderControls(); renderList();
+    });
+    $("markall").addEventListener("click", () => {
+      filtered().forEach(p => state.read.add(p.slug)); saveRead(); renderStats(); renderList();
+    });
+    $("list").addEventListener("click", e => {
+      const act = e.target.closest("[data-act]"); if (!act) return;
+      const slug = act.closest(".post").dataset.slug;
+      if (act.dataset.act === "toggle") {
+        state.open.has(slug) ? state.open.delete(slug) : state.open.add(slug);
+        rerenderPost(slug);
+        document.querySelector(`.post[data-slug="${CSS.escape(slug)}"] h3 button`)?.focus();
+      } else if (act.dataset.act === "read") {
+        state.read.has(slug) ? state.read.delete(slug) : state.read.add(slug);
+        saveRead(); renderStats();
+        state.unread ? renderList() : rerenderPost(slug);
+      } else if (act.dataset.act === "open") {
+        state.read.add(slug); saveRead(); renderStats();
+        setTimeout(() => state.unread ? renderList() : rerenderPost(slug), 0);
+      }
+    });
+    document.addEventListener("keydown", e => {
+      const q = $("q");
+      if (e.key === "/" && document.activeElement !== q) { e.preventDefault(); q.focus(); }
+      else if (e.key === "Escape" && document.activeElement === q) { state.q = ""; q.value = ""; renderList(); q.blur(); }
+    });
+  }
+
+  try {
+    boot(JSON.parse(document.getElementById("posts-data").textContent));
+  } catch (e) {
+    $("stats").textContent = "";
+    setHTML($("list"), `<div class="error"><strong>The post index didn't load.</strong>Reload the page. If it keeps failing, read the blog directly at <a href="${BLOG}" target="_blank" rel="noopener">markrjohnsongames.com/blog</a>.</div>`);
+  }
+})();
+</script>
