@@ -45,9 +45,32 @@ public struct ContainerRuntime: Sendable {
 
     // MARK: install
 
+    /// The same download, checks and install as `install`, as Terminal
+    /// commands, for players who'd rather not give the launcher admin rights.
+    public static var manualInstallCommand: String {
+        let release = Manifest.container
+        let pkg = release.pkgURL.lastPathComponent
+        return """
+        cd ~/Downloads &&
+        curl -fLO \(release.pkgURL.absoluteString) &&
+        echo "\(release.pkgSHA256)  \(pkg)" | shasum -a 256 -c - &&
+        pkgutil --check-signature \(pkg) | grep "\(release.signer)" &&
+        sudo installer -pkg \(pkg) -target /
+        """
+    }
+
     /// Downloads Apple's signed installer package, verifies its hash and
     /// signature, and installs it (macOS asks for an administrator password).
     public static func install(paths: Paths, log: @escaping LogSink) async throws {
+        let pkg = try await downloadVerifiedPackage(paths: paths, log: log)
+        log(LogEntry(.info, "installing container \(Manifest.container.version); macOS will ask for an administrator password"))
+        let script = "do shell script \"/usr/sbin/installer -pkg \" & quoted form of \"\(pkg.path)\" & \" -target /\" with administrator privileges"
+        try await Shell.check(URL(fileURLWithPath: "/usr/bin/osascript"), ["-e", script], log: log)
+    }
+
+    /// Downloads Apple's installer package and checks its sha256 and Developer
+    /// ID signature; returns the package, ready for Apple's Installer.
+    public static func downloadVerifiedPackage(paths: Paths, log: @escaping LogSink) async throws -> URL {
         try paths.prepare()
         let release = Manifest.container
         let pkg = paths.downloads.appendingPathComponent(release.pkgURL.lastPathComponent)
@@ -63,9 +86,8 @@ public struct ContainerRuntime: Sendable {
         guard sig.status == 0, sig.output.contains(where: { $0.contains(release.signer) }) else {
             throw ContainerError.badPackage("not signed by \(release.signer)")
         }
-        log(LogEntry(.info, "installing container \(release.version); macOS will ask for an administrator password"))
-        let script = "do shell script \"/usr/sbin/installer -pkg \" & quoted form of \"\(pkg.path)\" & \" -target /\" with administrator privileges"
-        try await Shell.check(URL(fileURLWithPath: "/usr/bin/osascript"), ["-e", script], log: log)
+        log(LogEntry(.info, "\(pkg.lastPathComponent) verified: sha256 matches and signed by \(release.signer)"))
+        return pkg
     }
 
     // MARK: checks

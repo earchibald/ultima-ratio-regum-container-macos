@@ -237,16 +237,7 @@ struct PromptCard: View {
         VStack(alignment: .leading, spacing: 10) {
             switch prompt.kind {
             case .installContainer:
-                Text("Install Apple's container runtime").font(.title3.bold())
-                Text("The game runs in a small Linux VM managed by Apple's open-source container runtime (version \(Manifest.container.version.description)). The launcher downloads Apple's signed installer from GitHub, checks its signature, and installs it. macOS will ask for your password once.")
-                    .fixedSize(horizontal: false, vertical: true)
-                HStack {
-                    Button("Install container \(Manifest.container.version.description)") { prompt.resolve(.yes) }
-                        .buttonStyle(.borderedProminent)
-                    Button("Not now") { prompt.resolve(.no) }
-                    Spacer()
-                    Link("About container", destination: URL(string: "https://github.com/apple/container")!)
-                }
+                InstallContainerCard(prompt: prompt, model: model)
             case .gameSource(let reason):
                 Text("Get the game").font(.title3.bold())
                 Text("\(reason) Ultima Ratio Regum is free, made by Mark R Johnson. Download it from his site, or choose the ZIP you downloaded yourself (you can also drop it on this window).")
@@ -329,6 +320,76 @@ struct LogConsole: View {
         case .output, .info: return .secondary
         case .warning: return .orange
         case .error: return .red
+        }
+    }
+}
+
+/// Three ways to get Apple's container runtime, for players who'd rather not
+/// give the launcher administrator rights. Setup continues by itself as soon
+/// as `container` appears, however it was installed.
+struct InstallContainerCard: View {
+    let prompt: Prompt
+    let model: LauncherModel
+    @State private var showCommand = false
+    @State private var copied = false
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Install Apple's container runtime").font(.title3.bold())
+            Text("The game runs in a small Linux VM managed by Apple's open-source container runtime (version \(Manifest.container.version.description)). Every option uses Apple's signed installer from GitHub; the launcher checks its checksum and signature first.")
+                .fixedSize(horizontal: false, vertical: true)
+            HStack {
+                Button("Install for me") { prompt.resolve(.yes) }
+                    .buttonStyle(.borderedProminent)
+                    .help("Runs Apple's installer with administrator rights; macOS asks for your password.")
+                Button {
+                    model.openContainerInstaller()
+                } label: {
+                    HStack(spacing: 6) {
+                        if model.fetchingInstaller { ProgressView().controlSize(.small) }
+                        Text("Open in Apple's Installer")
+                    }
+                }
+                .disabled(model.fetchingInstaller)
+                .help("Downloads and verifies the package, then hands it to Apple's Installer, which asks for your password itself.")
+                Button(showCommand ? "Hide Terminal command" : "Install it yourself…") { showCommand.toggle() }
+                Button("Not now") { prompt.resolve(.no) }
+                Spacer()
+                Link("About container", destination: URL(string: "https://github.com/apple/container")!)
+            }
+            if showCommand {
+                Text("Paste this into Terminal. It downloads the same package, checks its checksum and Apple's signature, and installs it with sudo:")
+                    .font(.callout).foregroundStyle(.secondary)
+                Text(ContainerRuntime.manualInstallCommand)
+                    .font(.system(size: 11, design: .monospaced))
+                    .textSelection(.enabled)
+                    .padding(10)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color(nsColor: .textBackgroundColor), in: .rect(cornerRadius: 6))
+                HStack {
+                    Button(copied ? "Copied" : "Copy command") {
+                        NSPasteboard.general.clearContents()
+                        NSPasteboard.general.setString(ContainerRuntime.manualInstallCommand, forType: .string)
+                        copied = true
+                    }
+                    Button("I've installed it") { prompt.resolve(.installedSeparately) }
+                }
+            }
+            HStack(spacing: 6) {
+                ProgressView().controlSize(.mini)
+                Text("Setup continues automatically once container is installed.")
+                    .font(.footnote).foregroundStyle(.secondary)
+            }
+        }
+        // Notice an install done in Terminal or Apple's Installer.
+        .task(id: prompt.id) {
+            while !Task.isCancelled {
+                try? await Task.sleep(for: .seconds(2))
+                if ContainerRuntime.locate() != nil {
+                    prompt.resolve(.installedSeparately)
+                    return
+                }
+            }
         }
     }
 }

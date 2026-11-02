@@ -19,7 +19,7 @@ launcher runs and its output (also written to `~/Library/Logs/Ultima Ratio Regum
 |---|---|---|
 | This Mac | Checks for Apple silicon and macOS 26+ | — |
 | Game files | Uses the bundled official ZIP, or asks: **Download** from markrjohnsongames.com, or **Choose ZIP…** / drag the ZIP onto the window. Verifies the sha256 and unpacks it unmodified. | Only if no ZIP is bundled |
-| Apple container runtime | If missing: downloads Apple's signed `container-1.6.1-installer-signed.pkg`, checks its sha256 and its Developer ID signature, and installs it | One click + macOS admin password, once |
+| Apple container runtime | If missing, offers three ways, all using Apple's signed `container-1.6.1-installer-signed.pkg` with its sha256 and Developer ID signature checked: **Install for me** (the launcher runs Apple's installer; macOS asks for your password), **Open in Apple's Installer** (the launcher only downloads and verifies), or **Install it yourself…** (a copyable Terminal command). Setup continues as soon as `container` appears. | One choice + macOS admin password, once |
 | Linux VM services | `container system start` (the first run downloads Apple's default Linux kernel) | — |
 | Game runtime image | `container build` of [`runtime/Containerfile`](runtime/Containerfile): a few minutes the first time, then cached | — |
 | Start the game | `container run` with the game folder mounted read-only and the saves folder read-write; the game appears in the window | Press **Play** |
@@ -98,6 +98,30 @@ urrctl import URR0104d.zip # install a game ZIP (--yes accepts an untested minor
 urrctl play                # set up as needed, then open the game in your browser
 ```
 
+### Installing and removing Apple container by hand
+
+The command the app's **Install it yourself…** option shows:
+
+```sh
+cd ~/Downloads &&
+curl -fLO https://github.com/apple/container/releases/download/1.6.1/container-1.6.1-installer-signed.pkg &&
+echo "cd47846819f06478d067060efe21e516b562ac0a9af8eecad6d5fea0b556b200  container-1.6.1-installer-signed.pkg" | shasum -a 256 -c - &&
+pkgutil --check-signature container-1.6.1-installer-signed.pkg | grep "Developer ID Installer: Apple Inc. - Containerization (UPBK2H6LZM)" &&
+sudo installer -pkg container-1.6.1-installer-signed.pkg -target /
+```
+
+To uninstall (for example, to re-test first-run setup), use Apple's own script,
+which refuses to run while the services are up. `-d` also deletes container's data
+(images, including the game runtime image, and the kernel); `-k` keeps it.
+
+```sh
+container stop --all; container system stop
+/usr/local/bin/uninstall-container.sh -d
+```
+
+To make the launcher itself start fresh while keeping saves, also remove
+`Game/`, `game.json` and `Downloads/` from `~/Library/Application Support/Ultima Ratio Regum/`.
+
 ### Environment overrides
 
 | Variable | Effect |
@@ -157,13 +181,15 @@ This product brings together work from several parallel sessions:
 
 ## Status
 
-Verified: the runtime image builds (arm64), the game runs in it (title screen, menu
-input over VNC, VNC password enforced), ZIP import and version policy (unit
-tests plus the real 0.10.4d ZIP), and the app's setup flow, game view, keyboard input
-and blog tab against a docker-hosted runtime.
+Verified:
+* **The full path with Apple container 1.6.1:** installed from the app, `system
+  start` with the kernel download, `build` (about 1.5 min), and `run` with
+  the 127.0.0.1 publish. The game picked its 10px font for a 1352×817 screen, and
+  the display fitted itself to 1060×700.
+* The runtime image under docker (arm64), menu input and VNC password enforcement.
+* ZIP import and version policy (unit tests plus the real 0.10.4d ZIP).
+* The app's setup flow, game view, keyboard input and blog tab.
 
-Not yet verified on a Mac with Apple `container` installed: the
-install → `system start` → `build` → `run` path end to end, and `--publish` to
-127.0.0.1. Also untested: `native/setup.sh` as a whole (its steps follow the
-native port's verified recipe), a full play-through with save/load, and
-notarized distribution.
+Not yet verified: the **Open in Apple's Installer** and **Install it yourself**
+paths (new), `native/setup.sh` as a whole (its steps follow the native port's
+verified recipe), a full play-through with save/load, and notarized distribution.

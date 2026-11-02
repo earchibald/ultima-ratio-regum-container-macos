@@ -10,7 +10,7 @@ struct Prompt: Identifiable {
         case gameSource(reason: String)
         case untestedVersion(GameVersion, explanation: String)
     }
-    enum Answer: Equatable { case yes, no, download, zip(URL) }
+    enum Answer: Equatable { case yes, no, download, zip(URL), installedSeparately }
 
     let id = UUID()
     let kind: Kind
@@ -32,6 +32,8 @@ final class LauncherModel {
     var steps: [Step: StepState] = Dictionary(uniqueKeysWithValues: Step.allCases.map { ($0, .pending) })
     var prompt: Prompt?
     var downloadProgress: Double?
+    /// Downloading the container installer for Apple's Installer app.
+    var fetchingInstaller = false
     var log: [LogEntry] = []
     var lastExit: String?
     var session: GameSession?
@@ -56,7 +58,11 @@ final class LauncherModel {
             log: { entry in Task { @MainActor in self.append(entry) } },
             downloadProgress: { p in Task { @MainActor in self.downloadProgress = p >= 1 ? nil : p } },
             confirmInstallContainer: {
-                await self.ask(.installContainer) == .yes
+                switch await self.ask(.installContainer) {
+                case .yes: return .automatic
+                case .installedSeparately: return .installedSeparately
+                default: return .declined
+                }
             },
             chooseGameSource: { reason in
                 switch await self.ask(.gameSource(reason: reason)) {
@@ -74,7 +80,12 @@ final class LauncherModel {
     private func ask(_ kind: Prompt.Kind) async -> Prompt.Answer {
         await withCheckedContinuation { (c: CheckedContinuation<Prompt.Answer, Never>) in
             Task { @MainActor in
+                // A card can be answered by a button and by its own polling
+                // (container installed elsewhere); only the first answer counts.
+                var answered = false
                 self.prompt = Prompt(kind: kind) { answer in
+                    guard !answered else { return }
+                    answered = true
                     self.prompt = nil
                     c.resume(returning: answer)
                 }
@@ -142,6 +153,26 @@ final class LauncherModel {
             } catch {
                 self.phase = .ready
                 self.lastExit = error.localizedDescription
+            }
+        }
+    }
+
+    /// Downloads and verifies Apple's container package, then opens it in
+    /// Apple's Installer, which asks for the password itself. Setup notices
+    /// when the install lands (see PromptCard).
+    func openContainerInstaller() {
+        guard !fetchingInstaller else { return }
+        fetchingInstaller = true
+        Task {
+            defer { fetchingInstaller = false }
+            do {
+                let pkg = try await ContainerRuntime.downloadVerifiedPackage(paths: paths) { entry in
+                    Task { @MainActor in self.append(entry) }
+                }
+                append(LogEntry(.command, "open \(pkg.path)"))
+                NSWorkspace.shared.open(pkg)
+            } catch {
+                append(LogEntry(.error, error.localizedDescription))
             }
         }
     }

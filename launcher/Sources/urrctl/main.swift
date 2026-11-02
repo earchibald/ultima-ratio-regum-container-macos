@@ -50,7 +50,11 @@ func hooks(allowInstall: Bool) -> LauncherHooks {
         log: log,
         downloadProgress: { _ in },
         confirmInstallContainer: {
-            allowInstall && ask("Install Apple's container runtime \(Manifest.container.version)? (macOS will ask for your password)")
+            if allowInstall, ask("Install Apple's container runtime \(Manifest.container.version)? (macOS will ask for your password)") {
+                return .automatic
+            }
+            say("To install it yourself, run:\n\n\(ContainerRuntime.manualInstallCommand)\n")
+            return .declined
         },
         chooseGameSource: { reason in
             say(reason)

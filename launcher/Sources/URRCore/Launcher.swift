@@ -33,14 +33,23 @@ public enum GameSource: Sendable {
     case zip(URL)
 }
 
+/// How the player wants Apple's container runtime installed.
+public enum ContainerInstallChoice: Sendable {
+    /// The launcher downloads, verifies and installs it (macOS asks for an admin password).
+    case automatic
+    /// The player installed it some other way (Terminal, Apple's Installer); look again.
+    case installedSeparately
+    case declined
+}
+
 /// Questions only the player can answer. The app shows them as cards in the
 /// setup panel; urrctl asks on the terminal.
 public struct LauncherHooks: Sendable {
     public var step: @Sendable (Step, StepState) -> Void
     public var log: LogSink
     public var downloadProgress: @Sendable (Double) -> Void
-    /// Apple's container runtime is missing: install it? (needs an admin password)
-    public var confirmInstallContainer: @Sendable () async -> Bool
+    /// Apple's container runtime is missing: how should it be installed?
+    public var confirmInstallContainer: @Sendable () async -> ContainerInstallChoice
     /// No game installed (or the player asked to replace it): where from? nil cancels.
     public var chooseGameSource: @Sendable (_ reason: String) async -> GameSource?
     /// The game is a different minor version than tested: try it anyway?
@@ -49,7 +58,7 @@ public struct LauncherHooks: Sendable {
     public init(step: @escaping @Sendable (Step, StepState) -> Void,
                 log: @escaping LogSink,
                 downloadProgress: @escaping @Sendable (Double) -> Void,
-                confirmInstallContainer: @escaping @Sendable () async -> Bool,
+                confirmInstallContainer: @escaping @Sendable () async -> ContainerInstallChoice,
                 chooseGameSource: @escaping @Sendable (String) async -> GameSource?,
                 confirmUntestedVersion: @escaping @Sendable (GameVersion, String) async -> Bool) {
         self.step = step
@@ -126,14 +135,24 @@ public final class Launcher: @unchecked Sendable {
     func ensureRuntime() async throws -> ContainerRuntime {
         begin(.runtime, "looking for the container command")
         var binary = ContainerRuntime.locate()
-        if binary == nil {
-            hooks.step(.runtime, .waiting("Not installed"))
-            guard await hooks.confirmInstallContainer() else {
+        var waiting = "Not installed"
+        while binary == nil {
+            hooks.step(.runtime, .waiting(waiting))
+            switch await hooks.confirmInstallContainer() {
+            case .declined:
                 throw SetupCancelled(reason: "The game runs in a small Linux VM managed by Apple's container runtime, which isn't installed.")
+            case .automatic:
+                begin(.runtime, "installing container \(Manifest.container.version)")
+                try await ContainerRuntime.install(paths: paths, log: hooks.log)
+                binary = ContainerRuntime.locate()
+                if binary == nil { throw ContainerError.notInstalled }
+            case .installedSeparately:
+                binary = ContainerRuntime.locate()
+                if binary == nil {
+                    waiting = "Still not found in \(ContainerRuntime.searchPaths.joined(separator: " or "))"
+                    hooks.log(LogEntry(.warning, "container is still not installed"))
+                }
             }
-            begin(.runtime, "installing container \(Manifest.container.version)")
-            try await ContainerRuntime.install(paths: paths, log: hooks.log)
-            binary = ContainerRuntime.locate()
         }
         guard let binary else { throw ContainerError.notInstalled }
         let runtime = ContainerRuntime(binary: binary, log: hooks.log)
