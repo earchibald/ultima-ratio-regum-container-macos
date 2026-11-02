@@ -16,10 +16,17 @@ macOS port, plus one for the virtual display:
 4. Virtual display: there is no window manager, so the game's window sits on
    a bigger X screen. Shrink the X screen to the window (xrandr), so the VNC
    view — and the Mac window showing it — is exactly the game.
+
+Diagnostics: if the game hangs, dump every thread's Python stack to the
+launcher log without stopping it:
+
+    container exec urr-game sh -c 'kill -USR1 $(cat /tmp/urr-game.pid)'
 """
+import faulthandler
 import os
 import runpy
 import shutil
+import signal
 import subprocess
 import sys
 import warnings
@@ -27,6 +34,7 @@ import warnings
 GAME_DIR = os.environ.get("URR_GAME_DIR", "/opt/urr/game")
 DATA_DIR = os.environ.get("URR_DATA_DIR", "/data")
 FONTS = ("8x8.png", "10x10.png", "12x12.png")
+PID_FILE = "/tmp/urr-game.pid"
 
 
 def log(msg):
@@ -96,6 +104,17 @@ def patch_display():
     libtcodpy.console_flush = console_flush
 
 
+def install_stack_dump():
+    """On SIGUSR1, write all threads' stacks to stderr (the launcher log).
+
+    faulthandler dumps from its C signal handler, so this works even while
+    the game is stuck in a pure-Python loop that never yields.
+    """
+    faulthandler.register(signal.SIGUSR1, file=sys.stderr, all_threads=True)
+    with open(PID_FILE, "w") as f:
+        f.write("%d\n" % os.getpid())
+
+
 def enter_data_dir():
     os.makedirs(DATA_DIR, exist_ok=True)
     for font in FONTS:
@@ -108,6 +127,7 @@ def enter_data_dir():
 def main(pyc):
     if sys.version_info[:2] != (3, 7):
         raise SystemExit("URR's bytecode requires Python 3.7, not %d.%d" % sys.version_info[:2])
+    install_stack_dump()
     force_dumb_dbm()
     patch_display()
     enter_data_dir()
