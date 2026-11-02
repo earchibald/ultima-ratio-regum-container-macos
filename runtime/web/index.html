@@ -1,0 +1,64 @@
+<!doctype html>
+<!-- Game viewer: a full-window noVNC client for the container's virtual display.
+     Shown inside the Mac launcher (WKWebView); also works in any browser.
+     The per-launch password arrives in the URL fragment, which is never sent
+     over the network. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ultima Ratio Regum</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  #screen { position: fixed; inset: 0; }
+  /* The game is pixel art: scale it with hard edges, never smoothed. */
+  #screen canvas { image-rendering: pixelated; image-rendering: crisp-edges; }
+  #status { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+            color: #c9c2b0; font: 15px/1.4 -apple-system, system-ui, sans-serif; pointer-events: none; }
+  #status[hidden] { display: none; }
+</style>
+</head>
+<body>
+<div id="screen"></div>
+<div id="status">Connecting to the game…</div>
+<script type="module">
+import RFB from "./core/rfb.js";
+
+const status = document.getElementById("status");
+const host = window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.urr;
+const notify = (msg) => { if (host) host.postMessage(msg); };
+
+const params = new URLSearchParams(location.hash.slice(1));
+const scheme = location.protocol === "https:" ? "wss" : "ws";
+const rfb = new RFB(document.getElementById("screen"), `${scheme}://${location.host}/websockify`,
+                    { credentials: { password: params.get("password") || "" } });
+rfb.scaleViewport = true;
+rfb.background = "#000";
+
+// Tell the Mac window the game's size whenever the remote screen changes
+// (start-up, and when the in-game font size is changed).
+let observed = null;
+function watchCanvas() {
+  const canvas = document.querySelector("#screen canvas");
+  if (!canvas || canvas === observed) return;
+  observed = canvas;
+  const report = () => notify({ event: "size", width: canvas.width, height: canvas.height });
+  new MutationObserver(report).observe(canvas, { attributes: true, attributeFilter: ["width", "height"] });
+  report();
+}
+
+rfb.addEventListener("connect", () => {
+  status.hidden = true;
+  watchCanvas();
+  rfb.focus();
+  notify({ event: "connect" });
+});
+rfb.addEventListener("disconnect", (e) => {
+  status.hidden = false;
+  status.textContent = e.detail.clean ? "The game has closed." : "Lost connection to the game.";
+  notify({ event: "disconnect", clean: e.detail.clean });
+});
+rfb.addEventListener("securityfailure", (e) => notify({ event: "error", reason: e.detail.reason || "authentication failed" }));
+window.addEventListener("focus", () => rfb.focus());
+</script>
+</body>
+</html>

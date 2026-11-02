@@ -1,0 +1,62 @@
+# URR runtime image: open-source parts only — Python 3.7, tcod 11.19.3 (libtcod),
+# SDL 2.0.14, a virtual X display (TigerVNC) and a browser VNC bridge (noVNC).
+# It contains no game files: the official, unmodified game folder is mounted
+# read-only at /opt/urr/game when the container runs.
+#
+# Versions match the Windows release's frozen runtime (Python 3.7, tcod 11.19.3,
+# numpy 1.19.3). tcod 11.19.3 has no linux/arm64 wheel, and its cffi bindings
+# cannot parse the headers of SDL >= 2.24 (Debian bookworm ships 2.26), so SDL
+# 2.0.14 — the version tcod 11.19.3 shipped with — is built from pinned source.
+#
+# Build context is the repository root:  container build -f runtime/Containerfile .
+
+ARG PYTHON_IMAGE=docker.io/library/python:3.7-slim-bookworm
+
+FROM ${PYTHON_IMAGE} AS build
+ARG SDL_VERSION=2.0.14
+ARG SDL_SHA256=f85233bc8d4f30a7caa5aea7de0f95b8f4b1f7272473aea4b3ec4ede0a27357f
+ENV PIP_NO_CACHE_DIR=1 PIP_DISABLE_PIP_VERSION_CHECK=1
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends build-essential pkg-config curl ca-certificates \
+        libx11-dev libxext-dev libxrandr-dev libxcursor-dev libxi-dev libxss-dev \
+        libxinerama-dev libxxf86vm-dev libgl-dev \
+ && rm -rf /var/lib/apt/lists/*
+RUN curl -fsSL -o /tmp/sdl.tar.gz "https://github.com/libsdl-org/SDL/archive/refs/tags/release-${SDL_VERSION}.tar.gz" \
+ && echo "${SDL_SHA256}  /tmp/sdl.tar.gz" | sha256sum -c - \
+ && mkdir /tmp/sdl && tar -xzf /tmp/sdl.tar.gz -C /tmp/sdl --strip-components=1 \
+ && cd /tmp/sdl \
+ && ./configure --prefix=/usr/local --disable-static --disable-audio --disable-video-wayland \
+        --disable-video-kmsdrm --disable-video-vulkan --disable-joystick --disable-haptic \
+ && make -j"$(nproc)" && make install \
+ && ldconfig && rm -rf /tmp/sdl /tmp/sdl.tar.gz
+RUN pip install "numpy==1.19.3" "cffi==1.15.1" "pycparser==2.21" \
+ && pip install --no-build-isolation --no-binary tcod "tcod==11.19.3" \
+ && python -c "import tcod; print('tcod', tcod.__version__)"
+
+FROM ${PYTHON_IMAGE}
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends \
+        libx11-6 libxext6 libxrandr2 libxcursor1 libxi6 libxss1 libxinerama1 libxxf86vm1 \
+        libgl1 libgl1-mesa-dri \
+        tigervnc-standalone-server tigervnc-tools x11-xserver-utils \
+        novnc websockify \
+ && rm -rf /var/lib/apt/lists/*
+COPY --from=build /usr/local/lib/libSDL2* /usr/local/lib/
+COPY --from=build /usr/local/lib/python3.7/site-packages /usr/local/lib/python3.7/site-packages
+RUN ldconfig && python -c "import tcod; print('tcod', tcod.__version__)"
+
+COPY game/extract.py game/urr_container.py /opt/urr/runtime/
+COPY runtime/entrypoint.sh /opt/urr/entrypoint.sh
+COPY runtime/web/ /opt/urr/web/
+RUN ln -s /usr/share/novnc/core /opt/urr/web/core \
+ && ln -s /usr/share/novnc/vendor /opt/urr/web/vendor \
+ && chmod +x /opt/urr/entrypoint.sh
+
+# /opt/urr/game  official game folder (read-only bind mount)
+# /data          saves, prefs and the extracted-bytecode cache (bind mount)
+ENV URR_GAME_DIR=/opt/urr/game URR_DATA_DIR=/data URR_GEOMETRY=1280x800 PYTHONUNBUFFERED=1
+LABEL org.opencontainers.image.title="Ultima Ratio Regum runtime (no game files)" \
+      org.opencontainers.image.source="https://github.com/earchibald/ultima-ratio-regum-container-macos"
+EXPOSE 6080
+ENTRYPOINT ["/opt/urr/entrypoint.sh"]
