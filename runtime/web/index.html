@@ -12,6 +12,9 @@
   #screen { position: fixed; inset: 0; }
   /* The game is pixel art: scale it with hard edges, never smoothed. */
   #screen canvas { image-rendering: pixelated; image-rendering: crisp-edges; }
+  /* noVNC replaces the local pointer with the remote X cursor (an inline
+     style on the canvas), which the game leaves blank. Keep the Mac arrow. */
+  #screen canvas { cursor: default !important; }
   #status { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
             color: #c9c2b0; font: 15px/1.4 -apple-system, system-ui, sans-serif; pointer-events: none; }
   #status[hidden] { display: none; }
