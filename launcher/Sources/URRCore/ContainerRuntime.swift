@@ -136,6 +136,8 @@ public struct ContainerRuntime: Sendable {
         try await Shell.check(binary, ["build", "--progress", "plain", "--cpus", "4", "--memory", "4G",
                                        "-t", tag, "-f", context.appendingPathComponent("runtime/Containerfile").path,
                                        context.path], log: log)
+        // The build runs in its own VM (4 GB); don't leave it running after.
+        _ = try? await Shell.run(binary, ["builder", "stop"], log: log)
     }
 
     // MARK: game
